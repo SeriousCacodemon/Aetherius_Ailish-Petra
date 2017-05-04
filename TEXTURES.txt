@@ -1,0 +1,15 @@
+Graphic AILPORT2, 1280, 384
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 872, -264
+	Patch AILPORT2, 0, 0
+}
+
+Graphic PETPORT2, 1280, 384
+{
+	XScale 4.000
+	YScale 4.000
+	Offset 872, -264
+	Patch PETPORT2, 0, 0
+}

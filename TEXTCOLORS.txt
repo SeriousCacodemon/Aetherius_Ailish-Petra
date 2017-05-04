@@ -1,0 +1,81 @@
+FloraBlue
+{
+	#0D161C  #439AE0//#5B8FB8
+Console:
+	#000000  #1E3241    0 127
+	#5DB8FF  #FFFFFF  128 256
+Flat:
+	#439AE0
+}
+
+AilishBlue
+{
+	#00007B  #54FCFC
+Console:
+	#000000  #00007F    0 127
+	#3D94FF  #FFFFFF  128 256
+Flat:
+	#54FCFC
+}
+
+PetraOrange
+{
+	#41261D  #FF8C63
+Console:
+	#000000  #C87251    0 127
+	#FF9368  #FFFFFF  128 256
+Flat:
+	#FF8C63
+}
+
+LightRed
+{
+    #530000  #FF0000
+Console:
+    #000000  #7F7F7F    0 127
+    #800000  #FFFFFF  128 256
+}
+
+DarkRed "Dark Red"
+{
+	#2B0000  #AF2B2B
+Console:
+	#000000  #730000    0 127
+	#800000  #FFDCDC  128 255
+Flat:
+	#800000
+}
+
+HealthLightRed
+{
+    #880000  #ff0000
+//    #530000  #FF0000
+Console:
+    #000000  #7F7F7F    0 127
+    #800000  #FFFFFF  128 256
+}
+
+HealthRed
+{
+    #440000  #cc0000
+//	#580000	 #ac0000
+//	#3F0000  #FF0000
+Console:
+	#000000  #7F0000    0 127
+	#FF0000  #FFFEFE  128 256
+Flat:
+	#FF5566
+}
+
+HealthDarkRed "Dark Red"
+{
+    #000000  #aa0000
+//	#180000	 #560000
+//	#2B0000  #AF2B2B
+Console:
+	#000000  #730000    0 127
+	#800000  #FFDCDC  128 255
+Flat:
+	#800000
+}
+

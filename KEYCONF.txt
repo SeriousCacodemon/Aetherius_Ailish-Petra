@@ -1,0 +1,6 @@
+clearplayerclasses
+addplayerclass FloraBriscoletti
+addplayerclass Ailish
+addplayerclass PetraLagerkvist
+addplayerclass IlluciaHendershot
+addplayerclass DeggarisMontegger

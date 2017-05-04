@@ -1,0 +1,255 @@
+OptionValue "OTHER_DeathMusic"
+{
+	0, "None"
+	1, "Sesame Under Watch..."
+	2, "Game Over Yeah!!"
+	3, "Thou Art Dead..."
+	4, "Press 'R' to Try Again"
+	5, "You Are Dead... Dead Dead..."
+	6, "SSSNNNNAAAAAAAKKKKKKEEEEE!!!"
+	7, "It's a sad thing that..."
+	8, "Game Over..."
+}
+
+OptionValue "StartRoyalSceptre"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "StartShockStaff"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "SerpentStaffAilish"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "AilishCounterpart"
+{
+	0, "Sudeki [DEFAULT]"
+	1, "Haskilia [Unmerged]"
+	2, "Akloria [Alexine]"
+}
+
+OptionValue "AilishArmorLevel"
+{
+	0, "Silk Dress [Level 1][DEFAULT]"
+	1, "Witch Armor [Level 2]"
+	2, "Seraphitic Armor [Level 3]"
+}
+
+OptionValue "PetraAChristinaAddonsSpawn"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PetraAChristinaBossAddonsSpawn"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PetraAChristinaPartiniasAddonSpawn"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PetraAChristinaInfinite"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PetraArcanaGaugeInfinite"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PistolRestart_AilishStaffs"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PistolRestart_PetraChristinaAddons"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PistolRestart_PetraChristinaBossAddons"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+ListMenu "PlayerclassMenu"
+{
+	IfGame(Doom, Heretic, Hexen, Strife)
+	{
+		NetgameMessage "$NEWGAME"
+	}
+	IfGame(Chex)
+	{
+		NetgameMessage "$CNEWGAME"
+	}
+
+	IfGame(Doom, Strife, Chex)
+	{
+		Selector "M_FLORA2", -28, -7
+		StaticTextCentered 160, 5, "$MNU_CHOOSECLASS"
+		Position 48, 28
+		PlayerDisplay 220, 58, "20 00 00", "80 00 40"
+		MouseWindow 0, 220
+	}
+	IfGame(Heretic)
+	{
+		Selector "M_FLORA2", -28, -7
+		StaticTextCentered 160, 0, "$MNU_CHOOSECLASS"
+		Position 80, 30
+		PlayerDisplay 220, 45, "20 00 00", "80 00 40"
+		MouseWindow 0, 220
+	}
+	IfGame(Hexen)
+	{
+		Selector "M_FLORA2", -28, -7
+		StaticText 34, 14, "$MNU_CHOOSECLASS"
+		Position 66, 28
+		PlayerDisplay 174, 8, "00 07 00", "40 53 40"
+		MouseWindow 0, 174
+	}
+	// The rest of this menu will be set up based on the actual player definitions.
+}
+
+OptionMenu "DVDS-SubMenu3"
+{
+	Title "AETHERIUS - Cheat-Like Options"
+
+	Option "HP/Mana Factor (@ Startup)", 			"dvds_starthpmanafactor", 				"StartHPManaFactor"
+	Option "Other Stats' Factor (@ Startup)", 		"dvds_startotherstatsfactor", 			"StartOtherStatsFactor"
+	TextField "Sceptre Level (@ Startup) [0-16]",	 	"dvds_sceptrestartlvl"
+	Option "Level EXP MultiX", 					"dvds_expmultiplier", 				"BaseEXPMultiplier"
+	Option "Sceptre EXP MultiX", 				"dvds_sceptreexpmultiplier", 			"SceptreEXPMultiplier"
+	Option "Level Stat Increase MultiX", 			"dvds_lvlstatmultiplier", 				"LvlStatMultiplier"
+	Option "Seed/Fygg Bonus MultiX", 				"dvds_seedmultiplier", 				"SeedMultiplier"
+	Option "Aeon Point MultiX", 				"dvds_aeonpointmultiplier", 			"AeonPointMultiplier"
+	Option "Ruinous Shield Uncurse Rate", 			"dvds_uncurserate", 					"ShieldUncurseRate"
+	StaticText " "
+	Option "Hellcore Heat MultiX", 				"dvds_heatheatmultiplier", 				"HellcoreHeatMultiplier"
+	Option "Hellcore Cool MultiX", 				"dvds_heatcoolmultiplier",				"HellcoreCoolMultiplier"
+	StaticText " "
+	Option "HP Regen MultiX", 					"dvds_healthregenmultiplier", 			"HealthRegenMultiplier"
+	Option "Mana Regen Amount MultiX", 			"dvds_manaregenmultiplier", 			"ManaRegenMultiplier"
+	Option "Mana Regen Rate MultiX", 				"dvds_manaregenratemultiplier", 			"ManaRegenRateMultiplier"
+	Option "Mana Item MultiX", 					"dvds_manaitemmultiplier", 				"ManaItemMultiplier"
+	Option "Stamina Regen MultiX", 				"dvds_staminaregenmultiplier", 			"StaminaRegenMultiplier"
+	StaticText " "
+	Option "Mana Cost MultiX", 					"dvds_manacostgmultiplier", 			"ManaCostMultiplier"
+	StaticText " "
+	Option "Tension Charge MultiX", 				"dvds_tension_chargemultiplier", 			"TensionChargeMultiplier"
+	Option "Tension Countdown MultiX", 			"dvds_tension_countdownmultiplier", 		"TensionCountdownMultiplier"
+	Option "Tension Cooldown MultiX", 				"dvds_tension_cooldownmultiplier", 		"TensionCooldownMultiplier"
+	TextField "Tension Fail Rate Ratio [%]", 			"dvds_tension_failrateratio"
+	StaticText " "
+	StaticText " "
+	TextField "Deggaris/Illucia Lvl Cap [0-200]", 		"dvds_marines_maxlevel"
+	TextField "Flora Lvl Cap [0-200]", 			"dvds_flora_maxlevel"
+	TextField "Ailish Lvl Cap [0-200]",			"dvds_ailish_maxlevel"
+	TextField "Petra Lvl Cap [0-200]",			"dvds_petra_maxlevel"
+	Option "Flora's Lvl Cap Ignores Her Armor", 		"dvds_flora_ignorearmormadelevelcap", 		"Flora_LevelCapIgnoresArmor"
+	StaticText " "
+	Option "'Power Fantasy' Mode?",				"dvds_musou_powertripmode",				"MusouOption"
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaults3"
+}
+
+OptionMenu "DVDS-SubMenu4"
+{
+	Title "AETHERIUS - Forced-Pistol-Start Options"
+
+	Option "Keep Sauron Items", 				"dvds_pistolrestart_allkeepsauronequip",	 	"PistolRestart_AllSauronItems"
+	Option "Keep Inventory Items", 				"dvds_pistolrestart_allkeepinventoryitems",	"PistolRestart_AllInventoryItems"
+	Option "Flora Keeps Sceptre", 				"dvds_pistolrestart_florakeepsceptre", 		"PistolRestart_FloraSceptre"
+	Option "Flora Keeps Armor", 				"dvds_pistolrestart_florakeeparmor", 		"PistolRestart_FloraArmor"
+	Option "Flora Keeps Hellcore Weapons", 			"dvds_pistolrestart_florakeephellcore", 		"PistolRestart_FloraHellcore"
+	Option "Flora Keeps Diaris Longbow", 			"dvds_pistolrestart_florakeepdiarisbow", 		"PistolRestart_FloraDiarisBow"
+	Option "Ailish Keeps Staffs",				"dvds_pistolrestart_ailishkeepsstaffs",			"PistolRestart_AilishStaffs"
+	Option "Petra Keeps Addons",			"dvds_pistolrestart_petrakeepschristinaaddons",		"PistolRestart_PetraChristinaAddons"
+	Option "Petra Keeps Boss-type Addons",			"dvds_pistolrestart_petrakeepschristinabossaddons",		"PistolRestart_PetraChristinaBossAddons"
+	Option "Deggaris/Illucia Keeps Weapons", 			"dvds_pistolrestart_marineskeepweapons", 		"PistolRestart_MarineWeapons"
+	Option "Deggaris/Illucia Keeps Ammo", 			"dvds_pistolrestart_marineskeepammo", 		"PistolRestart_MarineAmmo"
+	StaticText " "
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaults4"
+}
+
+OptionMenu "DVDS-AilishSpecific"
+{
+	Title "AETHERIUS - AILISH SPECIFIC OPTIONS"
+
+	Option "Starts w/ Scepter? [all games]",			"dvds_ailishstartroyalsceptre",			"StartRoyalSceptre"
+	Option "Starts w/ Shockstaff? [all games]",		"dvds_ailishstartshockstaff",			"StartShockStaff"
+	Option "Starts w/ Serpent Staff? [Hexen]",			"dvds_ailishstartserpentstaff",			"SerpentStaffAilish"
+//	Option "Hexen Weapons use MP instead of Mana",			"dvds_ailishusesmagichexen",			"HexenWeaponsMagic"
+	StaticText " "
+	Option "Ailish Counterpart?",			"dvds_ailishcounterpart",		"AilishCounterpart"
+	Option "Starting Armor Level?",			"dvds_ailisharmorlevel",		"AilishArmorLevel"
+	StaticText " "
+	Command "Restore Default Settings",			"dvds_defaultsailish"
+}
+
+OptionMenu "DVDS-PetraSpecific"
+{
+	Title "AETHERIUS - PETRA SPECIFIC OPTIONS"
+	
+	StaticText "A. Christina Options"
+	Option "Don't spawn Addons?",			"dvds_petrachristinaaddonspawn",		"PetraAChristinaAddonsSpawn"
+	Option "Don't spawn Boss Addons?",			"dvds_petrachristinabossaddonspawn",		"PetraAChristinaBossAddonsSpawn"
+	Option "Don't spawn Partinias shot Addon?",		"dvds_petrachristinapartiniasaddonspawn",		"PetraAChristinaPartiniasAddonSpawn"
+	Option "Infinite Ether Stock?",				"dvds_petrachristinainfinite",			"PetraAChristinaInfinite"
+	StaticText " "
+	StaticText "Zillael-related Options"
+	Option "Infinite Force Gauge?",				"dvds_petraarcanagaugeinfinite",		"PetraArcanaGaugeInfinite"
+}
+
+OptionMenu "DVDSOptions"
+{
+	Title "AETHERIUS - MAIN OPTIONS"
+
+	SubMenu "Special Game Options",			"DVDS-SubMenu1"
+	SubMenu "Optimization & Visual Options",		"DVDS-SubMenu2"
+	SubMenu "Cheat-Like Options",			"DVDS-SubMenu3"
+	SubMenu "Forced-Pistol-Start Options",		"DVDS-SubMenu4"
+	SubMenu "EXP & Combo System Options",		"DVDS-SubMenu5"
+	SubMenu "Monster Stat Calculation Options",	"DVDS-SubMenu6"
+	SubMenu "Monster Randomizer Options",		"DVDSRandomizer"
+	StaticText " "
+	SubMenu "Misc Options",				"DVDS-Other1"
+	SubMenu "HUD Options",				"DVDS-HUDStuff"
+	SubMenu "Voices/Dialouge",				"DVDS-Voices"
+	StaticText " "
+	SubMenu "Flora Specfic Options",			"DVDS-FloraSpecfic"
+	SubMenu "Ailish Specific Options",		"DVDS-AilishSpecific"
+	SubMenu "Petra Specific Options",		"DVDS-PetraSpecific"
+	SubMenu "Perks/AeonPts Options",			"DVDS-PerksAeonPts"
+	StaticText " "
+	StaticText " "
+	SubMenu "Debugging Options",				"DVDS-DebugMenu1"
+	StaticText " "
+	StaticText " "
+	SubMenu "Compatability with other Mods",			"DVDS-MiscModCompat1"
+	StaticText " "
+	Option "Fast Monsters", 					"sv_fastmonsters", 					"OnOff"
+	Option "Enhanced Night-Vision Mode", 			"gl_enhanced_nightvision", 				"OnOff"
+	Option "Allow jump",						"sv_jump", 						"JumpCrouchFreeLook"
+	Option "Allow crouch",					"sv_crouch", 						"JumpCrouchFreeLook"
+	Option "Allow freelook",					"sv_freelook", 					"JumpCrouchFreeLook"
+}

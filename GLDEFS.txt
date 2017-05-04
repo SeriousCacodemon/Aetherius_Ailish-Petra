@@ -1,0 +1,10 @@
+Pointlight AChristinaGlow
+{
+Color 0.26 1.0 1.0
+Size 24
+}
+
+Object AChristina
+{
+Frame VUPPA { Light AChristinaGlow }
+}

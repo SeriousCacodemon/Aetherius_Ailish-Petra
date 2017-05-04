@@ -1,0 +1,73 @@
+//Ailish Sounds
+
+//Serpent Staff
+ClericCStaffFire        spell1
+ClericCStaffExplode     glbhit4
+ClericCStaffHitThing    vamp5
+
+PetraPain11		PETRPN11
+PetraPain12		PETRPN12
+PetraPain13		PETRPN13
+$random PetraPainSet1 { PetraPain11 PetraPain12 PetraPain13 }
+
+PetraPain21		PETRPN21
+PetraPain22		PETRPN22
+PetraPain23		PETRPN23
+$random PetraPainSet2 { PetraPain21 PetraPain22 PetraPain23 }
+
+PetraPain31		PETRPN31
+PetraPain32		PETRPN32
+PetraPain33		PETRPN33
+$random PetraPainSet3 { PetraPain31 PetraPain32 PetraPain33 }
+
+PetraDash1		PETRAM5
+PetraDash2		PETRAM6
+PetraDash3		PETRAM8
+$random PetraDash { PetraDash1 PetraDash2 PetraDash3 }
+
+PetraAttack1	PETRAM1
+PetraAttack2	PETRAM2
+PetraAttack3	PETRAM3
+PetraAttack4	PETRAM4
+PetraAttack5	PETRAM5
+PetraAttack6	PETRAM6
+PetraAttack7	PETRAM7
+PetraAttack8	PETRAM8
+PetraAttack9	PETRAM9
+
+$random PetraLightAttack { PetraAttack1 PetraAttack2 PetraAttack3 }
+$random PetraMediumAttack { PetraAttack4 PetraAttack5 PetraAttack6 }
+$random PetraHeavyAttack { PetraAttack7 PetraAttack8 PetraAttack9 }
+
+PetraLeveledUp		PETLEVL
+
+// Sounds for Petra player
+$playersound	PetraSND	male	*death		PETRADTH
+$playersound	PetraSND	male	*xdeath		PETRCDTH
+$playersound	PetraSND	male	*wimpydeath		PETRWDTH
+$playersound	PetraSND	male	*crazydeath		PETRCDTH
+$playersound	PetraSND	male	*burndeath		PETRCDTH
+$playeralias	PetraSND	male	*splat		PETRCDTH
+$playeralias	PetraSND	male	*gibbed		PETRCDTH
+$playeralias	PetraSND	male	*pain100	PetraPainSet1
+$playeralias	PetraSND	male	*pain75		PetraPainSet2
+$playeralias	PetraSND	male	*pain50		PetraPainSet2
+$playeralias	PetraSND	male	*pain25		PetraPainSet3
+$playersound	PetraSND	male	*grunt		PETRAM3
+$playersound	PetraSND	male	*land		PETRAOOF
+$playersound	PetraSND	male	*usefail	PETRANOW
+$playersound	PetraSND	male	*falling	DQFALLIN
+$playersound	PetraSND	male	*jump		PETRJUMP
+//$playeralias	PetraSND	male	*puzzfail	FloraPuzzleFail
+$playersound	PetraSND	male	*evillaugh	PETRADGE
+$playersound	PetraSND	male	*weaponlaugh	PETRADGE
+$playersound	PetraSND	male	*dive		null
+$playersound	PetraSND	male	*surface	null
+$playersound	PetraSND	male	*gasp		null
+$playersound	PetraSND	male	*poison	null
+
+AChristina/Shoot1   AH3CHRF
+AChristina/Shoot2   AH3CHRF3
+AChristina/LongRangeShoot   AH3CHRF2
+
+GetCelestialStone	AHCSTONE

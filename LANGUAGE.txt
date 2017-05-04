@@ -1,0 +1,784 @@
+[enu default]
+
+MNU_CHOOSECLASS		= "SELECT YOUR CHARACTER:";
+MNU_CHOOSESKILL		= "CHOOSE DIFFICULTY LEVEL:";
+
+// First the self-kills, then the other-kills
+OB_SUICIDE = "%o gave up on life.";
+OB_FALLING = "%o suddenly stopped at the end.";
+OB_CRUSH = "%o got pressed for time.";
+OB_EXIT = "%o flipped the no-no switch.";
+OB_WATER = "%o forgot water isn't for breathing.";
+OB_SLIME = "%o became positively radiant.";
+OB_LAVA = "%o got the mother of all hotfoots.";
+OB_BARREL = "%o shot a barrel.";
+OB_SPLASH = "%o splashed some damage.";
+OB_R_SPLASH = "%o tried to star in an action flick.";
+OB_ROCKET = "%o remembered too late that rockets aren't food.";
+OB_KILLEDSELF = "%o ceased to exist.";
+OB_HELLCORE = "%o overheated trying to harness the power of Hellcore."
+
+QUITMSG1 = "\cnIt might look bleak now, but if you give up, the demons win and Earth is truly lost!";
+QUITMSG2 = "\cqWhat the hell do you think you're doing?! You're not giving up on Earth now, are you?!";
+QUITMSG3 = "\caWhat's wrong, young mortal?\n\caToo much for you to handle?!\n\ca*cackle*";
+QUITMSG4 = "\caSure, go ahead and flee, weakling!\n\caYour fleeing means the universe\n\caitself will soon belong to us!";
+QUITMSG5 = "\ctYou can run, but you can't hide from the Hellstar's omnipresense!";
+QUITMSG6 = "\cdSauron is out there somewhere,\n\cdwe can't stop until we've crushed him!";
+QUITMSG7 = "\c[FloraBlue]It might look bleak now, but if you give up, the demons win and Earth is truly lost!";
+QUITMSG8 = "\cqWhat the hell do you think you're doing?! You're not giving up on Earth now, are you?!";
+QUITMSG9 = "\caWhat's wrong, young mortal?\n\caToo much for you to handle?!\n\ca*cackle*";
+QUITMSG10 = "\caSure, go ahead and flee, weakling!\n\caYour fleeing means the universe\n\caitself will soon belong to us!";
+QUITMSG11 = "\ctYou can run, but you can't hide from the Hellstar's omnipresense!";
+QUITMSG12 = "\cdSauron is out there somewhere,\n\cdwe can't stop until we've crushed him!";
+QUITMSG13 = "\ctIt is wise for you to flee, mortal human. I would crush you into atoms in the beat of your heart!";
+QUITMSG14 = "\ctIt is wise for you to flee, mortal human. I would crush you into atoms in the beat of your heart!";
+QUITMSG15 = "\c[AilishBlue]seriously?  you're gonna just abandon us like that?  what would Tetsu think if he found out you just ran off?!";
+QUITMSG16 = "\c[AilishBlue]don't leave us!  this universe is still in peril and we need your help!";
+QUITMSG17 = "\c[PetraOrange]Quitting at this point makes me disappointed in you.  The others would think so too, perhaps even worse.";
+QUITMSG18 = "\c[PetraOrange]The word 'defeat' does not exist in the Lagerkvist dictionary.  I trust that you understand that?";
+
+// Doom 1
+
+//  "                                             \n"
+//  Up to 20 lines. :V
+E1TEXT =
+	"What in the name of the Goddess is going on?!\n"
+	"As your vision fades into black from the chaos\n"
+	"around you, you reflect that you're once again\n"
+	"facing the hellspawn demons, but they seem to\n"
+	"not recognize you as their past enemy turned\n"
+	"HaSatan.\n"
+    "\n"
+	"You think about all of the technology you saw\n"
+	"around you in the past few locations, and the\n"
+	"weird landscape outdoors, almost as if it's\n"
+	"not either Zendarian or Earth, but another\n"
+	"world.\n"
+    "\n"
+	"Wait a second... Xenos... he did this, didn't\n"
+	"he?! He sent you into the distant past, the\n"
+	"'Doom War' he was involved in over 150 years\n"
+	"ago! And this must be one of the famous\n"
+	"theatres where the war took place: Phobos.\n"
+    "\n"
+	"However, as you regain consciousness, a feel-\n"
+	"ing of familiarity flashes through your heart.\n"
+	"Hell. You feel it's pulse, it's aura. You're\n"
+	"not on Phobos anymore, either. That's for sure...";
+	
+E2TEXT =
+	"As the Cyberdemon lord's body explodes, you\n"
+	"giggle lightly to yourself. This was the first\n"
+	"one you've met since being sent into the past.\n"
+	"Hell must've still been trying to mass create\n"
+	"them at this point in history. ~160 years is a\n"
+	"lot of time for them to churn out those guys,\n"
+	"after all.\n"
+	"\n"
+	"However, you know where you were: Deimos, the\n"
+	"2nd theatre of the 'Doom Wars', and you know\n"
+	"even as you walk to the edge of the Tower of\n"
+	"Babel, what awaits below...\n"
+	"\n"
+	"Hell, the REAL thing this time, and not a middle\n"
+	"realm. You look over the landscape and notice\n"
+	"this is NOT a part of Hell you've really seen\n"
+	"before, but somewhere down there, Xenos' past\n"
+	"self, Baphomet, and the other 12 gatekeepers are\n"
+	"likely aware of your existence by now, and who\n"
+	"can know their next moves?\n"
+	"\n"
+	"You take a deep breath and dive feet first into\n"
+	"the infernal realm, yet once again...";
+	
+E3TEXT =
+	"The first Spider Mastermind, still just as\n"
+	"chaotic a foe as any other you've faced...\n"
+	"Your history lessons from the UAC mentioned it\n"
+	"was the 'leader' of the invasion, or at least\n"
+	"that was likely the job Baphomet and his ilk\n"
+	"had assigned it to...\n"
+	"\n"
+	"Noticing a gateway opening up nearby, you also\n"
+	"remember the original heroic marine of the war\n"
+	"used a similar gate to escape Hell and back to\n"
+	"Earth. However that Earth was already under siege\n"
+	"by Hell, having attacked it at the same time as\n"
+	"Mars and its' moons...\n"
+	"\n"
+	"You also realized by now, you've all but filled\n"
+	"the shoes of Cpl. Taggart, the fateful hero of\n"
+	"the 'Doom Wars', so it seems you're going to need\n"
+	"to continue this for a while... Just what in the\n"
+	"universe is present!Xenos trying to do here? Is\n"
+	"this some kind of history lesson he's trying to\n"
+	"teach you?\n"
+	"\n"
+	"You certainly don't find this very enlightening...";
+
+E4TEXT =
+	"Another Mastermind and a couple more Cyber-\n"
+	"demons vanquished...\n"
+	"\n"
+	"A lot of the events of this recent quest were\n"
+	"not known to you or most of the UAC, as Cpl.\n"
+	"Taggart had decided to withhold that informa-\n"
+	"tion from most of the general public...\n"
+	"\n"
+	"However, upon your arrival on Earth, you had\n"
+	"noticed the gruesome site of a rabbit's head\n"
+	"skewered on a pike, and you saw a name with it:\n"
+	"Daisy. Taggart had been mention to have a pet\n"
+	"rabbit with that name. You sigh, the poor guy\n"
+	"probably suffered in silence over the bunny...\n"
+	"\n"
+	"Still, you remember even in the wake of this\n"
+	"Mastermind's death, the 'Doom Wars' continue\n"
+	"on Earth, and even more death and destruction\n"
+	"is in store. Xenos' seems intent on keeping\n"
+	"you here for this personal delve into Hell\n"
+	"and Earth's bloody history.\n"
+	"\n"
+	"Time to try and save Earth yet again...";
+	
+// Doom 2
+
+C1TEXT =
+	"Your anger simmers. Upon arriving at the Star-\n"
+	"port proper, you felt your powers disipate and\n"
+	"weaken AGAIN, starting you from square one once\n"
+	"more...\n"
+	"\n"
+	"You wonder why Xenos thought THAT was necessary?\n"
+	"It was bad enough to have your powers reset when\n"
+	"he dumped you on Phobos, and now you have to do\n"
+	"this again.\n"
+	"\n"
+	"Regaining your focus, you remembered info that\n"
+	"the marine hero of the war had come to this star\n"
+	"port to disable a hellish forcefield that was\n"
+	"preventing the first of the 'Starport Exodus' ships\n"
+	"filled with most of Earth's surviving human pop-\n"
+	"ulation from escaping into space. Now it's up\n"
+	"to you to do it in his place...\n"
+	"\n"
+	"Being Earth's unwitting heroine in your own time\n"
+	"was taxing enough, but now you might end up being\n"
+	"the planet's heroine 160 years before you should\n"
+	"be. Hope you're ready for those demons... because\n"
+	"Baphomet and the gatekeepers are waiting for you.";
+
+C2TEXT =
+	"You sigh in relief, flipping the forcefield's\n"
+	"shutdown switch. The Starport Exodus ship then\n"
+	"is seen quickly escaping into space...\n"
+	"\n"
+	"You sit down and take a quick rest, when you\n"
+	"suddenly hear a familiar voice. XENOS. Your\n"
+	"version of him from your time.\n"
+	"\n"
+	"Your telepathic conversation reveals he had\n"
+	"to contact you since you don't have access\n"
+	"to UAC's communication grid. He tells you that\n"
+	"you must go to the heart of a nearby city\n"
+	"where the source portal for the hellish inv-\n"
+	"asion is located, and that you might be able\n"
+	"to shut it down there.\n"
+	"\n"
+	"Deciding to postphone chewing him out about\n"
+	"this until later, you tell him you'll head\n"
+	"there but that he needs to start explaining\n"
+	"his intent for you in all of this VERY soon.\n"
+	"\n"
+	"He merely says that you can still trust him...\n"
+	"You say that you'll have yet to see of that...";
+
+C3TEXT =
+	"During your gallavant through the city, you and\n"
+	"Xenos have discussed the purpose of this 'history\n"
+	"lesson'.\n"
+	"\n"
+	"He claims he himself had been put through a\n"
+	"similar lesson during his original gatekeeper's\n"
+	"training, in order to be prepared for anything\n"
+	"Hell or their enemies would throw at him.\n"
+	"\n"
+	"He felt you needed to have an up close and per-\n"
+	"sonal experience to what the 'Doom Wars' entailed\n"
+	"and that all of your powers being reset was a\n"
+	"temporary condition of this 'quest' and that\n"
+	"once you achieved victory, you would return to\n"
+	"the present, and your powers as they were then.\n"
+	"\n"
+	"He explains for now though, you must reenter\n"
+	"Hell yet AGAIN, now in order to stop Baphomet\n"
+	"himself, as Cpl. Taggart had to in the original\n"
+	"timeline. He also warns you to be weary, in\n"
+	"case his past self were to intervene... And\n"
+	"as you fall back into the infernal abyss, you\n"
+	"can only wonder what he meant by that...";
+
+C4TEXT =
+	"As Baphomet's image collapses inward, you feel\n"
+	"a strange presense almost becoming extinguished.\n"
+	"\n"
+	"Your senses felt this presense as familiar to\n"
+	"Xenos... his self from this timeline. He and\n"
+	"the other 12 gatekeepers must've tried to make\n"
+	"a final rush at you from beyond the veil to\n"
+	"defend Baphomet, but did so just a bit too\n"
+	"late... You only feel his faint aura, and that\n"
+	"of one other gatekeeper.\n"
+	"\n"
+	"Xenos, YOUR Xenos, explains that this was also\n"
+	"the event that caused Hell's control to shift\n"
+	"from that of Lucifer's, to HIS... You know who\n"
+	"he means... SAURON. This was when he capitalized\n"
+	"on Lucifer's weakening from the death of Bapho-\n"
+	"met, setting the chain of events in motion...\n"
+	"that 150 years later led to YOUR 1ST and origin-\n"
+	"al journey to defeat him, rescue Andy, and save\n"
+	"Earth from Hell again...\n"
+	"\n"
+	"However in an instant, you feel yourself black-\n"
+	"out... as YOUR Xenos gives a cry of surprise...";
+
+C5TEXT =
+	"Curiously, you stumble into the weird teleport-\n"
+	"er, and finding yourself in a large room with the\n"
+	"strangest looking blue walls you ever saw.\n"
+	"\n"
+	"Xenos explains that you've found a hidden fort-\n"
+	"ress in Hell, built mostly by HUMANS, not demons.\n"
+	"Wondering what humans were foolish enough to do\n"
+	"this, he responds to explain of a troublesome,\n"
+	"genocidal group from over 200 years before the\n"
+	"'Doom War', known as the '3rd Reich'.\n"
+	"\n"
+	"He explains though that these humans were fair-\n"
+	"ly stupid and you should have no problem dealing\n"
+	"with them...\n"
+	"\n"
+	"Yeah, you'll see about that... you guess...\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"";
+
+C6TEXT =
+	"Xenos chuckles at you nervously. Appearantly he\n"
+	"was just a LITTLE off about those 'Nazi' guys\n"
+	"being no threat. Man those guys were gung ho\n"
+	"with trying to kill you, and the Pinkies they\n"
+	"had littered around where more than happy to\n"
+	"assist them.\n"
+	"\n"
+	"Now you only wonder what's waiting for you in\n"
+	"this red-bricked madhouse.\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"";
+
+// Plutonia
+P1TEXT =
+	"For the last few hours, Xenos has been freaking\n"
+	"out over his appearant lack of ability to pull\n"
+	"you back to the present after your climatic bat-\n"
+	"tle with Baphomet, as your powers once again have\n"
+	"been reset to square one...\n"
+	"\n"
+	"Though you know him to have something of a trick-\n"
+	"ster mentality, you can tell this time he's not\n"
+	"lying, and is legitimatly perplexed about all of\n"
+	"this...\n"
+	"\n"
+	"...until you defeated that 'guardian' and the\n"
+	"'Accelerator' it referenced. Then you realize\n"
+	"something. This device resembles the 'Quantum\n"
+	"Accelerator' devices from Earth in the present,\n"
+	"the same devices used to create an anti Hellgate\n"
+	"network around Earth to shield them from wider\n"
+	"scale Hell invasions via super-portals...\n"
+	"\n"
+	"Xenos also thinks he's come to a realization,\n"
+	"but he tells you he wants to be sure of his\n"
+	"guess before he goes into more detail, and you\n"
+	"sigh dejectedly as you once again set out...";
+
+P2TEXT =
+	"Well! That Arch-Vile mazes was a real hoot,\n"
+	"wasn't it? Still you survived and you've app-\n"
+	"earantly found the prototype Quantum Acceler\n"
+	"ator... Which you prompty deactivate.\n"
+	"\n"
+	"Xenos also has explained that in all of this,\n"
+	"he believes his past self, the one from this\n"
+	"time, is responsible for keeping you in this\n"
+	"'simulation' of history, using his powers to\n"
+	"try for revenge against his master's slayer...\n"
+	"\n"
+	"In other words, you're now on a crash course\n"
+	"to battle Past!Xenos, the demon gatekeeper who\n"
+	"in the present becomes your trickster major\n"
+	"-domo-slash-'friend'.\n"
+	"\n"
+	"Xenos also explains his past self is likely a\n"
+	"fair deal stronger than he is currently, due\n"
+	"to the whole 'reincarnation after his first\n"
+	"death' thing. Wonderful! Simply wonderful!!\n"
+	"\n"
+	"Oi, you can only dreadful anticipate the in-\n"
+	"evitable showdown to come as you move forward...";
+
+P3TEXT =
+	"As your fight against the abyss continues, Xenos\n"
+	"has informed you more on this point in history...\n"
+	"His past self, and the other surviving gatekeeper\n"
+	"from the Baphomet fight had fought to decide whose\n"
+	"plan would be brought to fruition, and Xenos was\n"
+	"the victor, at the cost of his surviving brother's\n"
+	"life in combat.\n"
+	"\n"
+	"Past!Xenos plan is to manipulate the prototype\n"
+	"quantum accelerators to keep portals to Hell open\n"
+	"permenantly on Earth and to take revenge against\n"
+	"the one who destroyed his master... Who is now\n"
+	"YOU instead of the original marine hero.\n"
+	"\n"
+	"Xenos also tells you that battling his past self\n"
+	"might not end up as harrowing as he once thought,\n"
+	"as he recalled taking the form of a 'brain-\n"
+	"spitter', the same kind of creature Baphomet\n"
+	"took the form of in the climatic battle, and a\n"
+	"similar strategy should ultimately suffice...\n"
+	"\n"
+	"That's good to hear. Hopefully he's not lying\n"
+	"or off about this, as you push on back into Hell.";
+
+P4TEXT =
+	"With his death throes, Past!Xenos shrivels away\n"
+	"into non-existance, and the shards of the final\n"
+	"prototype accelerator go with him. Earth is safe\n"
+	"once again, and Present!Xenos realizes he can\n"
+	"take you back home to the present, and does so\n"
+	"quickly, returning you to your time, and your\n"
+	"full powers. Good to be home and back to normal\n"
+	"again!\n"
+	"\n"
+	"Xenos laments his past self, reflecting on how\n"
+	"little he had truly known of Hell and it's real\n"
+	"nature and scope back then. Baphomet had kept\n"
+	"him and his 12 brothers into the dark of the ex-\n"
+	"istance of Lucifer, and a vast majority of the\n"
+	"abyss itself. 13 smaller tools to assist one\n"
+	"larger tool to a former HaSatan, etc...\n"
+	"\n"
+	"After a stern talk with Xenos, he agrees to at\n"
+	"least ask for your permission before sending\n"
+	"you off into any more of these 'history less-\n"
+	"ons', and you suppose it's the best you're\n"
+	"gonna get from the guy for now. Ruling Hell is\n"
+	"still not your TRUE job in the end anyways...";
+
+P5TEXT =
+	"Looks like Past!Xenos laid a little trap you\n"
+	"blundered into in the form of this Cyberdemon\n"
+	"filled detour. You gird yourself, hoping that\n"
+	"your still-not-full-power is still efficient\n"
+	"enough to deal with these guys...\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"";
+
+P6TEXT =
+	"Unfortunately, your 'detour' isn't yet finished\n"
+	"as you find yourself in a place vaugely familiar,\n"
+	"yet not. This place reminds you of the entrance\n"
+	"of that Star Port on Earth, but you feel Hell's\n"
+	"presense in VAST numbers here, numbers starting\n"
+	"to border the amount you had to deal with during\n"
+	"your first ever quest to stop these guys when\n"
+	"Sauron commanded them.\n"
+	"\n"
+	"Past!Xenos might not know WHO you are, or where\n"
+	"you really come from, but he must be getting\n"
+	"real nervous at this point to throw such a large\n"
+	"force your way...\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"";
+
+// TNT
+
+T1TEXT =
+	"As you escape those labs behind you, you recall\n"
+	"Xenos' shock at being unable to pull you back to\n"
+	"the present after Baphomet's death, even as you\n"
+	"had your powers reset once again...\n"
+	"\n"
+	"He explains that what you've ended up in is very\n"
+	"different to how things should've gone. His past\n"
+	"self and a surviving gatekeeper had conceived\n"
+	"plans of revenge against Earth, and that they\n"
+	"fought honorably to establish whose plan would\n"
+	"be used, with the loser dying in addition.\n"
+	"\n"
+	"In the original timeline, Xenos had won that\n"
+	"battle, but he realizes in THIS timeline, his\n"
+	"surviving brother somehow turned the tables\n"
+	"and won, and now you must deal with this, a\n"
+	"shift in the timeline that Xeno has absolutely\n"
+	"no idea what to prepare you for.\n"
+	"\n"
+	"That and a gatekeeper whose personality you have\n"
+	"no understanding of. This is just the thing you\n"
+	"wanted to hear, wasn't it?? You sigh and press\n"
+	"forward to find this new gatekeeper quickly...";
+
+T2TEXT =
+	"Hearing the stamping of heavy machinery ahead,\n"
+	"you realize Xenos' brother is not taking your\n"
+	"presense lightly. He's planning a blood feast\n"
+	"on you and Earth, but after everything you've\n"
+	"gone through, even your legendary patience is\n"
+	"being stretched VERY thin.\n"
+	"\n"
+	"The 'Evilution'. Xeno explains that it is a\n"
+	"sort of Hellish starship that seems to be in\n"
+	"orbit around the planet Jupiter and it's moon\n"
+	"Io. It was the hallmark of his brother's orig-\n"
+	"inal plan, and now it's finally seeing use on\n"
+	"the planes of your own reality.\n"
+	"\n"
+	"You realize it's time to stop playing totally\n"
+	"nice and jack up the pressure on Hell and Xenos'\n"
+	"brother, and sail on forward into battle once\n"
+	"more...\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"";
+
+T3TEXT =
+	"Well then! Of course the 'Evilution' would've\n"
+	"held a major portal to the abyss within it. You\n"
+	"sigh dejectedly. You've gotten pretty tired of\n"
+	"putting up with Hell's temper tantrums. Yeah,\n"
+	"you had to put down Baphomet. He was evil, he\n"
+	"was wrecking Earth and certainly would've wreck-\n"
+	"ed other worlds had he been given a chance...\n"
+	"\n"
+	"Xenos then chimes in, having been trying to\n"
+	"learn more about the real intentions of his\n"
+	"brother gatekeeper. Xenos laments that said\n"
+	"brother seems to be taking a similar path to\n"
+	"Baphomet and has converted himself into a\n"
+	"'demon-spitter', similar to the large skull\n"
+	"like thing you saw Baphomet as back on Earth.\n"
+	"\n"
+	"Xenos believes a similar strategy will suff-\n"
+	"ice in dealing with his brother, but you can\n"
+	"only wonder if it'll really be that easy.\n"
+	"\n"
+	"Scrunching your nose at the unpleasant odor\n"
+	"of sulfur ahead, you jump back into Hell for\n"
+	"the THIRD time, intent on finishing it for good.";
+
+T4TEXT =
+	"With one final ear-rending scream, Xenos' bro-\n"
+	"ther erupts into a cataclysm vortex of bloody\n"
+	"aether and then all is silent. The hellspawn\n"
+	"and their many corpses vanish around you...\n"
+	"\n"
+	"Xenos chimes in, telling to prepare to be\n"
+	"taken back, and with a blue flash of light,\n"
+	"you find yourself home and at your full powers\n"
+	"again. Appearnatly Andy and the kids are out\n"
+	"at the moment too, as you settle in...\n"
+	"\n"
+	"That's just fine with you. You need time to\n"
+	"reflect on this out-of-control 'history le-\n"
+	"son' of Xenos'. He contacts you immediately,\n"
+	"giving a sort of meek apology for that final\n"
+	"stretch of things where he had lost control.\n"
+	"\n"
+	"After a lengthy discussion with your 'major-\n"
+	"domo'-slash-'friend', he agrees to inform you\n"
+	"when he wants to do this kind of thing and to\n"
+	"ask your permission first. You suppose it's\n"
+	"the best you're gonna get from your 'trickster'\n"
+	"of a friend from Hell on this subject...";
+
+T5TEXT =
+	"Woah! This place feels vaugely familiar... like\n"
+	"Halmunpatra on Earth during your original quest\n"
+	"to rescue Andy and defeat Sauron. It's not the\n"
+	"same region of Egypt, but the architechture is\n"
+	"definately similar.\n"
+	"\n"
+	"It might not be the Desert Temple, but a tomb\n"
+	"is still a tomb, and those usually have some\n"
+	"nasty things waiting about. Be careful.\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"\n"
+	"";
+
+T6TEXT =
+	"What the?? Well, this place is definately a far\n"
+	"cry from what you've been seeing lately. You\n"
+	"almost think it were possible to take a vaction\n"
+	"of some kind in this Carribean paradise...\n"
+	"\n"
+	"Sadly the sounds of a Cyberdemon's iron hooves\n"
+
+	"alert you that this isn't the vacation spot you\n"
+	"thought it was.\n"
+	"\n"
+	"Of course, you understand that Hell doesn't give\n"
+	"any cares as to WHAT or WHERE it attacks as long\n"
+
+	"as there's blood and gore to be consumed in the\n"
+	"process. They are dead set and determined to get\n"
+	"Earth, and you as well, back for the death of\n"
+	"Baphomet.\n"
+	"\n"
+
+	"Well, maybe you can at least clean this small\n"
+	"part of Earth out of demonic influence, for a\n"
+	"little while...\n"
+	"\n"
+	"Maybe even take in some sights and make a note\n"
+
+	"to visit this place when you get back home to\n"
+	"your own time and universe...";
+
+// Heretic dialouge                            ||
+HE1TEXT =
+	"Those iron skull creatures back there were\n"
+	"pretty scary looking, considering you've\n"
+	"had your powers reduced after you were sent\n"
+	"back to this freakish realm...\n"
+	"\n"
+	"Speaking of such place... it looked a lot\n"
+	"like a large city having fallen into ruin,\n"
+	"with all those gargoyles, stone golems,\n"
+	"those skeletal warriors and those creepy,\n"
+	"droning wizards...\n"
+	"\n"
+	"There's one thing that looked sort of fami-\n"
+	"lar to you... that trident symbol... it seem-\n"
+	"ed like something you recall from recent\n"
+	"events... In particular, the wizards you've\n"
+	"been fighting wore robes with the symbol\n"
+    "embedded on them...\n"
+	"\n"
+	"These monsters wouldn't happen to work for\n"
+	"those 'Serpent Riders' you and your friends\n"
+	"faced a couple of years ago, are they? You\n"
+	"don't remember seeing most of these...\n"
+	"\n"
+	"However you suddenly find yourself in a new\n"
+	"realm which feels way too familar to you...";
+HE2TEXT =
+	"'Hell's Maw' indeed! It certainly felt like a\n"
+	"taste of Hell, with those Maulotaurs back\n"
+	"there! You certainly DO remember them from\n"
+	"your battles with the Serpent Riders. Appe-\n"
+	"arantly D'Sparil, weakest of the Riders, is\n"
+	"the one behind all of this...\n"
+	"\n"
+	"The portals guarded by those Maulotaurs seem\n"
+	"to have led you to yet another place, but it\n"
+	"feels like the energies of the world you were\n"
+	"in before, but deeper into the earth...\n"
+	"\n"
+	"It looks like this might be D'Sparil's hide-\n"
+	"out, and this must be a world he once conq-\n"
+	"uered and you've been sent back in time, so\n"
+	"it looks like you need to take care of the\n"
+	"the robed bastard one more time...\n"
+	"\n"
+	"Time to get your weapons ready, girl... and\n"
+	"kick some Serpent Rider butt. Maybe get back\n"
+	"home to your own time too... that'd be nice...\n";
+HE3TEXT =
+	"Well, that's that... D'Sparil falls after a\n"
+	"long battle. Unfortunately, you don't think\n"
+	"it's over after that CURSE he uttered out\n"
+	"in his death throes.\n"
+	"\n"
+	"Sadly, after quickly rushing through the exit\n"
+	"portal, you find yourself not home, but now in\n"
+	"another new dimension.\n"
+	"\n"
+	"No contact with Xenos either... at this point\n"
+	"you're still on your own. You just have to keep\n"
+	"pressing on so you can get home or he gets in\n"
+	"contact with you.\n"
+	"\n"
+	"Still, you have to wonder what D'Sparil left\n"
+	"in these dimensions to send you here with\n"
+	"that odd curse of his... Maybe you'll solve\n"
+	"some riddles to help you clean up the Serpent\n"
+	"Riders' mess in your own time as well...\n"
+	"";
+HE4TEXT =
+	"As the army of iron liches fall, you sigh in\n"
+	"annoyance at the length of your current trek\n"
+	"across this unknown dimension...\n"
+	"\n"
+	"Suddenly, Xenos finally calls out and makes\n"
+	"contact with you, telling you that as you\n"
+	"already guessed, you were sent long into the\n"
+	"past, to the time of D'Sparil's attack on the\n"
+	"world of Parthoris, and that you're about to\n"
+	"step through into D'Sparil's Demense...\n"
+	"\n"
+	"Asking Xenos if he can just get you back home\n"
+	"you find out that's not possible, and that\n"
+	"the answer might be found further in. In other\n"
+	"words, more fighting through these endless\n"
+	"dimensions, you guess.\n"
+	"\n"
+	"Wondering what D'Sparil's bodyguards think of\n"
+	"your actions back on Parthoris, you expect\n"
+	"the heaviest of hostility and hope it'll\n"
+	"finally come to a close in this realm... one\n"
+	"way or another...";
+HE5TEXT =
+	"EIGHT... eight flapping Maulotaurs! Though not\n"
+	"as dangerous as facing D'Sparil was, he certain-\n"
+	"ly had built one hell of an army in his home\n"
+	"dimension...\n"
+	"\n"
+	"But it's finally over. The portals they had\n"
+	"been guarding, you feel the flow of your own\n"
+	"world, your own time. Zendaria and the present\n"
+	"await on the other side, and you quickly run\n"
+	"into one of the portals.\n"
+	"\n"
+	"On the other side, you find yourself back in\n"
+	"Mosterferrato, your hometown, and all seems\n"
+	"right in the world again... Even your full\n"
+	"powers seem to have returned with you...\n"
+	"\n"
+	"However, you know those dimensions still exist\n"
+	"here in the present, and you can only wonder\n"
+	"if the situation in those realms have improved...\n"
+	"or else...\n"
+	"\n"
+	"Well, you can look into that some other time,\n"
+	"you need that rest and relaxation right now...";
+
+// Strife Dialouges
+
+// Random dialogs
+
+TXT_RANDOM_PEASANT_01 = "Please don't hurt me.";
+TXT_RANDOM_PEASANT_02 = "You have kind eyes, but someone like you needs to stay away from this place.";
+TXT_RANDOM_PEASANT_03 = "I don't know anything. I swear!";
+TXT_RANDOM_PEASANT_04 = "Go away or I'll call the guards!";
+TXT_RANDOM_PEASANT_05 = "I wish sometimes that all these rebels would just learn their place and stop this nonsense.";
+TXT_RANDOM_PEASANT_06 = "Just leave me alone, OK?";
+TXT_RANDOM_PEASANT_07 = "I'm not sure, but sometimes I think that I know some of the acolytes.";
+TXT_RANDOM_PEASANT_08 = "The order's got everything around here pretty well locked up tight.";
+TXT_RANDOM_PEASANT_09 = "A w-woman walking free?! I don't know why the acolytes haven't come after you yet!";
+TXT_RANDOM_PEASANT_10 = "I've heard that the order is really nervous about the front's actions around here.";
+
+TXT_RANDOM_REBEL_01 = "There's no way the order will stand against us.";
+TXT_RANDOM_REBEL_02 = "We're almost ready to strike. Macil's plans are falling in place.";
+TXT_RANDOM_REBEL_03 = "We're all behind you, don't worry lass.";
+TXT_RANDOM_REBEL_04 = "Don't get too close to any of those Crusader robots. They'll melt you down for scrap!";
+TXT_RANDOM_REBEL_05 = "The day of our glory will soon come, and those who oppose us will be crushed!";
+TXT_RANDOM_REBEL_06 = "Don't get too comfortable. We've still got our work cut out for us.";
+TXT_RANDOM_REBEL_07 = "Macil says that you're the new hope, young lady. Bear that in mind. No.. no pressure or anything, I mean...";
+TXT_RANDOM_REBEL_08 = "Once we've taken these charlatans down, we'll be able to rebuild this world as it should be.";
+TXT_RANDOM_REBEL_09 = "Remember that you aren't fighting just for yourself, but for everyone here and outside.";
+TXT_RANDOM_REBEL_10 = "As long as one of us still stands, we will win.";
+
+TXT_RANDOM_AGUARD_01 = "Move along, you bouncy little annoyance!";
+TXT_RANDOM_AGUARD_02 = "Follow the true faith, only then will you begin to understand.";
+TXT_RANDOM_AGUARD_03 = "Only through death can one be truly reborn. A lesson everyone will learn eventually...";
+TXT_RANDOM_AGUARD_04 = "I'm not here for you to talk my ears off. Go away before I start shooting!";
+TXT_RANDOM_AGUARD_05 = "If I'd wanted to talk to you I would've told you so.";
+TXT_RANDOM_AGUARD_06 = "A woman? Meh, not my problem. Someone else will deal with you eventually...";
+TXT_RANDOM_AGUARD_07 = "You're either brave, or really stupid. Maybe both. Either way, go away, woman!";
+TXT_RANDOM_AGUARD_08 = "If the alarm goes off, you stay out of our way!";
+TXT_RANDOM_AGUARD_09 = "The order will cleanse the world and usher it into the new era.";
+TXT_RANDOM_AGUARD_10 = "You have a problem? No, thought not.";
+
+TXT_RANDOM_BEGGAR_01 = "Alms for the poor?";
+TXT_RANDOM_BEGGAR_02 = "What are you looking at? Don't pity me!";
+TXT_RANDOM_BEGGAR_03 = "You wouldn't have any extra food, would you?";
+TXT_RANDOM_BEGGAR_04 = "Those other surface people will never understand us. You on the other hand... perhaps...";
+TXT_RANDOM_BEGGAR_05 = "Ha, the guards can't find us. Those idiots don't even know we exist.";
+TXT_RANDOM_BEGGAR_06 = "One day everyone but those who serve the order will be forced to join us.";
+TXT_RANDOM_BEGGAR_07 = "I can tell you pity us. You feel bad for us. Don't. We do not need your pity.";
+TXT_RANDOM_BEGGAR_08 = "That look in your eye, you're different from the others, yet still not truly naive, are you?";
+TXT_RANDOM_BEGGAR_09 = "The order will make short work of that pathetic front. Leave them as fast as you can, lass!";
+TXT_RANDOM_BEGGAR_10 = "Watch yourself, lass. We know our enemies!";
+
+TXT_RANDOM_PGUARD_01 = "We are the hands of fate. To earn our wrath is to find oblivion!";
+TXT_RANDOM_PGUARD_02 = "The Order will cleanse the world of the weak and useless!";
+TXT_RANDOM_PGUARD_03 = "Obey the will of the masters! Long Live the One God!";
+TXT_RANDOM_PGUARD_04 = "Long life to the brothers of the Order!";
+TXT_RANDOM_PGUARD_05 = "Free will is an illusion that binds the weak minded.";
+TXT_RANDOM_PGUARD_06 = "Power is the path to glory. To follow the Order is to walk that path!";
+TXT_RANDOM_PGUARD_07 = "Woman! I see a strength in your eyes I rarely see in anyone else. Take your place among the righteous, join us!";
+TXT_RANDOM_PGUARD_08 = "The Order protects its own.";
+TXT_RANDOM_PGUARD_09 = "Acolytes? Hmph. They've yet to see the full glory of the Order.";
+TXT_RANDOM_PGUARD_10 = "Heheh, for a woman, you are much stronger than the rest. Join us among your rightful place in the Order!";
+
+TXT_RANDOMGOODBYE_1 = "Alright then, Bye...";
+TXT_RANDOMGOODBYE_2 = "Talk to you later...";
+TXT_RANDOMGOODBYE_3 = "I better get going...";
+TXT_HAVEENOUGH		= "You seem to have enough!";
+TXT_GOAWAY			= "Go away!";

@@ -1,0 +1,5 @@
+#include decorate/buffslevelups.txt
+#include decorate/items.txt
+#include decorate/players.txt
+#include decorate/technicalstuff.txt
+#include decorate/weaponsammo.txt

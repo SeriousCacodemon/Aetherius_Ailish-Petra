@@ -1,0 +1,19 @@
+
+server int dvds_ailishstartroyalsceptre = 1;
+server int dvds_ailishstartshockstaff = 1;
+server int dvds_ailishstartserpentstaff = 0;
+server int dvds_ailishcounterpart = 0;
+server int dvds_ailisharmorlevel = 0;
+
+server int dvds_petrachristinaaddonspawn = 0;
+server int dvds_petrachristinabossaddonspawn = 0;
+server int dvds_petrachristinapartiniasaddonspawn = 0;
+server int dvds_petrachristinainfinite = 0;
+server int dvds_petraarcanagaugeinfinite = 0;
+
+server int dvds_pistolrestart_ailishkeepsstaffs = 0;
+server int dvds_pistolrestart_petrachristinaaddons = 0;
+server int dvds_pistolrestart_petrachristinabossaddons = 0;
+
+server int dvds_ailish_maxlevel = 100;
+server int dvds_petra_maxlevel = 100;
