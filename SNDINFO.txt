@@ -1,9 +1,53 @@
 //Ailish Sounds
 
+AilishPain11	AILPAIN1
+AilishPain12	AILPAIN2
+AilishPain13	AILPAIN3
+$random AilishPainSet1 { AilishPain11 AilishPain12 AilishPain13 }
+
+AilishPain21	AILPAIN4
+AilishPain22	AILPAIN5
+AilishPain23	AILPAIN6
+$random AilishPainSet2 { AilishPain21 AilishPain22 AilishPain23 }
+
+AilishPain31	AILPAIN7
+AilishPain32	AILPAIN8
+AilishPain33	AILPAIN9
+$random AilishPainSet3 { AilishPain31 AilishPain32 AilishPain33 }
+
+AilishNoWay1	AILNOWY1
+AilishNoWay2	AILNOWY2
+$random AilishNoWay { AilishNoWay1 AilishNoWay2 }
+
 //Serpent Staff
 ClericCStaffFire        spell1
 ClericCStaffExplode     glbhit4
 ClericCStaffHitThing    vamp5
+
+// Sounds for Ailish player
+$playersound	AilishSND	male	*death		AILDEATH
+$playersound	AilishSND	male	*xdeath		AILDEATH
+$playersound	AilishSND	male	*wimpydeath		AILWDTH
+$playersound	AilishSND	male	*crazydeath		AILDEATH
+$playersound	AilishSND	male	*burndeath		AILDEATH
+$playersound	AilishSND	male	*splat		AILDEATH
+$playersound	AilishSND	male	*gibbed		AILDEATH
+$playeralias	AilishSND	male	*pain100	AilishPainSet1
+$playeralias	AilishSND	male	*pain75		AilishPainSet2
+$playeralias	AilishSND	male	*pain50		AilishPainSet2
+$playeralias	AilishSND	male	*pain25		AilishPainSet3
+$playersound	AilishSND	male	*grunt		AILGRUNT
+$playersound	AilishSND	male	*land		AILOOF
+$playeralias	AilishSND	male	*usefail	AilishNoWay
+$playersound	AilishSND	male	*falling	AILFALL
+$playersound	AilishSND	male	*jump		AILJUMP
+//$playeralias	AilishSND	male	*puzzfail	FloraPuzzleFail
+$playersound	AilishSND	male	*evillaugh	null
+$playersound	AilishSND	male	*weaponlaugh	AILSCRT1
+$playersound	AilishSND	male	*dive		null
+$playersound	AilishSND	male	*surface	null
+$playersound	AilishSND	male	*gasp		null
+$playersound	AilishSND	male	*poison	null
 
 PetraPain11		PETRPN11
 PetraPain12		PETRPN12
