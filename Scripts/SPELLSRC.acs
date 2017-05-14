@@ -39238,13 +39238,14 @@ script "GetPlayerATKDMG" (int type, int puff)
   int misc2 = 1000;
   if (type == 52)
   {
-   if (CheckActorInventory(Player1TID,"SauronGauntlets") > 0) misc1 += 125;
-   if (CheckActorInventory(Player1TID,"SauronGauntletsIllucia") > 0) misc1 += 125;
-   if (CheckActorInventory(Player1TID,"SauronGauntletsFlora") > 0) misc1 += 125;
-   if (CheckActorInventory(Player1TID,"SauronGauntletsAilish") > 0) misc1 += 125;
-   if (CheckActorInventory(Player1TID,"SauronGauntletsPetra") > 0) misc1 += 125;
-   if (CheckActorInventory(Player1TID,"BalrogRing") > 0) misc1 += 125;
-   finaldmg = (finaldmg * misc1) / 1000;
+   if (CheckActorInventory(Player1TID,"SauronHelmet") > 0) misc2 += 125;
+   if (CheckActorInventory(Player1TID,"SauronGauntlets") > 0) misc2 += 125;
+   if (CheckActorInventory(Player1TID,"SauronGauntletsIllucia") > 0) misc2 += 125;
+   if (CheckActorInventory(Player1TID,"SauronGauntletsFlora") > 0) misc2 += 125;
+   if (CheckActorInventory(Player1TID,"SauronGauntletsAilish") > 0) misc2 += 125;
+   if (CheckActorInventory(Player1TID,"SauronGauntletsPetra") > 0) misc2 += 125;
+   if (CheckActorInventory(Player1TID,"TheOneRing") > 0) misc2 += 500;
+   finaldmg = (finaldmg * misc2) / 1000;
   }
   
   str actorname = GetActorClass(0);
@@ -39265,6 +39266,7 @@ script "GetPlayerATKDMG" (int type, int puff)
              s:"\nPerkFactor: ",d:perkfactor,
              s:"\n",
              s:"\nMisc1: ",d:misc1,
+             s:"\nMisc2: ",d:misc2,
              s:"\nTotal: ",d:finaldmg);
   }
  }
