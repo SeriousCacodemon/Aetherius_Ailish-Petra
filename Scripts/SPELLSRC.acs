@@ -24289,6 +24289,7 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
   GiveActorInventory(Player1TID,"PaxaPunch",1);  TakeActorInventory(Player1TID,"PaxaPunch",1);
   GiveActorInventory(Player1TID,"RockbombShard",1);  TakeActorInventory(Player1TID,"RockbombShard",1);
   GiveActorInventory(Player1TID,"YggdrasilDew",1);  TakeActorInventory(Player1TID,"YggdrasilDew",1);
+  GiveActorInventory(Player1TID,"MiraclePotion",1);  TakeActorInventory(Player1TID,"MiraclePotion",1);
   GiveActorInventory(Player1TID,"ElfinElixir",1);  TakeActorInventory(Player1TID,"ElfinElixir",1);
   GiveActorInventory(Player1TID,"SageElixir",1);  TakeActorInventory(Player1TID,"SageElixir",1);
   GiveActorInventory(Player1TID,"MagicWater",1);  TakeActorInventory(Player1TID,"MagicWater",1);
@@ -42665,6 +42666,30 @@ script "UseCustomInventoryItem" (int type)
   else
   {
    PlaySound(Player1TID,"inv_fail",CHAN_BODY,1.0,0,ATTN_NORM);
+  }
+ }
+
+ if (type == 12 && CheckActorInventory(Player1TID,"MiraclePotion") > 0) // Miracle Potion
+ {
+  if (GetActorProperty(Player1TID,APROP_HEALTH) >= MaxHealthTrue && (CurrentMana >= MaxMana))
+  {
+   PlaySound(Player1TID,"inv_fail",CHAN_BODY,1.0,0,ATTN_NORM);
+  }
+  else
+  {
+   if (GetActorProperty(Player1TID,APROP_HEALTH) < MaxHealthTrue)
+   {
+    SetActorProperty(Player1TID,APROP_HEALTH,MaxHealthTrue);
+   }
+   
+   if (CurrentMana < MaxMana)
+   {
+    CurrentMana = MaxMana;
+   }
+   PlaySound(Player1TID,"misc/invuse",CHAN_BODY,1.0,0,ATTN_NORM);
+   PlaySound(Player1TID,"healing_dq",CHAN_BODY,1.0,0,ATTN_NORM);
+   FadeRange(12,255,12,0.43,16,255,16,0.01,0.55);
+   TakeActorInventory(Player1TID,"MiraclePotion",1);
   }
  }
 }
