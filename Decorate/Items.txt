@@ -289,7 +289,7 @@ Actor MiraclePotion : CustomInventory
 			MRPT A -1
 			Stop
 		Use:
-			TNT1 A 0 ACS_NamedExecuteAlways("UseCustomInventoryItem",0,1)
+			TNT1 A 0 ACS_NamedExecuteAlways("UseCustomInventoryItem",0,12)
 			fail
 	}
 }
