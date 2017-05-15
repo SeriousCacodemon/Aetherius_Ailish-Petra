@@ -3,6 +3,9 @@ actor HealthBonus2AP : HealthBonus2 Replaces HealthBonus2
 	States
 	{
 	MiraclePotionSpawn:
+		TNT1 A 0 A_Jump(192,"MiraclePotionSpawn2")
+		Goto Float
+	MiraclePotionSpawn2:
 		TNT1 A 0 A_SpawnItemEX("MiraclePotion",0,0)
 		Goto Float
 	Spawn:
@@ -17,7 +20,7 @@ actor HealthBonus2AP : HealthBonus2 Replaces HealthBonus2
 		BON1 A 0 A_Jump(1,"PaxaSpawn")
 		BON1 A 0 A_Jump(1,"MercBandanaSpawn")
 		BON1 A 0 A_Jump(1,"VimstoneSpawn")
-		BON1 A 0 A_Jump(2,"MiraclePotion")
+		BON1 A 0 A_Jump(1,"MiraclePotion")
 		BON1 A 0 A_Jump(8,"BigBonus")    
 		goto Float
 	}

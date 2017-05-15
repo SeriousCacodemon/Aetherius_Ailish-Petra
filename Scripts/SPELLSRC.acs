@@ -46003,6 +46003,7 @@ script "AddEXP" (int baseamount, int flags, int incrementcombo)
   if (random(1,1024) == 1) DropItem(0,"MagicWater",1,256);
   if (random(1,1024) == 1) DropItem(0,"RandomPowerupSpawner",1,256);
   if (random(1,1024) == 1) DropItem(0,"RockBombShard",1,256);
+  if (random(1,1024) == 1) DropItem(0,"MiraclePotion",1,256);
   if (random(1,512) == 1) DropItem(0,"RandomHerbSpawner",1,256);
   if (random(1,512) == 1) DropItem(0,"RockBombShard",1,256);
   if (random(1,256) == 1) DropItem(0,"MonsterMunchies",1,256);
