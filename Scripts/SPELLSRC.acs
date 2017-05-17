@@ -5895,7 +5895,34 @@ script "HUDDisplay" ENTER
      // 3801-4000 - Hellcore Meter Notches [AP/HLCR Info]
      // 4001 - AP/HLCR Meter Glass [AP/HLCR Info]
 	 
-     // AP/HLCR Meter Border
+     // AP/HLCR/ARC Meter Border
+	 if (CharacterClass == 9) // Petra = Arcana Gauge
+	 {
+		// ARC Glass Frame
+        xpos = ScreenXOffset + 320.0;
+        ypos = 924.0;
+
+        SetFont("HCBGLASS");
+        msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha);
+        HudMessage(s:"A";HUDMSG_ALPHA,4001,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+
+		// ARC Frame
+        xpos = ScreenXOffset + 320.0;
+        ypos = 924.0;
+
+        SetFont("HCBFRAME");
+        msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha);
+        HudMessage(s:"A";HUDMSG_ALPHA,4001,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+
+		// ARC Label
+        xpos = ScreenXOffset + 220.0;
+        ypos = 922.0;
+		
+        SetFont("DQHUDFONTSML");
+        msgalpha = 0.875; msgalpha = FixedMul(msgalpha,overallhudalpha);
+        HudMessage(s:"ARC";HUDMSG_ALPHA,3502,cr_white,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+
+	 }
      if (CharacterClass == 2) // Flora = HellCore/HLCR
      {
        G3 = HellcoreOverheatLevel / 100;
@@ -8887,6 +8914,7 @@ script "HUDDisplay" ENTER
     //************************
 
 	 int showmanabar = 0;
+	 int showetherstock = 0;
      ScreenXOffset = GetCVar("dvdsnewhud_widescreenxoffset") * 1.0;
      //************************************************************
      //**Weapon/Ammo Display and Sceptre-EXP meter [5900 to 6205]**
@@ -9156,6 +9184,10 @@ script "HUDDisplay" ENTER
       ammo = CurrentMana;
       maxammo = MaxMana;
      }
+     If(StrIcmp(weapon, "AChristina") == 0) //Show Ether stock for A. Christina
+     {
+      showetherstock = 1;
+	 }
      SetActivator(0);
 
      // Weapon Icons
@@ -9170,6 +9202,17 @@ script "HUDDisplay" ENTER
       If(StrIcmp(weapon, "FistPetra") == 0) SetFont("WIFISTF");
 	  If(StrIcmp(weapon, "SauronGauntletsPetra") == 0) SetFont("WISGNLTF");  
 	  If(StrIcmp(weapon, "AChristina") == 0) SetFont("WIACHRIS");  
+	  // Petra-Specific Addons from Boss-type enemies
+	  If(StrIcmp(weapon, "AChristinaCyberdemon") == 0) SetFont("WIACHCYB");  
+	  If(StrIcmp(weapon, "AChristinaMastermind") == 0) SetFont("WIACHSPI");  
+	  If(StrIcmp(weapon, "AChristinaHades") == 0) SetFont("WIACHHOV");  
+	  If(StrIcmp(weapon, "AChristinaIronLich") == 0) SetFont("WIACHLCH");  
+	  If(StrIcmp(weapon, "AChristinaMaulotaur") == 0) SetFont("WIACHMAU");  
+	  If(StrIcmp(weapon, "AChristinaWyvern") == 0) SetFont("WIACHWYV");  
+	  If(StrIcmp(weapon, "AChristinaHeresiarch") == 0) SetFont("WIACHHER");  
+	  // Special Petra-Specific Addons
+	  If(StrIcmp(weapon, "AChristinaPartinias") == 0) SetFont("WIACHPAR");    
+	  
       // Flora-Specfic Weapons
       If(StrIcmp(weapon, "FistFlora") == 0) SetFont("WIFISTF");
       If(StrIcmp(weapon, "SauronGauntletsFlora") == 0) SetFont("WISGNLTF");
@@ -9483,6 +9526,13 @@ script "HUDDisplay" ENTER
         SetFont("MPBFRAME"); // SetFont("SCBFRAME"); 
         msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha);
         HudMessage(s:"A";HUDMSG_ALPHA,5904,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+	   }
+	   else
+	   if(showetherstock == 1)
+	   {
+		SetFont("ACMFULL");
+        msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha);
+        HudMessage(s:"AAAAAA\nAAAAAA";HUDMSG_ALPHA,5904,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha);
 	   }
 	   else
        if (maxammo > 0)

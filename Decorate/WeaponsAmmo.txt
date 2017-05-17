@@ -37,7 +37,7 @@ actor SerpentStaffAilish : CWeapStaff
 // What HP amount do I equate 32000 with?  Belphegor specific HP?
 actor AChristina : Weapon
 {
-Inventory.PickupMessage "Found A. Christina.  Ether-charged pew pew!"
+Inventory.PickupMessage "Found Alexandra Christina!  Ether-charged pew pew!"
 XScale 0.350
 YScale 0.292
 weapon.selectionorder 400
@@ -74,6 +74,14 @@ VUPP A -1 Bright
 stop
 }
 }
+
+Actor AChristinaMastermind : AChristina { }
+Actor AChristinaHades : AChristina { }
+Actor AChristinaIronLich : AChristina { }
+Actor AChristinaMaulotaur : AChristina { }
+Actor AChristinaWyvern : AChristina { }
+Actor AChristinaHeresiarch : AChristina { }
+
 
 actor AChristinaShot : Actor
 {

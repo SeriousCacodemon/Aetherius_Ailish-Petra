@@ -167,8 +167,8 @@ actor PetraLagerkvist : DoomPlayer // PlayerPawn
   Player.MugShotMaxHealth -1 // 102
   Radius 13 // 13
   Height 44 // 44
-  XScale 0.255 // 0.24
-  YScale 0.213 // 0.20
+  XScale 0.26 // 0.24
+  YScale 0.208 // 0.20
   Mass 60
   PainChance 255
   species "Players"
@@ -222,10 +222,10 @@ actor PetraLagerkvist : DoomPlayer // PlayerPawn
   Player.WeaponSlot 1, SauronGauntletsPetra, PetraFist, AChristina // Melee Weapons
   Player.WeaponSlot 2, AChristinaSapphire, PetraRevolver, PetraRevolver2 // Pistols
   Player.WeaponSlot 3, AChristinaEnergyMine
-  Player.WeaponSlot 4, AChristinaRepeater
-  Player.WeaponSlot 5, AChristinaPartinias, AChristinaBFG
-  Player.WeaponSlot 6, AChristinaHades, AChristinaHierophant
-  Player.WeaponSlot 7, AChristinaCyberdemon
+  Player.WeaponSlot 4, AChristinaRepeater, AChristinaMastermind
+  Player.WeaponSlot 5, AChristinaMiniMissiles, AChristinaCyberdemon, AChristinaMaulotaur, AChristinaWyvern
+  Player.WeaponSlot 6, AChristinaHades, AChristinaIronLich, AChristinaHeresiarch
+  Player.WeaponSlot 7, AChristinaPartinias
   Player.WeaponSlot 8, NNSigil
   Player.ViewHeight 34
   Player.JumpZ 10

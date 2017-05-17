@@ -278,7 +278,7 @@ Actor MiraclePotion : CustomInventory
 	Inventory.PickupSound "inv_grab"
 	Inventory.icon "INV_MRPT"
 	Inventory.PickupMessage "Found a \cdmiracle potion\c-!"
-	Tag "Miracle Potion:  Restores 100% HP & MP"
+	Tag "Miracle Potion:  Restores 100% HP, 100% Mana"
 	States
 	{
 		Spawn:
