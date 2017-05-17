@@ -25323,14 +25323,8 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
 
 
  // Check for Sceptre Abilities
- if (CharacterClass == 2 && PlayerLevel >= 8 && SceptreActualLevel >= 2)
- {
-  MiscellaneousVars[244] = 1;
- }
- else
- {
-  MiscellaneousVars[244] = 0;
- }
+ MiscellaneousVars[244] = 0;
+ if (CharacterClass == 2 && PlayerLevel >= 8 && SceptreActualLevel >= 2) MiscellaneousVars[244] = 1;
 
  // Delays the levelup speech for a character
  if (MiscellaneousVars[247] > 0)
