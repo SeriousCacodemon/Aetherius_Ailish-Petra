@@ -1,2 +1,1 @@
-actor AilishInPlay : PlaceholderItem { ConversationID 413 } // This works as an inventory flag to indicate the character in use
-actor PetraInPlay : PlaceholderItem { ConversationID 414 } // This works as an inventory flag to indicate the character in use
+// Empty for now [all items that where here are moved to the main ComboPack right now - Misfit :V]
