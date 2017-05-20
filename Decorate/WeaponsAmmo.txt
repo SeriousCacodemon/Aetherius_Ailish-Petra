@@ -75,15 +75,15 @@ stop
 }
 }
 
-/*Actor AChristinaCyberdemon : AChristina { }
-Actor AChristinaMastermind : AChristina { }
-Actor AChristinaHades : AChristina { }
-Actor AChristinaIronLich : AChristina { }
-Actor AChristinaMaulotaur : AChristina { }
-Actor AChristinaWyvern : AChristina { }
-Actor AChristinaHeresiarch : AChristina { }
+Actor AChristinaCyberdemon : AChristina { Inventory.PickupMessage "Alexandra Christina gains ability to fire Cyberdemon rockets!" }
+Actor AChristinaMastermind : AChristina { Inventory.PickupMessage "Alexandra Christina gains ability to fire like Spider Mastermind's Super Chaingun!" }
+Actor AChristinaHades : AChristina { Inventory.PickupMessage "Alexandra Christina gains ability to use Hades Elemental/Overlord's dark lightning!" }
+Actor AChristinaIronLich : AChristina { Inventory.PickupMessage "Alexandra Christina gains ability to conjure Iron Lich's spells!" }
+Actor AChristinaMaulotaur : AChristina { Inventory.PickupMessage "Alexandra Christina gains ability to use Maulotaur's magical fire!" }
+Actor AChristinaWyvern : AChristina { Inventory.PickupMessage "Alexandra Christina gains ability to use Death Wyvern's exploding fireballs!" }
+Actor AChristinaHeresiarch : AChristina { Inventory.PickupMessage "Alexandra Christina gains ability to use Heresiarch magic (minus the barrier)!" }
 
-Actor AChristinaPartinias : AChristina { }*/
+Actor AChristinaPartinias : AChristina { Inventory.PickupMessage "Alexandra Christina gains ability to... use Partinias's heartful magic?!" }
 
 actor AChristinaShot : Actor
 {
@@ -92,6 +92,7 @@ actor AChristinaShot : Actor
 		XScale 0.255 // 0.24
         YScale 0.213 // 0.20
 		Speed 0
+		+FORCERADIUSDMG
 		DamageType "Ether"
 		Projectile
 		Renderstyle "Add"
