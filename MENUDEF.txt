@@ -1,3 +1,1382 @@
+OptionValue "OldHUDQuickSpellList"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "NewHUDQuickSpellBar"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "SecretsCompletionBonuses"
+{
+	0, "+10% EXP to Next Lvl [DEFAULT]"
+	1, "1 Aeon Point"
+}
+
+OptionValue "ItemsCompletionBonuses"
+{
+	0, "+10% EXP to Next Lvl [DEFAULT]"
+	1, "1 Aeon Point"
+}
+
+OptionValue "MonstersCompletionBonuses"
+{
+	0, "+10% EXP to Next Lvl [DEFAULT]"
+	1, "1 Aeon Point"
+}
+
+OptionValue "OldCompletionBonuses"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "MonsterLevelBehavior"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "AdvancedArchvileResurrections"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "Atatatatatatatata"
+{
+	0, "No Thanks. :P"
+	1, "Sure Why Not? :V"
+}
+
+OptionValue "GFXEffectLevel"
+{
+	0, "Full"
+	1, "Reduced"
+	2, "None"
+}
+
+OptionValue "SapphireWandFlora"
+{
+	0, "None [DEFAULT]"
+	1, "One"
+	2, "Two"
+}
+
+OptionValue "NumberOfElvenWands"
+{
+	0, "None"
+	1, "One [DEFAULT]"
+	2, "Two"
+}
+
+OptionValue "HereticWeaponsMagic"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "StaminaAffectsSpeed"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "KillsForAeonPts"
+{
+	48, "48 [Easiest]"
+	96, "96 [Easier]"
+	192, "192 [Easy]"
+	384, "384 [DEFAULT]"
+	768, "768 [Hard]"
+	1536, "1536 [Harder]"
+	3072, "3072 [Hardest]"
+}
+
+OptionValue "SecretsForAeonPts"
+{
+	1, "1 [Easiest]"
+	2, "2 [Easier]"
+	4, "4 [Easy]"
+	8, "8 [DEFAULT]"
+	16, "16 [Hard]"
+	32, "32 [Harder]"
+	64, "64 [Hardest]"
+}
+
+OptionValue "ItemsForAeonPts"
+{
+	32, "32 [Easiest]"
+	64, "64 [Easier]"
+	128, "128 [Easy]"
+	256, "256 [DEFAULT]"
+	512, "512 [Hard]"
+	1024, "1024 [Harder]"
+	2048, "2048 [Hardest]"
+}
+
+OptionValue "PerkSystemEnabled"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "StartHPManaFactor"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "PerkCostRatio"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "SurviveMercyInvin"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "SkillLevelCalcType"
+{
+	0, "Emphasized [OLD]"
+	1, "Balanced [DEFAULT]"
+}
+
+OptionValue "SurviveMercyInvin"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "DVIIMonstersInClassic"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "SuicideBombers"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "StartSceptre"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "StartDiarisLongbow"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "EXPGains"
+{
+	0, "Yes [DEFAULT]"
+	1, "No"
+}
+
+OptionValue "SceptreEXPGains"
+{
+	0, "Yes [DEFAULT]"
+	1, "No"
+}
+
+OptionValue "AeonPointBonus"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "SeedsAppear"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "SeedMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+}
+
+OptionValue "AeonPointMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+}
+
+OptionValue "LvlStatMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+}
+
+OptionValue "HellcoreHeatMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "HellcoreCoolMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "ShieldUncurseRate"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "SceptreEXPMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "BaseEXPMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "StaminaRegenMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "HealthRegenMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "ManaRegenMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "ManaRegenRateMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "ManaItemMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "ManaCostMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "TensionChargeMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "TensionCountdownMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "TensionCooldownMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "StartHPManaFactor"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "StartOtherStatsFactor"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "RandomizeDVIIMonsters"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "EvolveBasedOnLevel"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "EvolveBasedOnCharacter"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "EvolveBasedOnSkill"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "EvolveBasedOnSauronItems"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "EvolveBasedOnMap"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "RandomizeDVIIStealthMonsters"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "DVIIStealthLevels"
+{
+	0, "50.00%"
+	1, "75.00%"
+	2, "87.50% [DEFAULT]"
+	3, "93.75%"
+}
+
+OptionValue "StealthBasedOnLevel"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "StealthBasedOnCharacter"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "StealthBasedOnSkill"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "StealthBasedOnMap"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "RandomizeDVIIArmor"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DamageIndicators"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "ActorLifebars"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "ActorLifebarNames"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "ActorLifebarHP"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "ActorLifebarStats"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "ACSHUDElements"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "HealthDegenMode"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "ShotgunnerType"
+{
+	0, "Classic [DEFAULT]"
+	1, "DoomSpell [HARDER]"
+}
+
+OptionValue "CrisisAttacks"
+{
+	0, "None"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "BulletTypesMonsters"
+{
+	0, "Hitscans"
+	1, "Tracers [DEFAULT]"
+}
+
+OptionValue "BFG2704"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "DashOption"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "TensionOption"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "TensionOverdriveDmg"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "TensionSpeed"
+{
+	0, "0.125x"
+	1, "0.25x"
+	2, "0.5x"
+	3, "1x [DEFAULT]"
+	4, "2x"
+	5, "4x"
+	6, "8x"
+}
+
+
+OptionValue "PistolRestart_AllSauronItems"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "PistolRestart_AllInventoryItems"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "PistolRestart_FloraSceptre"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "PistolRestart_FloraArmor"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "PistolRestart_FloraHellcore"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PistolRestart_FloraDiarisBow"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PistolRestart_MarineWeapons"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "PistolRestart_MarineAmmo"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "Flora_LevelCapIgnoresArmor"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "Monster_EXP_Base"
+{
+	0, "SpawnHealth"
+	1, "MaxHP [if possible]"
+}
+
+OptionValue "EXP_ComboSystem"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "EXP_ProperCredit"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "EXPComboTimerMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "EXPComboBaseMultiplier"
+{
+	0, "1x [DEFAULT]"
+	1, "2x"
+	2, "3x"
+	3, "4x"
+	4, "5x"
+	5, "6x"
+	6, "7x"
+	7, "8x"
+	8, "9x"
+	9, "10x"
+	10, "11x"
+	11, "12x"
+	12, "13x"
+	13, "14x"
+	14, "15x"
+	15, "16x"
+	16, "17x"
+	17, "18x"
+	18, "19x"
+	19, "20x"
+	20, "0.05x"
+	21, "0.1x"
+	22, "0.15x"
+	23, "0.2x"
+	24, "0.25x"
+	25, "0.3x"
+	26, "0.35x"
+	27, "0.4x"
+	28, "0.45x"
+	29, "0.5x"
+	30, "0.55x"
+	31, "0.6x"
+	32, "0.65x"
+	33, "0.7x"
+	34, "0.75x"
+	35, "0.8x"
+	36, "0.85x"
+	37, "0.9x"
+	38, "0.95x"
+}
+
+OptionValue "MusouOption"
+{
+	0, "No [DEFAULT]"
+	1, "Yes (5x)"
+	2, "Yes (10x)"
+}
+
 OptionValue "OTHER_DeathMusic"
 {
 	0, "None"
@@ -10,6 +1389,317 @@ OptionValue "OTHER_DeathMusic"
 	7, "It's a sad thing that..."
 	8, "Game Over..."
 	9, "DUN DUN DUN DUN!..... DUN!"
+}
+
+OptionValue "DEBUG_AttackDefenseDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_PoisonDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_HealItemDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_AccuracyDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_HellcoreHeatDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_InGameMenuDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_PlayerPosDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_SpellPosDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_ExpDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_MeleeAtkDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_PlayerAtkDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_MiscAtkDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_TensionDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_DashDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_MoveDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_HPRegenDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_ManaRegenDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_StaminaRegenDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_EnemySpeedDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_EnemyStatsDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_PlayerCritDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_SpellCostDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_SurviveRateDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_EvadeRateDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_StaminaUseDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_SeedGrabDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_EvolveDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_StealthDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_InfiniteAmmoDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "DEBUG_LifebarDisplay"
+{
+	0, "No [DEFAULT]"
+	1, "Yes"
+}
+
+OptionValue "GameHUDMode"
+{
+	0, "Old Style"
+	1, "DQH-ish Style"
+}
+
+
+// HUD-SPECFIC OPTIONS
+
+OptionValue "GameHUDMode"
+{
+	0, "Old Style"
+	1, "DQH-ish Style"
+}
+
+OptionValue "OldHUDMeterNotchDetail"
+{
+	1, "Very High [100/1%]"
+	2, "High [50/2%]"
+	4, "Medium [25/4%]"
+}
+
+OptionValue "OldHUDEmptyNotches"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "OldHUDEXPBar"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "OldHUDManaBar"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "OldHUDComboBar"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "OldHUDTensionBars"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "NewHUDMeterNotchDetail"
+{
+	1, "Very High [200/0.5%]"
+	2, "High [100/1%]"
+	4, "Medium [50/2%]"
+}
+
+OptionValue "NewHUDEmptyNotches"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "NewHUDOverlifeNotches"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "NewHUDPrimaryMeters"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "NewHUDSecondaryMeters"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "NewHUDTensionMainBar"
+{
+	0, "Only When Needed"
+	1, "Always"
+}
+
+OptionValue "NewHUDTensionCooldownBar"
+{
+	0, "Only When Needed"
+	1, "Always"
+}
+
+OptionValue "NewHUDDamageBurstRatios"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "ALLHUDSecondaryStatInfo"
+{
+	0, "Off"
+	1, "On"
+}
+
+OptionValue "MonsterStatChangeMaps"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "MonsterStatChangeDifficulty"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "MonsterStatChangePlayerLevel"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
+OptionValue "MonsterStatChangeError"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
 }
 
 OptionValue "StartRoyalSceptre"
@@ -92,42 +1782,71 @@ OptionValue "PistolRestart_PetraChristinaBossAddons"
 	1, "Yes"
 }
 
-ListMenu "PlayerclassMenu"
+OptionMenu "OptionsMenu"
 {
-	IfGame(Doom, Heretic, Hexen, Strife)
-	{
-		NetgameMessage "$NEWGAME"
-	}
-	IfGame(Chex)
-	{
-		NetgameMessage "$CNEWGAME"
-	}
+	Title "OPTIONS"
+	Submenu "Customize Controls",				"CustomizeControls"
+	Submenu "Mouse options",					"MouseOptions"
+	Submenu "Joystick options",					"JoystickOptions"
+	StaticText " "
+	Submenu "Player Setup",					"PlayerMenu"
+	Submenu "Gameplay Options",					"GameplayOptions"
+	Submenu "Compatibility Options",				"CompatibilityOptions"
+	Submenu "Automap Options",					"AutomapOptions"
+	Submenu "HUD Options",					"HUDOptions"
+	Submenu "Miscellaneous Options",				"MiscOptions"
+	Submenu "Sound Options",					"SoundOptions"
+	Submenu "Display Options",					"VideoOptions"
+	Submenu "Set video mode",					"VideoModeMenu"
+	StaticText " "
+	SafeCommand "Reset to defaults",				"reset2defaults"
+	SafeCommand "Reset to last saved",				"reset2saved"
+	Command "Go to console",					"menuconsole"
+}
 
-	IfGame(Doom, Strife, Chex)
-	{
-		Selector "M_FLORA2", -28, -7
-		StaticTextCentered 160, 5, "$MNU_CHOOSECLASS"
-		Position 48, 28
-		PlayerDisplay 220, 58, "20 00 00", "80 00 40"
-		MouseWindow 0, 220
-	}
-	IfGame(Heretic)
-	{
-		Selector "M_FLORA2", -28, -7
-		StaticTextCentered 160, 0, "$MNU_CHOOSECLASS"
-		Position 80, 30
-		PlayerDisplay 220, 45, "20 00 00", "80 00 40"
-		MouseWindow 0, 220
-	}
-	IfGame(Hexen)
-	{
-		Selector "M_FLORA2", -28, -7
-		StaticText 34, 14, "$MNU_CHOOSECLASS"
-		Position 66, 28
-		PlayerDisplay 174, 8, "00 07 00", "40 53 40"
-		MouseWindow 0, 174
-	}
-	// The rest of this menu will be set up based on the actual player definitions.
+OptionMenu "DVDS-SubMenu1"
+{
+	Title "AETHERIUS - Special Game Options"
+
+	Option "Stat Gain Items Appear?", 				"dvds_canseedsappear", 				"SeedsAppear"
+	Option "Mercy Time if Survive Mortal Hit?",		"dvds_survivemercyinvin", 				"SurviveMercyInvin"
+	StaticText " "
+	Option "HP Degens if Above 100%", 				"dvds_healthdegenmode", 				"HealthDegenMode"
+	Option "DVII Enemies in Classic?",				"dvds_classicdviimonsters",				"DVIIMonstersInClassic"
+	Option "Random Suicide Bomber Zombies",			"dvds_suicidebombers",				"SuicideBombers"
+	Option "Enemy Shotgun/Mauler Spreads", 			"dvds_shotgunnerspread", 				"ShotgunnerType"
+	Option "Hitscans vs. Tracers [Monsters]", 		"dvds_monsterbulletstracers",			"BulletTypesMonsters"
+	TextField "Tracer Speed [multiplier]", 			"dvds_tracervelmulti"
+	Option "Actor Crisis Attacks?", 				"dvds_monstercrisisattacks", 			"CrisisAttacks"
+	TextField "Crisis Attack Multiplier",			"dvds_monstercrisismulti"
+	Option "BFG2704 Alt-Fire?", 				"dvds_BFG2704", 					"BFG2704"
+     Option "Stamina Affects Movement Speed",			"dvds_staminaaffectsspeed", 			"StaminaAffectsSpeed"
+	Option "Can Dash/Air-Dash?",	 			"dvds_allowdashing", 				"DashOption"
+	Option "Can use Tension?",					"dvds_allowtension", 				"TensionOption"
+	Option "Tension OverPsyche Slowly Hurts?",		"dvds_allowtensionocdmg", 				"TensionOverdriveDmg"
+	Option "Tension Spd (affects Stam. use)",			"dvds_tensionspeed", 				"TensionSpeed"
+	StaticText " "
+	Option "Monsters Behavior Based on Level?",		"dvds_monsterlevelbehavior", 			"MonsterLevelBehavior"
+	StaticText " "
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaults1"
+}
+
+OptionMenu "DVDS-SubMenu2"
+{
+	Title "AETHERIUS - Optimization/Visual Options"
+
+	Option "Damage Indicators", 				"dvds_dmgindicator", 				"DamageIndicators"
+	TextField "Dmg Ind. Delay [tics] (1-35)", 		"dvds_dmgind_delay"
+	Option "Show Actor Lifebars on LOS", 			"dvds_actorlifebars", 				"ActorLifebars"
+	Option "Show Actor Names on Lifebars", 			"dvds_actorlifebarnames", 				"ActorLifebarNames"
+	Option "Show Actor HP Amount on Lifebars",	 	"dvds_actorlifebarhp", 				"ActorLifebarHP"
+	Option "Show Actor Stats on Lifebars",	 		"dvds_actorlifebarstats", 				"ActorLifebarStats"
+	StaticText " "
+	Option "GFX Effect Level",	 				"dvds_gfxeffectlevel", 				"GFXEffectLevel"
+	StaticText " "
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaults2"
 }
 
 OptionMenu "DVDS-SubMenu3"
@@ -192,6 +1911,142 @@ OptionMenu "DVDS-SubMenu4"
 	Command "Restore Default Settings", 			"dvds_defaults4"
 }
 
+OptionMenu "DVDS-SubMenu5"
+{
+	Title "AETHERIUS - EXP & Combo System Options"
+
+	Option "EXP Gained for killing monsters", 		"dvds_noexpgains", 					"EXPGains"
+	StaticText " "
+	Option "EXP Combo System", 					"dvds_expcombosystem", 				"EXP_ComboSystem"
+	Option "EXP Only For Player's Kills", 			"dvds_exppropercredit", 				"EXP_ProperCredit"
+	Option "EXP Based on MaxHP/SpawnHealth?",		 	"dvds_monsterexpbase", 				"Monster_EXP_Base"
+	Option "EXP Combo Timer Mulitplier", 			"dvds_expcombotimermultiplier", 			"EXPComboTimerMultiplier"
+	Option "EXP Combo Base Mulitplier", 			"dvds_expcombobasemultiplier",			"EXPComboBaseMultiplier"
+	StaticText " "
+	TextField "Player EXP Base Requirement", 			"dvds_baseexprequirement"
+	TextField "Player EXP Base Extra", 			"dvds_baseexpextra"
+	TextField "Player EXP Base Acceleration 1", 		"dvds_baseexpaccel1"
+	TextField "Player EXP Base Acceleration 2", 		"dvds_baseexpaccel2"
+	StaticText " "
+	TextField "Deftness Base [for +100% EXP]", 		"dvds_deftnessexpbase"
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaults5"
+}
+
+OptionMenu "DVDS-SubMenu6"
+{
+	Title "AETHERIUS - Monster Stat Calculation Options"
+
+	Option "Actor Skill-Level Stat Calcs?",			"dvds_skilllevelcalctype", 				"SkillLevelCalcType"
+	StaticText " "
+	Option "Actor Stats Based On Difficulty", 		"dvds_monsterstatcalc_skill", 			"MonsterStatChangeDifficulty"
+	Option "Actor Stats Based On Map #", 			"dvds_monsterstatcalc_maps",			"MonsterStatChangeMaps"
+	Option "Actor Stats Based On Player Level", 		"dvds_monsterstatcalc_levels", 			"MonsterStatChangePlayerLevel"
+	Option "Actor Stats Error/Varience", 			"dvds_monsterstatcalc_varience", 			"MonsterStatChangeError"
+	StaticText " "
+	TextField "Map Difficulty Inflate [OVERALL]", 		"dvds_mapdifficultyinflationOVERALL"
+	TextField "Map Difficulty Inflate [EXP]", 		"dvds_mapdifficultyinflationEXP"
+	TextField "Map Difficulty Inflate [Stats]",		"dvds_mapdifficultyinflationStats"
+	TextField "Map Difficulty Inflate [Spwn/Stel]", 	"dvds_mapdifficultyinflationSpawnStealth"
+	StaticText " "
+	TextField "Level Difficulty Inflate [Exact]",		"dvds_leveldifficultyinflation"
+	TextField "Level Difficulty Inflate [Percentile]", 	"dvds_leveldifficultyinflation2"
+	TextField "Level Stats Factor", 				"dvds_monsterlevelstatfactor"
+	StaticText " "
+	TextField "Monster Atk Factor (Skill)",			"dvds_monsterattackratio_skill"
+	TextField "Monster Atk Factor (Map)",			"dvds_monsterattackratio_maps"
+	TextField "Monster Atk Factor (Levels)",			"dvds_monsterattackratio_levels"
+	TextField "Monster Atk Varience",				"dvds_monsterattackvarience"
+	StaticText " "
+	TextField "Monster Def Factor (Skill)",			"dvds_monsterdefenseratio_skill"
+	TextField "Monster Def Factor (Map)",			"dvds_monsterdefenseratio_maps"
+	TextField "Monster Def Factor (Levels)",			"dvds_monsterdefenseratio_levels"
+	TextField "Monster Def Varience",				"dvds_monsterdefensevarience"
+	StaticText " "
+	TextField "Monster Spd Factor (Skill)",			"dvds_monsterspeedratio_skill"
+	TextField "Monster Spd Factor (Map)",			"dvds_monsterspeedratio_maps"
+	TextField "Monster Spd Factor (Levels)",			"dvds_monsterspeedratio_levels"
+	TextField "Monster Spd Varience",				"dvds_monsterspeedvarience"
+	StaticText " "
+	TextField "Monster MaxHP Factor (Skill)",			"dvds_monstermaxhpratio_skill"
+	TextField "Monster MaxHP Factor (Map)",			"dvds_monstermaxhpratio_maps"
+	TextField "Monster MaxHP Factor (Levels)",		"dvds_monstermaxhpratio_levels"
+	TextField "Monster MaxHP Varience",			"dvds_monstermaxhpvarience"
+	StaticText " "
+	TextField "Monster Balance Factor (Skill)",		"dvds_monsterbalanceratio_skill"
+	TextField "Monster Balance Factor (Map)",			"dvds_monsterbalanceratio_maps"
+	TextField "Monster Balance Factor (Levels)",		"dvds_monsterbalanceratio_levels"
+	TextField "Monster Balance Varience",			"dvds_monsterbalancevarience"
+	StaticText " "
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaults6"
+}
+
+OptionMenu "DVDS-Other1"
+{
+	Title "AETHERIUS - Misc Options"
+
+	Option "Death Music", 					"dvds_deathmusic", 					"OTHER_DeathMusic"
+}
+
+OptionMenu "DVDS-DebugMenu1"
+{
+	Title "AETHERIUS - Debugging Options"
+
+	Option "Player Position Displays",				"dvdsdebug_showplayercoords", 			"DEBUG_PlayerPosDisplay"
+	Option "Spell Position Displays",				"dvdsdebug_showspellpos", 				"DEBUG_SpellPosDisplay"
+	Option "EXP Debug Displays", 				"dvdsdebug_showexpdebugstuff", 			"DEBUG_ExpDisplay"
+	Option "Melee-Attack Displays", 				"dvdsdebug_showmeleeinformation", 			"DEBUG_MeleeAtkDisplay"
+	Option "Player-Attack Displays", 				"dvdsdebug_showplayeratkinformation", 		"DEBUG_PlayerAtkDisplay"
+	Option "Misc-Attack Displays", 				"dvdsdebug_showmiscdmginformation", 		"DEBUG_MiscAtkDisplay"
+	Option "Tension Displays", 					"dvdsdebug_showtensioninformation", 		"DEBUG_TensionDisplay"
+	Option "Dashing Displays", 					"dvdsdebug_showdashinformation", 			"DEBUG_DashDisplay"
+	Option "Player Movement Displays", 			"dvdsdebug_showmoveinformation", 			"DEBUG_MoveDisplay"
+	Option "HP Regen/Degen Displays", 				"dvdsdebug_showhpregenstuff", 			"DEBUG_HPRegenDisplay"
+	Option "Mana Regen/Degen Displays", 			"dvdsdebug_showmanaregenstuff", 			"DEBUG_ManaRegenDisplay"
+	Option "Stamina Regen/Degen Displays", 			"dvdsdebug_showstaminaregenstuff", 		"DEBUG_StaminaRegenDisplay"
+	Option "Monster Stat Calc Displays",			"dvdsdebug_showstatcalcstuff",			"DEBUG_EnemyStatsDisplay"
+	Option "Player Critical Hit % Displays",			"dvdsdebug_showcriticalhitstuff",			"DEBUG_PlayerCritDisplay"
+	Option "Spell Cost Displays",				"dvdsdebug_showspellcoststuff",			"DEBUG_SpellCostDisplay"
+	Option "Survival Rate Displays",				"dvdsdebug_showsurvivalstuff",			"DEBUG_SurviveRateDisplay"
+	Option "Evade Rate Displays",				"dvdsdebug_showevadestuff",				"DEBUG_EvadeRateDisplay"
+	Option "Stamina Consumption Displays",			"dvdsdebug_showstaminausestuff",			"DEBUG_StaminaUseDisplay"
+	Option "Max HP Bonus/Seed/Fygg Displays",			"dvdsdebug_showseedstuff",				"DEBUG_SeedGrabDisplay"
+	Option "Monster Evolve Chance Displays",			"dvdsdebug_evolvestuff",				"DEBUG_EvolveDisplay"
+	Option "Monster Stealth Chance Displays",			"dvdsdebug_stealthstuff",				"DEBUG_StealthDisplay"
+	Option "Infinite Ammo Chance Displays",			"dvdsdebug_infiniteammostuff",			"DEBUG_InfiniteAmmoDisplay"
+	Option "Lifebar Displays",					"dvdsdebug_lifebardisplaystuff",			"DEBUG_LifebarDisplay"
+	Option "In-Game Menu Displays",				"dvdsdebug_ingamemenudisplay",			"DEBUG_InGameMenuDisplay"
+	Option "Hellcore Heat Displays",				"dvdsdebug_hellcoreheatdisplay",			"DEBUG_HellcoreHeatDisplay"
+	Option "Accuracy/Spread Displays",				"dvdsdebug_accuracyspreadisplay",			"DEBUG_AccuracyDisplay"
+	Option "Healing Item Displays",				"dvdsdebug_healitemdisplays",			"DEBUG_HealItemDisplay"
+	Option "Poison Ailment Displays",				"dvdsdebug_poisonailmentdisplays",			"DEBUG_PoisonDisplay"
+	//Option "Attack/Defense Displays",				"dvdsdebug_attackdefensedisplays",			"DEBUG_AttackDefenseDisplay"
+}
+
+OptionMenu "DVDS-MiscModCompat1"
+{
+	Title "AETHERIUS - Compatability with other Mods"
+	StaticText " "
+	Textfield "10XU Multiplier (Requires '10xu.pk3)'",	"sv_10xu_mul"
+}
+
+OptionMenu "DVDS-FloraSpecfic"
+{
+	Title "AETHERIUS - FLORA SPECFIC OPTIONS"
+
+	Option "Starts w/ Sceptre? [all games]", 			"dvds_florastartsceptre", 				"StartSceptre"
+	Option "Starts w/ Sapphire Wand? [all]", 			"dvds_florastartsapphirewand", 			"SapphireWandFlora"
+	Option "Starts w/ Diaris Longbow? [all]", 		"dvds_florastartdiarislongbow", 			"StartDiarisLongBow"
+	Option "Starts w/ Elven Wand? [Heretic]", 		"dvds_florastartelvenwands", 			"NumberOfElvenWands"
+//	Option "Heretic Weapons use MP instead of Ammo", 	"dvds_florausesmagicheretic", 			"HereticWeaponsMagic"
+	StaticText " "
+	Option "Armor Randomized in DVII?", 			"dvds_dviiarmorspawn", 				"RandomizeDVIIArmor"
+	Option "Can Gain Sceptre EXP?", 				"dvds_noscexpgains", 				"SceptreEXPGains"
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaultsflora"
+}
+
 OptionMenu "DVDS-AilishSpecific"
 {
 	Title "AETHERIUS - AILISH SPECIFIC OPTIONS"
@@ -221,6 +2076,123 @@ OptionMenu "DVDS-PetraSpecific"
 	Option "Infinite Force Gauge?",				"dvds_petraarcanagaugeinfinite",		"PetraArcanaGaugeInfinite"
 }
 
+OptionMenu "DVDS-PerksAeonPts"
+{
+	Title "AETHERIUS - Perks/AeonPts Options"
+
+	TextField "1st Level to Use AeonPts [0-200]", 		"dvds_aeonstartlvl"
+	TextField "Aeon Points to Start with", 			"dvds_startingaeonpts"
+	StaticText " "
+	Option "AeonPts for Kills/Secrets/Items?"	,	 	"dvds_aeonpointbonus", 				"AeonPointBonus"
+	Option "Kills Needed to get an AeonPt",			"dvds_killsforaeonpts", 				"KillsForAeonPts"
+	Option "Secrets Needed to get an AeonPt",			"dvds_secretsforaeonpts", 				"SecretsForAeonPts"
+	Option "Items Needed to get an AeonPt",			"dvds_itemsforaeonpts", 				"ItemsForAeonPts"
+	StaticText " "
+	TextField "1 Aeon Point / x Combo Kills", 		"dvdsperks_combobase"
+	StaticText " "
+	Option "Perks Enabled?",				 	"dvdsperks_active", 					"PerkSystemEnabled"
+	TextField "Perk Cost Ratio [%]",				"dvdsperks_costratio" //,				"PerkCostRatio"
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaultsperks"
+}
+
+OptionMenu "DVDS-HUDStuff"
+{
+	Title "AETHERIUS - HUD Options"
+
+	Option "Game HUD Mode?",					"dvds_newhud",					"GameHUDMode"
+	Option "ACS-Based HUD Elements?",	 			"dvds_showacshudelements", 				"ACSHUDElements"
+	StaticText " "
+	Option "[OLD] Meter Detail",				"dvdsoldhud_hudmeternotchdetail",			"OldHUDMeterNotchDetail"
+	Option "[OLD] Empty Notches",				"dvdsoldhud_showemptynotches",			"OldHUDEmptyNotches"
+	Option "[OLD] EXP Bar",					"dvdsoldhud_showexpbar",				"OldHUDEXPBar"
+	Option "[OLD] Mana Bar",					"dvdsoldhud_showmanabar",				"OldHUDManaBar"
+	Option "[OLD] Combo Bar",					"dvdsoldhud_showcombobar",				"OldHUDComboBar"
+	Option "[OLD] Tension Bars",				"dvdsoldhud_showtensionbars",			"OldHUDTensionBars"
+	Option "[OLD] Quickspell List",				"dvdsoldhud_showquickspells",			"OldHUDQuickSpellList"
+	TextField "[OLD] General Transperancy Ratio",		"dvdsoldhud_generaltransperancy"
+	StaticText " "
+	TextField "[NEW] X-Offset [>4:3 Modes]",			"dvdsnewhud_widescreenxoffset"
+	Option "[NEW] Meter Detail",				"dvdsnewhud_hudmeternotchdetail",			"NewHUDMeterNotchDetail"
+	Option "[NEW] Overlife Notches",				"dvdsnewhud_showoverlifenotches",			"NewHUDOverlifeNotches"
+	Option "[NEW] Primary Meters",				"dvdsnewhud_showprimarymeters",			"NewHUDPrimaryMeters"
+	Option "[NEW] Secondary Meters",				"dvdsnewhud_showsecondarymeters",			"NewHUDSecondaryMeters"
+	Option "[NEW] Tension Bar...",				"dvdsnewhud_tensionmainbar",			"NewHUDTensionMainBar"
+	Option "[NEW] Tension Cooldown Bar...",			"dvdsnewhud_tensioncooldownbar",			"NewHUDTensionCooldownBar"
+	Option "[NEW] Quickspell Bar",				"dvdsnewhud_showquickspells",			"NewHUDQuickSpellBar"
+	Option "[NEW] Ratios on Dmg/Heal Bursts?",		"dvdsnewhud_damageburstsratios",			"NewHUDDamageBurstRatios"
+	TextField "[NEW] General Transperancy Ratio",		"dvdsnewhud_generaltransperancy"
+	StaticText " "
+	Option "[BOTH] Show Stat Values",				"dvdsallhuds_showstatinfo",				"ALLHUDSecondaryStatInfo"
+	TextField "[BOTH] HUD Refresh Delay [Tics]",		"dvdsallhuds_refreshdelay"
+	StaticText " "
+	StaticText " "
+	Command "Restore Default Settings [OLD]",			"dvds_huddefaultold"
+	Command "Restore Default Settings [NEW]",			"dvds_huddefaultnew"
+	Command "Restore Default Settings [BOTH]",		"dvds_huddefaultboth"
+}
+
+OptionMenu "DVDS-Voices"
+{
+	Title "AETHERIUS - Voices/Dialouge"
+
+	TextField "Player Grunt on Dash [%]",			"dvds_dashgruntchance"
+	// TextField "Player Grunt on Jump [%]",			"dvds_jumpgruntchance"
+	TextField "Player Speech on Level Up [%]",		"dvds_levelspeechchance"
+	StaticText " "
+	Option "Hokuto? (Mart. Arts Mast. Lvl4+)", 		"dvds_florahokutolol", 				"Atatatatatatatata"
+	StaticText " "
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaultsvoices"
+}
+
+OptionMenu "DVDSRandomizer"
+{
+	Title "AETHERIUS - MONSTER RANDOMIZER OPTIONS"
+
+	Option "Randomized Enemy Evolutions?", 			"dvds_rnd_evolve", 					"RandomizeDVIIMonsters"
+	TextField "Enemy Evolve Rate (Base) (#/256)", 		"dvds_rnd_evolvechance"
+	Option "Evolve Rate Increased by Levels", 		"dvds_rnd_evolve_levels", 				"EvolveBasedOnLevel"
+	Option "Evolve Rate Based on Character", 			"dvds_rnd_evolve_chars", 				"EvolveBasedOnCharacter"
+	Option "Evolve Rate Based on Difficulty", 		"dvds_rnd_evolve_skill", 				"EvolveBasedOnSkill"
+	Option "Evolve Rate Based on Sauron Items", 		"dvds_rnd_evolve_sauronequip", 			"EvolveBasedOnSauronItems"
+	Option "Evolve Rate Based on Maps",	 		"dvds_rnd_evolve_maps", 				"EvolveBasedOnMap"
+	StaticText " "
+	StaticText " "
+	Option "Randomized 'Stealth' Enemies?", 			"dvds_rnd_stealth", 					"RandomizeDVIIStealthMonsters"
+	TextField "Enemy 'Stealth' Rate (Base) (#/256)", 	"dvds_rnd_stealthchance"
+	Option "'Stealth' Rate Increased by Levels", 		"dvds_rnd_stealth_levels", 				"StealthBasedOnLevel"
+	Option "'Stealth' Rate Based on Character", 		"dvds_rnd_stealth_chars", 				"StealthBasedOnCharacter"
+	Option "'Stealth' Rate Based on Difficulty", 		"dvds_rnd_stealth_skill", 				"StealthBasedOnSkill"
+	Option "'Stealth' Rate Based on Maps",	 		"dvds_rnd_stealth_maps", 				"StealthBasedOnMap"
+	Option "'Stealth' Transperancy [Monsters]",		"dvds_rnd_stealthlevel", 				"DVIIStealthLevels"
+	StaticText " "
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaultsrandomizer"
+}
+
+OptionMenu "DVDS-OldCompletionBonuses"
+{
+	Title "AETHERIUS - DOOMSPELLV2 COMPLETION BONUS OPTIONS"
+
+    Option "Old DoomSpellV2 Completion Bonuses?",		"dvds_oldcompletionbonuses", 			"OldCompletionBonuses"
+
+	StaticText " "
+    Option "Monsters Killed Type?",				"dvds_monsterskilledbonus", 			"MonstersCompletionBonuses"
+    Option "Items Found Type?",					"dvds_itemsfoundbonus", 				"ItemsCompletionBonuses"
+    Option "Secrets Found Type?",				"dvds_secretsfoundbonus", 				"SecretsCompletionBonuses"
+	StaticText " "
+    TextField "Monsters Killed Multi?",			"dvds_monsterskilledmulti"
+    TextField "Items Found Multi?",				"dvds_itemsfoundmulti"
+    TextField "Secrets Found Multi?",				"dvds_secretsfoundmulti"
+	StaticText " "
+    TextField "Monsters to Increase Base Multi?",		"dvds_monsterskilledformulti"
+    TextField "Items to Increase Base Multi?",		"dvds_itemsfoundformulti"
+    TextField "Secrets to Increase Base Multi?",		"dvds_secretsfoundformulti"
+	StaticText " "
+	Command "Restore Default Settings", 			"dvds_defaultscompletion"
+}
+
 OptionMenu "DVDSOptions"
 {
 	Title "AETHERIUS - MAIN OPTIONS"
@@ -242,6 +2214,7 @@ OptionMenu "DVDSOptions"
 	SubMenu "Petra Specific Options",		"DVDS-PetraSpecific"
 	SubMenu "Perks/AeonPts Options",			"DVDS-PerksAeonPts"
 	StaticText " "
+	SubMenu "DOOMSPELLV2 COMPLETION BONUS OPTIONS",		"DVDS-OldCompletionBonuses"
 	StaticText " "
 	SubMenu "Debugging Options",				"DVDS-DebugMenu1"
 	StaticText " "
@@ -249,8 +2222,114 @@ OptionMenu "DVDSOptions"
 	SubMenu "Compatability with other Mods",			"DVDS-MiscModCompat1"
 	StaticText " "
 	Option "Fast Monsters", 					"sv_fastmonsters", 					"OnOff"
+	Option "Monsters Respawn", 					"sv_monsterrespawn", 				"OnOff"
 	Option "Enhanced Night-Vision Mode", 			"gl_enhanced_nightvision", 				"OnOff"
 	Option "Allow jump",						"sv_jump", 						"JumpCrouchFreeLook"
 	Option "Allow crouch",					"sv_crouch", 						"JumpCrouchFreeLook"
 	Option "Allow freelook",					"sv_freelook", 					"JumpCrouchFreeLook"
+}
+
+LISTMENU "EpisodeMenu"
+{
+	IfGame(Doom, Chex)
+	{
+		Selector "M_FLORA2", -28, -7
+		Position 48, 63
+		StaticPatch 54, 38, "M_EPISOD"
+	}
+	IfGame(Strife)
+	{
+		Selector "M_FLORA2", -28, -7
+		Position 48, 63
+		StaticText 54, 38, "$MNU_EPISODE"
+	}
+	IfGame(Heretic, Hexen)
+	{
+		Selector "M_FLORA2", -28, -7
+		Position 80, 50
+	}
+}
+
+ListMenu "SkillMenu"
+{
+
+	IfGame(Doom, Chex)
+	{
+		StaticPatch 96, 14, "M_NEWG"
+	}
+	IfGame(Strife)
+	{
+		StaticPatch 96, 14, "M_NGAME"
+	}
+	IfGame(Doom, Strife, Chex)
+	{
+		Selector "M_FLORA2", -28, -7
+		StaticPatch 54, 38, "M_SKILL"
+		Position 48, 63
+	}
+	IfGame (Heretic)
+	{
+		Selector "M_FLORA2", -28, -7
+		Position 38, 30
+	}
+	IfGame (Hexen)
+	{
+		Selector "M_FLORA2", -28, -7
+		StaticText 74, 16, "$MNU_CHOOSESKILL"
+		Position 160, 44
+		centermenu
+	}
+}
+
+ListMenu "PlayerclassMenu"
+{
+	IfGame(Doom, Heretic, Hexen, Strife)
+	{
+		NetgameMessage "$NEWGAME"
+	}
+	IfGame(Chex)
+	{
+		NetgameMessage "$CNEWGAME"
+	}
+
+	IfGame(Doom, Strife, Chex)
+	{
+		Selector "M_FLORA2", -28, -7
+		StaticTextCentered 160, 5, "$MNU_CHOOSECLASS"
+		Position 48, 28
+		PlayerDisplay 220, 58, "20 00 00", "80 00 40"
+		MouseWindow 0, 220
+	}
+	IfGame(Heretic)
+	{
+		Selector "M_FLORA2", -28, -7
+		StaticTextCentered 160, 0, "$MNU_CHOOSECLASS"
+		Position 80, 30
+		PlayerDisplay 220, 45, "20 00 00", "80 00 40"
+		MouseWindow 0, 220
+	}
+	IfGame(Hexen)
+	{
+		Selector "M_FLORA2", -28, -7
+		StaticText 34, 14, "$MNU_CHOOSECLASS"
+		Position 66, 28
+		PlayerDisplay 174, 8, "00 07 00", "40 53 40"
+		MouseWindow 0, 174
+	}
+	// The rest of this menu will be set up based on the actual player definitions.
+}
+
+LISTMENU "MainMenu"
+{
+	Selector "M_FLORA2", -28, -7
+	StaticPatch 90, 4, "M_AETHER"
+	Position 97, 72
+	
+	TextItem "New Game",			"n",	"PlayerclassMenu"
+	TextItem "AETHERIUS Options",	"s",	"DVDSOptions"
+	TextItem "Engine Options",		"o",	"OptionsMenu"
+	TextItem "Help",			"h",	"ReadThisMenu"
+	TextItem "Load Game",		"l",	"LoadGameMenu"
+	TextItem "Save Game",		"s",	"SaveGameMenu"
+	TextItem "Quit Game",		"q",	"QuitMenu"
 }
