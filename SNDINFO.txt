@@ -21,6 +21,7 @@ AilishNoWay2	AILNOWY2
 $random AilishNoWay { AilishNoWay1 AilishNoWay2 }
 
 AilishLeveledUp	AILLEVL
+SpiritStrikeMeterMaxed	AILSSMM
 
 //Serpent Staff
 ClericCStaffFire        spell1

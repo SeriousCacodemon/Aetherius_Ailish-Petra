@@ -10946,7 +10946,7 @@ script "LevelUpCode" ENTER // (void)
     if (leveluptimes == 0)
     {
 	 if (CharacterClass == 9) ActivatorSound("PetraLeveledUp",127); //Petra
-	 //else if (CharacterClass == 8) ActivatorSound("AilishLeveledUp",127); //Ailish
+	 else if (CharacterClass == 8) ActivatorSound("AilishLeveledUp",127); //Ailish
      else if (CharacterClass == 2) ActivatorSound("FloraLeveledUp",127); // Flora
      else if (CharacterClass == 1) ActivatorSound("IlluciaLeveledUp",127); // Illucia
      else if (CharacterClass == 0) ActivatorSound("DeggarisLeveledUp",127); // Deggaris
