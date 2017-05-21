@@ -19,6 +19,8 @@ AilishNoWay1	AILNOWY1
 AilishNoWay2	AILNOWY2
 $random AilishNoWay { AilishNoWay1 AilishNoWay2 }
 
+AilishLeveledUp	AILLEVL
+
 //Serpent Staff
 ClericCStaffFire        spell1
 ClericCStaffExplode     glbhit4
