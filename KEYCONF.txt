@@ -68,7 +68,7 @@ addmenukey "Toggle In Game Menus" "pukename MENUKEY"
 
 clearplayerclasses
 addplayerclass FloraBriscoletti
-//addplayerclass Ailish
-//addplayerclass PetraLagerkvist
+addplayerclass Ailish
+addplayerclass PetraLagerkvist
 addplayerclass IlluciaHendershot
 addplayerclass DeggarisMontegger
