@@ -1,5 +1,7 @@
-
 //Ailish Sounds
+
+AilishLeveledUp	AILLEVL
+SpiritStrikeMeterMaxed	AILSSMM
 
 AilishPain11	AILPAIN1
 AilishPain12	AILPAIN2
@@ -19,9 +21,6 @@ $random AilishPainSet3 { AilishPain31 AilishPain32 AilishPain33 }
 AilishNoWay1	AILNOWY1
 AilishNoWay2	AILNOWY2
 $random AilishNoWay { AilishNoWay1 AilishNoWay2 }
-
-AilishLeveledUp	AILLEVL
-SpiritStrikeMeterMaxed	AILSSMM
 
 //Serpent Staff
 ClericCStaffFire        spell1
