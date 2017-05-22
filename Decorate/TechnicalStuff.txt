@@ -1,1 +1,52 @@
 // Empty for now [all items that where here are moved to the main ComboPack right now - Misfit :V]
+
+Actor ZillaelBlessing : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("BlessingGiveDamageBoost",1)
+		TNT1 A 0 A_GiveInventory("BlessingGiveProtection",1)
+	}
+}
+
+Actor PowerBlessingGiveDamageBoost : PowerDamage
+{
+	DamageFactor "normal", 1.1
+	DamageFactor "ether", 1.1
+}
+
+Actor BlessingGiveDamageBoost : PowerupGiver
+{
+	Powerup.Type "BlessingGiveDamageBoost"
+	Powerup.Duration -15
+	+INVENTORY.AUTOACTIVATE
+	States
+	{
+		Spawn:
+			TNT1 A -1
+			Stop
+	}
+}
+
+Actor PowerBlessingGiveProtection : PowerProtection
+{
+	DamageFactor 0.5
+}
+
+Actor BlessingGiveProtection : PowerupGiver
+{
+	Powerup.Color "6f ed bb", 0.15
+	Powerup.Type "BlessingGiveProtection"
+	Powerup.Duration -15
+	+INVENTORY.AUTOACTIVATE
+	States
+	{
+		Spawn:
+			TNT1 A -1
+			Stop
+	}
+}

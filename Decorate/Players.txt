@@ -219,6 +219,7 @@ actor PetraLagerkvist : DoomPlayer // PlayerPawn
   Player.ColorRange 0, 0
   Player.Portrait "PETPORT2"
   Player.StartItem "AChristina"
+  Player.StartItem "EtherStock", 3
   Player.WeaponSlot 1, SauronGauntletsPetra, PetraFist, AChristina // Melee Weapons
   Player.WeaponSlot 2, AChristinaSapphire, PetraRevolver, PetraRevolver2 // Pistols
   Player.WeaponSlot 3, AChristinaEnergyMine

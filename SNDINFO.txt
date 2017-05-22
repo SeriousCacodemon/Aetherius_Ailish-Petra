@@ -86,6 +86,13 @@ $random PetraLightAttack { PetraAttack1 PetraAttack2 PetraAttack3 }
 $random PetraMediumAttack { PetraAttack4 PetraAttack5 PetraAttack6 }
 $random PetraHeavyAttack { PetraAttack7 PetraAttack8 PetraAttack9 }
 
+PetraRangedAttackVoice1	PETRANON
+PetraRangedAttackVoice2	PETRAONE
+PetraRangedAttackVoice3 PETRATWO
+PetraRangedAttackVoice4 PETRATHR
+
+PetraReloadVoice	PETRARLD
+
 PetraLeveledUp		PETLEVL
 
 // Sounds for Petra player

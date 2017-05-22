@@ -35,6 +35,16 @@ actor SerpentStaffAilish : CWeapStaff
 
 // Petra-specfic version with more comboability...
 // What HP amount do I equate 32000 with?  Belphegor specific HP?
+Actor EtherStock : Ammo
+{
+	Inventory.PickupMessage "Picked up Ether Stock (3 units)."
+	Inventory.Icon "ACMFULL"
+	Inventory.Amount 3
+	Inventory.MaxAmount 12 //Maximum amount of ammo allowed period after all capacity upgrades
+	Ammo.BackPackAmount 3
+	Ammo.BackPackMaxAmount 12
+}
+
 actor AChristina : Weapon
 {
 Inventory.PickupMessage "Found Alexandra Christina!  Ether-charged pew pew!"
@@ -46,28 +56,54 @@ Obituary "%o got blammed by %k's A. Christina."
 states
 {
 Select:
-VUPG A 1 A_Raise
+ACHG A 1 A_Raise
 loop
 Deselect:
-VUPG A 1 A_Lower
+ACHG A 1 A_Lower
 loop
 Fire:
-	  VUPG B 0 BRIGHT A_PlayWeaponSound("AChristina/Shoot1")
-      VUPF A 1 BRIGHT A_SpawnItemEx("AChristinaShot",45,5,34,0,0,0)
-      VUPG CDC 1
-     	 VUPG A 10
-	  VUPG A 1 A_ReFire
+	  ACHG B 0 BRIGHT A_PlayWeaponSound("AChristina/Shoot1")
+      ACHF A 1 BRIGHT A_SpawnItemEx("AChristinaShot",45,5,34,0,0,0)
+      ACHG CDC 1
+     	 ACHG A 10
+	  ACHG A 1 A_ReFire
 Goto Ready
 AltFire:
-	  VUPG B 0 BRIGHT A_PlayWeaponSound("AChristina/LongRangeShoot")
-	  VUPF A 1 A_FireBullets(0,0,1,0,"AChristinaPuff",FBF_NORANDOM)//1024,"",0,0)
-	  //VUPF A 1
-      VUPG CDC 1
-      VUPG A 10
-	  VUPG A 1 A_ReFire
-Goto Ready
+		ACHG B 0 A_JumpIfInventory("EtherStock",1,"AltFireCharged")
+		ACHG B 0 BRIGHT A_PlayWeaponSound("AChristina/LongRangeShoot")
+		ACHF B 1 A_FireCustomMissile("AChristinaTracer",0,0)
+		//ACHF B 1 A_FireBullets(0,0,1,0,"AChristinaPuff",FBF_NORANDOM)//1024,"",0,0)
+		//VUPF A 1
+		ACHG FGF 1
+		ACHG A 10
+		ACHG A 1 A_ReFire
+		Goto Ready
+AltFireCharged:
+		ACHG B 0
+		{
+			A_PlaySound("PetraRangedAttackVoice1",CHAN_VOICE);
+			A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+		}
+		ACHF A 0 A_TakeInventory("EtherStock",1)
+		ACHF A 1 A_FireCustomMissile("AChristinaTracerCharged",0,0,2)
+		//ACHF B 1 A_FireBullets(0,0,1,0,"AChristinaPuffCharged",FBF_NORANDOM)//1024,"",0,0)
+		//VUPF A 1
+		ACHG CDC 1
+		ACHG A 10
+		ACHG B 0
+		{
+			A_PlaySound("PetraRangedAttackVoice2",CHAN_VOICE);
+			A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+		}
+		ACHF A 1 A_FireCustomMissile("AChristinaTracerCharged",0,0,2)
+		//ACHF B 1 A_FireBullets(0,0,1,0,"AChristinaPuffCharged",FBF_NORANDOM)//1024,"",0,0)
+		//VUPF A 1
+		ACHG CDC 1
+		ACHG A 10
+		ACHG A 1 A_ReFire
+		Goto Ready
 Ready:
-VUPG A 1 A_WeaponReady
+ACHG A 1 A_WeaponReady
 Loop
 Spawn:
 VUPP A -1 Bright
@@ -112,6 +148,56 @@ actor AChristinaShot : Actor
 		}
 }
 
+Actor AChristinaTracer : FastProjectile
+{
+   Damagetype "Ether"
+   Radius 1
+   Height 1
+   Mass 5
+   Speed 160 // 80
+   PROJECTILE
+   +DONTREFLECT
+		+PUFFONACTORS
+		+FORCEXYBILLBOARD
+		+FORCERADIUSDMG
+   Renderstyle Add
+   Alpha 1.0
+   Scale 0.5
+   decal BulletChip
+   States
+   {
+   Spawn:
+      TNT1 A 0 NoDelay bright { A_ScaleVelocity(GetCVar("dvds_tracervelmulti")); }
+   Idle:
+      TNT1 A 0 bright
+      TNT1 A 0 bright A_SpawnItemEx("ZombieBulletTracerTrail",-15.0,0,0,0,0,0,0,128,0)
+      TNT1 A 0 bright A_SpawnItemEx("ZombieBulletTracerTrail",-12.5,0,0,0,0,0,0,128,0)
+      TNT1 A 0 bright A_SpawnItemEx("ZombieBulletTracerTrail",-10.0,0,0,0,0,0,0,128,0)
+      TNT1 A 0 bright A_SpawnItemEx("ZombieBulletTracerTrail",-7.5,0,0,0,0,0,0,128,0)
+      TNT1 A 0 bright A_SpawnItemEx("ZombieBulletTracerTrail",-5.0,0,0,0,0,0,0,128,0)
+      TNT1 A 0 bright A_SpawnItemEx("ZombieBulletTracerTrail",-2.5,0,0,0,0,0,0,128,0)
+	  TNT1 A 1 bright A_SpawnItemEx("ZombieBulletTracerTrail",0.0,0,0,0,0,0,0,128,0)
+      loop
+	Death:
+		CHRP C 0 A_SetScale(0.5,0.418)
+		CHRP C 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",32,49,0),32,0,1,32)
+		CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
+		stop
+   }
+}
+
+Actor AChristinaTracerCharged : AChristinaTracer
+{
+	States
+	{
+	Death:
+		CHRP C 0 A_SetScale(0.5,0.418)
+		CHRP C 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",32,53,0),32,0,1,32)
+		CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
+		stop
+	}
+
+}
 actor AChristinaPuff : BulletPuff
 {
 		Alpha 1
@@ -130,7 +216,7 @@ actor AChristinaPuff : BulletPuff
 		{
 		Spawn:
 		CHRP C 0
-		CHRP C 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",32,49,0),32,0,1,32)
+		CHRP C 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",32,49,0),32,0,1,32,0,0,0,"Ether")
 		CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
 		stop
 		}

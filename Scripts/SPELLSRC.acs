@@ -9534,16 +9534,22 @@ script "HUDDisplay" ENTER
 	   else
 	   if(showetherstock == 1)
 	   {
-		SetFont("ACMFULL");
+		SetFont("ACMEMPTY");
         msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha);
-        HudMessage(s:"AAAAAA\nAAAAAA";HUDMSG_ALPHA,5904,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+        HudMessage(s:"AAA";HUDMSG_ALPHA,5904,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+
+		//SetFont("ACMFULL");
+        //msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha);
+        if (CheckInventory("EtherStock") == 3) { SetFont("ACMFULL"); msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha); HudMessage(s:"AAA";HUDMSG_ALPHA,6205,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha); }
+        if (CheckInventory("EtherStock") == 2) { SetFont("ACMFULL"); msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha); HudMessage(s:"AA ";HUDMSG_ALPHA,6205,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha); }
+        if (CheckInventory("EtherStock") == 1) { SetFont("ACMFULL"); msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha); HudMessage(s:"A  ";HUDMSG_ALPHA,6205,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha); }
 	   }
 	   else
        if (maxammo > 0)
        {
         SetFont("AMMBFRAM"); // SetFont("SCBFRAME"); 
         msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha);
-        HudMessage(s:"A";HUDMSG_ALPHA,5904,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+		HudMessage(s:"A";HUDMSG_ALPHA,5904,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha);
        }
       }
 
@@ -39280,25 +39286,24 @@ script "GetPlayerATKDMG" (int type, int puff)
   extradmg2 = ((MiscellaneousVars[36] * 12) / 3); // 400% of Therapeusis
   extradmg2 = extradmg2 * perkfactor / 10000;
  }
-
  if (type == 48) // A. Christina Blast
  {
   perkfactor += ((MiscellaneousVars[10023] * 200) + (MiscellaneousVars[10024] * 1000));
-  damage = random(48,56) * 5; //
+  damage = random(176,293);//234); //
   damage = damage * perkfactor / 10000;
   extradmg1 = (MiscellaneousVars[34] * 3); // 300% of Sorcery
   extradmg1 = extradmg1 * perkfactor / 10000;
-  extradmg2 = (MiscellaneousVars[36] * 2); // 200% of Therapeusis
+  extradmg2 = (MiscellaneousVars[35] * 2); // 200% of Strength
   extradmg2 = extradmg2 * perkfactor / 10000;
  }
  if (type == 49) // A. Christina Long Range Blast (Weak)
  {
   perkfactor += ((MiscellaneousVars[10023] * 200) + (MiscellaneousVars[10024] * 1000));
-  damage = random(40,44) * 5; //
+  damage = random(94,156);//125); //
   damage = damage * perkfactor / 10000;
   extradmg1 = (MiscellaneousVars[34] * 3); // 300% of Sorcery
   extradmg1 = extradmg1 * perkfactor / 10000;
-  extradmg2 = (MiscellaneousVars[36] * 2); // 200% of Therapeusis
+  extradmg2 = (MiscellaneousVars[35] * 2); // 200% of Strength
   extradmg2 = extradmg2 * perkfactor / 10000;
  }
  if (type == 50) // Unmaker Laser (Marines & Petra)
@@ -39336,7 +39341,27 @@ script "GetPlayerATKDMG" (int type, int puff)
   extradmg1 = extradmg1 * perkfactor / 10000;
   extradmg2 = (MiscellaneousVars[36] * 4) / 10; // 40.0% of Therapeusis 
   extradmg2 = extradmg2 * perkfactor / 10000;
- } 
+ }
+ if (type == 53) // A. Christina Long Range Blast (Normal)
+ {
+  perkfactor += ((MiscellaneousVars[10023] * 200) + (MiscellaneousVars[10024] * 1000));
+  damage = random(136,228);//182); //
+  damage = damage * perkfactor / 10000;
+  extradmg1 = (MiscellaneousVars[34] * 3); // 300% of Sorcery
+  extradmg1 = extradmg1 * perkfactor / 10000;
+  extradmg2 = (MiscellaneousVars[35] * 2); // 200% of Strength
+  extradmg2 = extradmg2 * perkfactor / 10000;
+ }
+ if (type == 54) // A. Christina Long Range Blast (Finale)
+ {
+  perkfactor += ((MiscellaneousVars[10023] * 200) + (MiscellaneousVars[10024] * 1000));
+  damage = random(265,441);//353); //
+  damage = damage * perkfactor / 10000;
+  extradmg1 = (MiscellaneousVars[34] * 3); // 300% of Sorcery
+  extradmg1 = extradmg1 * perkfactor / 10000;
+  extradmg2 = (MiscellaneousVars[35] * 2); // 200% of Strength
+  extradmg2 = extradmg2 * perkfactor / 10000;
+ }
  if (IsPointerEqual(AAPTR_TARGET, AAPTR_PLAYER1) == TRUE || puff == 1) // AAPTR_TARGET - the being who fires the shot
  {
   if (GetCVar("dvdsdebug_showplayeratkinformation") == 1) PrintBold(s:"Player Shot");
