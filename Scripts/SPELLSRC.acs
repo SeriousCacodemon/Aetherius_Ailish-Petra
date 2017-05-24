@@ -41470,6 +41470,7 @@ str dvds_monsternames[389][3] =
   {"Abaddon", "Abaddon", ""},
   {"DSHellKnight", "Hell Knight", ""},
   {"DSBaronofHell", "Baron of Hell", ""},
+  {"HellWarrior", "Hell Warrior", ""},
   {"Belphegor", "Belphegor", ""},
   {"BruiserDemon", "Bruiser Demon", ""},
   {"ArchonofHell", "Archon of Hell", ""},
@@ -41855,7 +41856,6 @@ str dvds_monsternames[389][3] =
   {"KDIZDChaingunner", "Chaingun Guy", ""},
   {"DemonCube", "Demon Cube", ""},
   {"HellsFury", "Hell's Fury", ""},
-  {"HellWarrior", "Hell Warrior", ""},
   {"MaulerDemon", "Mauler Pinky", ""},
   {"RapidFireTrooper", "Rapid Assault Zombieman", ""},
   {"RifleZombie", "Rifle Zombie", ""},
@@ -44895,6 +44895,7 @@ script "DoomMonsterDeathEmulation" OPEN
     TotalCount1 += ThingCountName("DSHellKnight", 0);
     TotalCount1 += ThingCountName("BaronofHell", 0);
     TotalCount1 += ThingCountName("DSBaronofHell", 0);
+    TotalCount1 += ThingCountName("HellWarrior", 0);
     TotalCount1 += ThingCountName("Belphegor", 0);
     TotalCount1 += ThingCountName("BruiserDemon", 0);
     TotalCount1 += ThingCountName("ArchonOfHell", 0);
