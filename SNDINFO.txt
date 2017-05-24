@@ -93,6 +93,10 @@ PetraRangedAttackVoice4 PETRATHR
 
 PetraReloadVoice	PETRARLD
 
+ZillaelHolyVoice	ZILLHVOI
+ZillaelJavelin	ZILLJAVL
+ZillaelBlessing	ZILBLESS
+
 PetraLeveledUp		PETLEVL
 
 // Sounds for Petra player

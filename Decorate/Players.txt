@@ -219,14 +219,14 @@ actor PetraLagerkvist : DoomPlayer // PlayerPawn
   Player.ColorRange 0, 0
   Player.Portrait "PETPORT2"
   Player.StartItem "AChristina"
-  Player.StartItem "EtherStock", 3
-  Player.WeaponSlot 1, SauronGauntletsPetra, PetraFist, AChristina // Melee Weapons
-  Player.WeaponSlot 2, AChristinaSapphire, PetraRevolver, PetraRevolver2 // Pistols
-  Player.WeaponSlot 3, AChristinaEnergyMine
-  Player.WeaponSlot 4, AChristinaRepeater, AChristinaMastermind
-  Player.WeaponSlot 5, AChristinaMiniMissiles, AChristinaCyberdemon, AChristinaMaulotaur, AChristinaWyvern
-  Player.WeaponSlot 6, AChristinaHades, AChristinaIronLich, AChristinaHeresiarch
-  Player.WeaponSlot 7, AChristinaPartinias
+  Player.StartItem "EtherStock", 12
+  Player.WeaponSlot 1, PetraFist, SauronGauntletsPetra // Melee Weapons
+  Player.WeaponSlot 2, PetraRevolver, PetraRevolver2, AChristina // Pistols
+  Player.WeaponSlot 3, PetraSawedOff, AChristinaEnergyMine
+  Player.WeaponSlot 4, PetraTommyGun, PetraTommyGun2, AChristinaMastermind, AChristinaRepeater
+  Player.WeaponSlot 5, PetraNapalmLauncher, AChristinaCyberdemon, AChristinaMaulotaur, AChristinaWyvern, AChristinaMiniMissiles
+  Player.WeaponSlot 6, PetraTeslaCannon, PetraTeslaCannon2, AChristinaHades, AChristinaIronLich, AChristinaHeresiarch
+  Player.WeaponSlot 7, AChristinaBFG, AChristinaPartinias
   Player.WeaponSlot 8, NNSigil
   Player.ViewHeight 34
   Player.JumpZ 10

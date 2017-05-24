@@ -40,7 +40,7 @@ Actor EtherStock : Ammo
 	Inventory.PickupMessage "Picked up Ether Stock (3 units)."
 	Inventory.Icon "ACMFULL"
 	Inventory.Amount 3
-	Inventory.MaxAmount 12 //Maximum amount of ammo allowed period after all capacity upgrades
+	Inventory.MaxAmount 12
 	Ammo.BackPackAmount 3
 	Ammo.BackPackMaxAmount 12
 }
@@ -135,8 +135,31 @@ AltHoldCharged3:
 		ACHG A 24
 		ACHG A 0 A_Refire
 		goto Ready
+BouncingShot:
+		ACHG A 6
+		ACHF A 0
+		{
+			A_PlaySound("PetraRangedAttackVoice2",CHAN_VOICE);
+			A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+			A_TakeInventory("EtherStock",1);
+		}
+		ACHF B 1 A_FireBullets(0,0,1,0,"AChristinaPuffChargedFinal",FBF_NORANDOM)//1024,"",0,0)
+		ACHG FGF 1
+		ACHG A 24
+		ACHG A 0 A_Refire
+		goto Ready
+User2:
+		ACHG H 16
+		ACHG A 4
+		{
+			A_PlaySound("PetraReloadVoice",CHAN_VOICE);
+			A_GiveInventory("EtherStock",3);
+		}
+		ACHG IJI 4
+		ACHG A 6
+		goto Ready
 Ready:
-ACHG A 1 A_WeaponReady
+ACHG A 1 A_WeaponReady(WRF_ALLOWUSER2)
 Loop
 Spawn:
 VUPP A -1 Bright
@@ -221,6 +244,8 @@ Actor AChristinaTracer : FastProjectile
 
 actor AChristinaPuff : BulletPuff
 {
+		Radius 12
+		Height 8
 		Alpha 1
 		Renderstyle "Add"
 		VSpeed 0

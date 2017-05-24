@@ -15,8 +15,7 @@ Actor ZillaelBlessing : CustomInventory
 
 Actor PowerBlessingGiveDamageBoost : PowerDamage
 {
-	DamageFactor "normal", 1.1
-	DamageFactor "ether", 1.1
+	DamageFactor "none", 1.2
 }
 
 Actor BlessingGiveDamageBoost : PowerupGiver
