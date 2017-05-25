@@ -149,10 +149,11 @@ BouncingShot:
 		ACHG A 0 A_Refire
 		goto Ready
 User2:
-		ACHG H 16
+		ACHG H 16 A_PlaySound("AChristina/Reload1",CHAN_5)
 		ACHG A 4
 		{
 			A_PlaySound("PetraReloadVoice",CHAN_VOICE);
+			A_PlaySound("AChristina/Reload2",CHAN_WEAPON);
 			A_GiveInventory("EtherStock",3);
 		}
 		ACHG IJI 4

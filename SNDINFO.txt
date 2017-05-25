@@ -128,4 +128,7 @@ AChristina/Shoot1   AH3CHRF
 AChristina/Shoot2   AH3CHRF3
 AChristina/LongRangeShoot   AH3CHRF2
 
+AChristina/Reload1	AH3CHR1
+AChristina/Reload2	AH3CHR2
+
 GetCelestialStone	AHCSTONE
