@@ -526,7 +526,7 @@ global int 21:MiscellaneousVars[]; // ***ARRAY*** For various permenant vars in 
 // [138] - ?
 // [139] - ?
 // [140] is storage for Starting Sceptre Level [Menu CVar]
-// [142] is storage for Health Degeneration Mode [Menu CVar]
+// [142] - ?
 // [143] is for how far along the degeneration timer is.
 // [144] is the base degeneration interval for the character
 // [145] - ?
@@ -575,8 +575,8 @@ global int 21:MiscellaneousVars[]; // ***ARRAY*** For various permenant vars in 
 // [188] Tension Max Cooldown Timer [for bar displays]
 // [189] Tension Sound Charge Loop Timer
 // [190] Active-Tension Pulse Timer
-// [191] Tension Countdown Multiplier [CVAR]
-// [192] Tension Cooldown Multiplier [CVAR]
+// [191] - ?
+// [192] - ?
 // [193] Tension Speed Central Multiplier [CVAR]
 // [194] Mercy Invincibility "Flag"
 // [195] Mercy Invincibility Timer
@@ -27468,8 +27468,7 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
  //***********************
  //**Health-Degen Checks**
  //***********************
-  MiscellaneousVars[142] = GetCVar("dvds_healthdegenmode");
-  if (MiscellaneousVars[142] == 1)
+  if (GetCVar("dvds_healthdegenmode") == 1)
   {
    if (CharacterClass == 0) MiscellaneousVars[144] = 41; // Deggaris Degenerates the Slowest [1.17 seconds]
    if (CharacterClass == 1) MiscellaneousVars[144] = 35; // Illucia has an even speed of Degeneration [1 second]
@@ -27565,8 +27564,8 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
     PerkFactor = 10000 - ((MiscellaneousVars[10013] * 2000) + (MiscellaneousVars[10014] * 5000));
     delaycount = delaycount * PerkFactor / 10000; // "RegenHPFast" and "RegenHPFast EX" perks.
 
-    // Checks Health Regen Rate Menu Option
-    delaycount = delaycount * (100 / GetCVar("dvds_healthregenmultiplier") * 100) / 100;
+    // Checks Health DeRegen Rate Menu Option
+    delaycount = delaycount * GetCVar("dvds_healthdegenmultiplier") / 100;
 
     // Low Cap to 1 Tics
     if (delaycount < 1) delaycount = 1;
@@ -29658,8 +29657,6 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
  // [188] Tension Max Cooldown Timer [for bar displays]
  // [189] Tension Sound Charge Loop Timer
  // [190] Active-Tension Pulse Timer
- // [191] Tension Countdown Multiplier [CVAR]
- // [192] Tension Cooldown Multiplier [CVAR]
  // [193] Tension Aura Appearance Frame
  // [250] Tension Duration Timer
  // [251] Tension OverCharge Timer
@@ -29870,7 +29867,7 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
       // +125% Charge Speed for Flora when Critically low on Health
       if (CharacterClass == 2 && CheckActorInventory(Player1TID,"CriticalHealth") > 0) TensionChargeAmount = TensionChargeAmount * 2250 / 1000;
       // Check Tension Charge Multiplier Option
-      TensionChargeAmount = TensionChargeAmount * MiscellaneousVars[187] / 100;
+      TensionChargeAmount = TensionChargeAmount * GetCVar("dvds_tension_chargemultiplier") / 100;
       // Check Tension Speed Option [also affects Stamina]
       TensionChargeAmount = TensionChargeAmount * MiscellaneousVars[193] / 4;
       // Check "Power Trip" mode Cheat
@@ -30069,7 +30066,6 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
   if (MiscellaneousVars[184] > 0) MiscellaneousVars[184] = 0; // Timer Counts Down?
   if (MiscellaneousVars[185] > 0) MiscellaneousVars[185] = 0;
   if (MiscellaneousVars[186] > 0) MiscellaneousVars[186] = 0;
-  if (MiscellaneousVars[187] > 0) MiscellaneousVars[187] = 0;
   if (MiscellaneousVars[188] > 0) MiscellaneousVars[188] = 0;
   if (MiscellaneousVars[189] > 0) MiscellaneousVars[189] = 0;
   if (MiscellaneousVars[190] > 0) MiscellaneousVars[190] = 0;
@@ -30272,7 +30268,7 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
    if (MiscellaneousVars[184] != 0) MiscellaneousVars[184] = 0; // Timer Counts Down?
    if (MiscellaneousVars[185] != 0) MiscellaneousVars[185] = 0;
    if (MiscellaneousVars[186] != 0) MiscellaneousVars[186] = 0;
-   if (MiscellaneousVars[187] != 0) MiscellaneousVars[189] = 0;
+   if (GetCVar("dvds_tension_chargemultiplier") != 0) MiscellaneousVars[189] = 0;
    if (MiscellaneousVars[188] != 0) MiscellaneousVars[190] = 0;   
   }
   if (GetActorProperty(Player1TID,APROP_Health) > 0)
