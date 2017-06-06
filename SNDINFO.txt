@@ -69,7 +69,7 @@ $random PetraPainSet3 { PetraPain31 PetraPain32 PetraPain33 }
 
 PetraDash1		PETRAM5
 PetraDash2		PETRAM6
-PetraDash3		PETRAM8
+PetraDash3		PETRAM7
 $random PetraDash { PetraDash1 PetraDash2 PetraDash3 }
 
 PetraAttack1	PETRAM1
@@ -127,6 +127,7 @@ $playersound	PetraSND	male	*poison	null
 AChristina/Shoot1   AH3CHRF
 AChristina/Shoot2   AH3CHRF3
 AChristina/LongRangeShoot   AH3CHRF2
+AChristina/BouncingShotBounce	AH3CHRB
 
 AChristina/Reload1	AH3CHR1
 AChristina/Reload2	AH3CHR2

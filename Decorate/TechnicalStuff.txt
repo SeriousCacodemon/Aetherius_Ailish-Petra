@@ -38,7 +38,7 @@ Actor PowerBlessingGiveProtection : PowerProtection
 
 Actor BlessingGiveProtection : PowerupGiver
 {
-	Powerup.Color "6f ed bb", 0.15
+	Powerup.Color "6f ed bb", 0.10
 	Powerup.Type "BlessingGiveProtection"
 	Powerup.Duration -15
 	+INVENTORY.AUTOACTIVATE
