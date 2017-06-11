@@ -380,7 +380,7 @@ YScale 0.7524
 
 actor AChristinaBouncingshotweak : Actor
 {
-	Damage 1
+	Damage (ACS_NamedExecuteWithResult("GetPlayerATKDMG",55,0,0))
 	XScale 0.26
 	YScale 0.208
 	Radius 2
@@ -409,6 +409,7 @@ actor AChristinaBouncingshotweak : Actor
 
 actor AChristinaBouncingshotstage1 : AChristinaBouncingshotweak
 {
+	Damage (ACS_NamedExecuteWithResult("GetPlayerATKDMG",56,0,0))
 	BounceType Doom
 	BounceFactor 1
 	WallBounceFactor 1

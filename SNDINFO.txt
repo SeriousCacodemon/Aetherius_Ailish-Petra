@@ -98,6 +98,7 @@ ZillaelJavelin	ZILLJAVL
 ZillaelBlessing	ZILBLESS
 
 PetraLeveledUp		PETLEVL
+ArcanaGaugeLevelup	AGAUGELV
 
 // Sounds for Petra player
 $playersound	PetraSND	male	*death		PETRADTH
