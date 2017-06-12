@@ -808,6 +808,10 @@ global int 21:MiscellaneousVars[]; // ***ARRAY*** For various permenant vars in 
 // [2501] Player should be frozen
 // [2502] Unfreeze Player
 
+// [5001] Arcana Points [Petra]
+
+// [5501] Spirit Strike Points [Ailish]
+
 // [9043] "Death Rage" Timer
 // [9044] "Death Rage" COOLDOWN Timer
 
@@ -986,7 +990,6 @@ global int 50:GameScriptEvents[]; // ***ARRAY*** Array for Controlling in-game s
 // [1801] = MAP08, Spawns all AmbientSound Actors in places meant to be high off the ground.
 
 global int 51:SpiritStrikePoints; //Ailish specific points for Spirit Strike usage
-global int 52:ArcanaPoints; //Petra specific for Arcana Supers and other attacks that use Arcana Gauge.
 
 // 0 = Normal, 1 = Other
 
@@ -5926,6 +5929,7 @@ script "HUDDisplay" ENTER
         SetFont("DQHUDFONTSML");
         msgalpha = 0.875; msgalpha = FixedMul(msgalpha,overallhudalpha);
         HudMessage(s:"ARC";HUDMSG_ALPHA,3502,cr_white,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+
 		
 		// ARC Notches
         xpos = ScreenXOffset + 225.0; // 225
@@ -5933,7 +5937,7 @@ script "HUDDisplay" ENTER
       msgalpha = 0.75; msgalpha = FixedMul(msgalpha,overallhudalpha);
       G10 = GetCVar("dvdsnewhud_hudmeternotchdetail");
       G9 = 200 / G10;
-      G3 = ArcanaPoints;
+      G3 = MiscellaneousVars[5001];
       G2 = 900; //To replace in the future with other max. Arcana Gauge options
       I1 = G3 * G9 / G2;
       if (I1 > G9) I1 = G9;
@@ -5987,6 +5991,7 @@ script "HUDDisplay" ENTER
         SetFont("DQHUDFONTSML");
         msgalpha = 0.875; msgalpha = FixedMul(msgalpha,overallhudalpha);
         HudMessage(s:"SSP";HUDMSG_ALPHA,3502,cr_white,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+
 	 }
      if (CharacterClass == 2) // Flora = HellCore/HLCR
      {
@@ -10179,15 +10184,14 @@ script "ManaRegenerationStuff" ENTER
  Restart;
 }
 
-
 Script "ArcanaGaugeRegenerationStuff" ENTER
 {
-	int ArcanaRegenDelay, ArcanaRegenAmount;
- if (ArcanaRegenDelay == 35 && ArcanaPoints < 900)
+ int ArcanaRegenDelay, ArcanaRegenAmount;
+ if (ArcanaRegenDelay == 35 && MiscellaneousVars[5001] < 900)
  {
-	ArcanaPoints += 1;
+	MiscellaneousVars[5001] += 1;
 	ArcanaRegenDelay = 0;
-	if (ArcanaPoints == 100 || ArcanaPoints == 200 || ArcanaPoints == 300 || ArcanaPoints == 400 || ArcanaPoints == 500 || ArcanaPoints == 600 || ArcanaPoints == 700 || ArcanaPoints == 800 || ArcanaPoints == 900 )
+	if (MiscellaneousVars[5001] == 100 || MiscellaneousVars[5001] == 200 || MiscellaneousVars[5001] == 300 || MiscellaneousVars[5001] == 400 || MiscellaneousVars[5001] == 500 || MiscellaneousVars[5001] == 600 || MiscellaneousVars[5001] == 700 || MiscellaneousVars[5001] == 800 || MiscellaneousVars[5001] == 900 )
 	{
 		PlaySound(0,"ArcanaGaugeLevelup",CHAN_7);
 	}
@@ -24994,6 +24998,10 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
    TakeActorInventory(Player1TID,"DSDiamondArmorClass2", 9999);
   }
   else
+  if (CharacterClass == 8) // Ailish
+  {
+  }
+  else
   if (CharacterClass == 9) // Petra
   {
    // HP Range
@@ -39412,7 +39420,7 @@ script "GetPlayerATKDMG" (int type, int puff)
  if (type == 54) // A. Christina Long Range Blast (Finale)
  {
   perkfactor += ((MiscellaneousVars[10023] * 200) + (MiscellaneousVars[10024] * 1000));
-  damage = random(340,570);//353); //
+  damage = random(340,570); //353); //
   damage = damage * perkfactor / 10000;
   extradmg1 = (MiscellaneousVars[34] * 3); // 300% of Sorcery
   extradmg1 = extradmg1 * perkfactor / 10000;
