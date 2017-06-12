@@ -10186,8 +10186,14 @@ script "ManaRegenerationStuff" ENTER
 
 Script "ArcanaGaugeRegenerationStuff" ENTER
 {
- int ArcanaRegenDelay, ArcanaRegenAmount;
- if (ArcanaRegenDelay == 35 && MiscellaneousVars[5001] < 900)
+ int ArcanaRegenDelay, ArcanaRegenDelaySkill, ArcanaRegenAmount;
+ if (CharacterClass != 9) Terminate;
+ if (GameSkill() == SKILL_VERY_EASY) { ArcanaRegenDelaySkill = 8; }
+ if (GameSkill() == SKILL_EASY) { ArcanaRegenDelaySkill = 16; }
+ if (GameSkill() == SKILL_NORMAL) { ArcanaRegenDelaySkill = 24; }
+ if (GameSkill() == SKILL_HARD) { ArcanaRegenDelaySkill = 32; }
+ if (GameSkill() == SKILL_VERY_HARD) { ArcanaRegenDelaySkill = 40; }
+ if (ArcanaRegenDelay == ArcanaRegenDelaySkill && MiscellaneousVars[5001] < 900)
  {
 	MiscellaneousVars[5001] += 1;
 	ArcanaRegenDelay = 0;
