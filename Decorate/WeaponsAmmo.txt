@@ -99,6 +99,7 @@ Fire:
 Goto Ready
 AltFire:
 AltHold:
+		ACHG B 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckAChristinaCheck") >= 1,"BouncingShotWeak") //Enter bouncing shot state if Zoom is held
 		ACHG B 0 A_JumpIfInventory("EtherStock",1,"AltHoldCharged")
 		ACHG B 0 BRIGHT
 		{
@@ -165,9 +166,26 @@ AltHoldCharged3:
 		ACHG A 24
 		ACHG A 0 A_Refire
 		goto Ready
-BouncingShot:
+BouncingShotWeak:
+		ACHG A 0 A_JumpIfInventory("EtherStock",1,"BouncingShotStage1")
+		ACHG A 5
+		ACHF A 0
+		{
+			A_PlaySound("PetraRangedAttackVoice1",CHAN_VOICE);
+			A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+			A_TakeInventory("EtherStock",1);
+			ACS_NamedExecuteAlways("StartTensionCountDown");
+		}
+		ACHF B 1 A_FireCustomMissile("AChristinaBouncingShotWeak",0,0,-3)
+		ACHG FGF 1
+		ACHG A 24
+		ACHG A 0 A_Refire
+		goto Ready
+BouncingShotStage1:
 		ACHG A 4
-		ACHF A 1 A_ReFire("BouncingShot2")
+		ACHF A 0 A_JumpIfInventory("EtherStock",2,1)
+		goto BouncingShotStage1+3
+		ACHF A 1 A_ReFire("BouncingShotStage2")
 		ACHF A 0
 		{
 			A_PlaySound("PetraRangedAttackVoice2",CHAN_VOICE);
@@ -175,14 +193,17 @@ BouncingShot:
 			A_TakeInventory("EtherStock",1);
 			ACS_NamedExecuteAlways("StartTensionCountDown");
 		}
-		ACHF B 1 A_FireBullets(0,0,1,0,"AChristinaPuffChargedFinal",FBF_NORANDOM)//1024,"",0,0)
+		ACHF B 1 A_FireCustomMissile("AChristinaBouncingShotStage1",0,0,-3)
 		ACHG FGF 1
 		ACHG A 24
 		ACHG A 0 A_Refire
 		goto Ready
-BouncingShot2:
+
+BouncingShotStage2:
 		ACHG A 3
-		ACHF A 1 A_ReFire("BouncingShot3")
+		ACHF A 0 A_JumpIfInventory("EtherStock",3,1)
+		goto BouncingShotStage2+3
+		ACHF A 1 A_ReFire("BouncingShotStage3")
 		ACHF A 0
 		{
 			A_PlaySound("PetraRangedAttackVoice3",CHAN_VOICE);
@@ -190,12 +211,12 @@ BouncingShot2:
 			A_TakeInventory("EtherStock",2);
 			ACS_NamedExecuteAlways("StartTensionCountDown");
 		}
-		ACHF B 1 A_FireBullets(0,0,1,0,"AChristinaPuffChargedFinal",FBF_NORANDOM)//1024,"",0,0)
+		ACHF B 1 A_FireCustomMissile("AChristinaBouncingShotStage2",0,0,-3)
 		ACHG FGF 1
 		ACHG A 24
 		ACHG A 0 A_Refire
 		goto Ready
-BouncingShot3:
+BouncingShotStage3:
 		ACHG A 2
 		ACHF A 0
 		{
@@ -204,7 +225,7 @@ BouncingShot3:
 			A_TakeInventory("EtherStock",3);
 			ACS_NamedExecuteAlways("StartTensionCountDown");
 		}
-		ACHF B 1 A_FireBullets(0,0,1,0,"AChristinaPuffChargedFinal",FBF_NORANDOM)//1024,"",0,0)
+		ACHF B 1 A_FireCustomMissile("AChristinaBouncingShotStage3",0,0,-3)
 		ACHG FGF 1
 		ACHG A 24
 		ACHG A 0 A_Refire
@@ -212,13 +233,14 @@ BouncingShot3:
 
 Reload:
 		ACHG H 0 A_PlaySound("AChristina/Reload1",CHAN_5)
-		ACHG HHH 5 A_GiveInventory("EtherStock",1)
-		ACHG A 0 A_ReFire("Reload2")
+		ACHG HHH 4 A_GiveInventory("EtherStock",1)
+		ACHG H 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckAChristinaCheck") == 3,"Reload2")
+		//ACHG A 0 A_ReFire("Reload2")
 		goto ReloadEnd
 Reload2:
-		ACHG H 5 A_GiveInventory("EtherStock",1)
+		ACHG H 4 A_GiveInventory("EtherStock",1)
 		ACHG H 0 A_JumpIfInventory("EtherStock",12,"ReloadEnd")
-		ACHG H 0 A_ReFire("Reload2")
+		ACHG H 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckAChristinaCheck") == 3,"Reload2")
 		goto ReloadEnd
 ReloadEnd:
 		ACHG A 4

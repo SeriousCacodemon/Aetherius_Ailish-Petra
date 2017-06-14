@@ -226,6 +226,9 @@ Functions
 	["UseCustomInventoryItem"]		-	For actual items that are stored in the inventory
 	["CheckCharacterClass"]			-	Returns the Character ID
 
+// Petra Specific Scripts
+	["CheckAChristinaCheck"]		-	Script that checks when certain keys are pressed while Alexandra Christina is selected. (Dodge, Bouncing Beams, Heel Kick, Reloading)
+	
 // Scripts imported from others [and possibly modified]
 
 //******************************************************************
@@ -1191,7 +1194,7 @@ str SpellTable[59] = {                               //[id] (deg?), (ill?), (flo
                       "\cfSpreader Aura Lv. 2\c-",	 //[55] X, X, O  [Status]
                       "\cfOomph\c-",				 //[56] X, X, O  [Status]
                       "\cfBuff\c-",					 //[57] X, X, O  [Status]
-					  "\cfDesperado Damsel"          //[58] X, X, X  [Status]
+					  "\cfDesperado Damsel\c-"          //[58] X, X, X  [Status]
                      };
 // 15, 20, 23, 29, 30, 33, 34, 36, 37, 41, 42, 44, 45, 46, 48, 49, 50, 54, 55, 56, 57, 58 = Deggaris Cannot use these Spell IDs in final version
 // 6, 26, 43, 49, 51, 55, 56, 57, 58 = Illucia Cannot use these Spell IDs in final version
@@ -1256,7 +1259,7 @@ str SpellDesc[59] =  {
                       "Allows You to Create 6 Extra Copies of Most Attacks/Spells.",	// Spreader Aura Lv. 2
                       "Doubles your damage output for a short time.",	// Oomph
                       "Cut Damage in Half and slightly increase survive rate.",		// Buff
-                      "Temporarily increase accuracy of all weapons.  Also increases damage for Hitscan weapons and A. Christina."		// Desperado Damsel
+                      "Temporary damage boost for A. Christina (non-enemy fire modes) and hitscan weaponry."		// Desperado Damsel
                      };
 int SpellCosts[59] = {
                         1,		// Minor Magic Missile
@@ -37226,6 +37229,28 @@ script "IncreaseHellcoreLevel" (int HellcoreWeapon)
 
  if (HellcoreWeapon == 17) MiscellaneousVars[112] += 1;
  if (MiscellaneousVars[112] > 8) MiscellaneousVars[112] = 8;
+}
+
+script "CheckAChristinaCheck" (void)
+{
+ int buttons = GetPlayerInput(0, INPUT_BUTTONS);
+ SetResultValue(0); //Always set to this initially!
+ if (buttons & BT_RELOAD) //Allow A. Christina's ammo to continue refilling by holding the button
+ {
+	SetResultValue(3);
+ }
+ 
+ if (buttons & BT_ZOOM) //A. Christina weapons fire mode
+ {
+  if (GetActorVelZ(Player1TID) < 0) //LGA Dodge can activate when Zoom key is pressed and on the ground
+  {
+	SetResultValue(2); //LGA Dodge can be used
+  }
+  else
+  {
+	SetResultValue(1); //Bouncing Beams and Heel Kick are only allowed when airborne
+  }
+ }
 }
 
 // Check if to perform Sceptre's downswing alternate attack while falling or it's spinning alternate while grounded.
