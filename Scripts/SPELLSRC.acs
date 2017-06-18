@@ -529,7 +529,8 @@ global int 21:MiscellaneousVars[]; // ***ARRAY*** For various permenant vars in 
 // [138] - ?
 // [139] - ?
 // [140] is storage for Starting Sceptre Level [Menu CVar]
-// [142] - ?
+// [141] - ?
+// [142] is EXP Combo Color Flash Timer
 // [143] is for how far along the degeneration timer is.
 // [144] is the base degeneration interval for the character
 // [145] - ?
@@ -5520,24 +5521,47 @@ script "HUDDisplay" ENTER
        HudMessage(s:"A";HUDMSG_ALPHA,2111,cr_untranslated,xpos,ypos,HUDMsgDelayFixed,msgalpha);
       }
 
+	  str killmsgcolor = "Green";
+	  MiscellaneousVars[142]++;
+	  if (MiscellaneousVars[142] > 39) MiscellaneousVars[142] -= 39;
+
       // # of Kills
       if (MiscellaneousVars[158] > 0)
       {
+       // Kill Combo
+       if (MiscellaneousVars[158] > 1)
+       {
+        if (MiscellaneousVars[158] > 10 && MiscellaneousVars[158] < 21) { killmsgcolor = "LightBlue"; }
+        else if (MiscellaneousVars[158] > 20 && MiscellaneousVars[158] < 36) { killmsgcolor = "Cream"; }
+        else if (MiscellaneousVars[158] > 35 && MiscellaneousVars[158] < 61) { killmsgcolor = "Cyan"; }
+        else if (MiscellaneousVars[158] > 60 && MiscellaneousVars[158] < 101) { killmsgcolor = "Brick"; }
+        else if (MiscellaneousVars[158] > 100 && MiscellaneousVars[158] < 201) { killmsgcolor = "Orange"; }
+        else if (MiscellaneousVars[158] > 200 && MiscellaneousVars[158] < 501) { killmsgcolor = "Gold"; }
+        else if (MiscellaneousVars[158] > 500) 
+		{ 
+	     if (MiscellaneousVars[142] >= 0 && MiscellaneousVars[142] <= 9) killmsgcolor = "PetraOrange"; 
+	     if (MiscellaneousVars[142] >= 10 && MiscellaneousVars[142] <= 19) killmsgcolor = "FloraBlue"; 
+	     if (MiscellaneousVars[142] >= 20 && MiscellaneousVars[142] <= 29) killmsgcolor = "PetraOrange"; 
+	     if (MiscellaneousVars[142] >= 30 && MiscellaneousVars[142] <= 39) killmsgcolor = "FloraBlue"; 
+		}
+       }
+
        SetFont("DQHUDFONT");
        xpos = ScreenXOffset + 108.0 + 0.2;
        if (xpos < 0.0) xpos -= 0.4;
        //Print(f:xpos);
        ypos += -22.0; // = 750.0;
        msgalpha = 0.875; msgalpha = FixedMul(msgalpha,overallhudalpha);
-       HudMessage(d:MiscellaneousVars[158];HUDMSG_ALPHA,2112,cr_green,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+       HudMessage(d:MiscellaneousVars[158];HUDMSG_ALPHA | HUDMSG_COLORSTRING,2112,killmsgcolor,xpos,ypos,HUDMsgDelayFixed,msgalpha);
        SetFont("DQHUDFONTSML");
        // "Kills" Label
        xpos = ScreenXOffset + 120.0 + 0.1;
        if (xpos < 0.0) xpos -= 0.2;
        ypos += 5.0; // = 755.0;
        msgalpha = 0.875; msgalpha = FixedMul(msgalpha,overallhudalpha);
-       if (MiscellaneousVars[158] == 1) HudMessage(s:"KILL";HUDMSG_ALPHA,2113,cr_green,xpos,ypos,HUDMsgDelayFixed,msgalpha);
-       else HudMessage(s:"KILLS";HUDMSG_ALPHA,2113,cr_green,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+
+       if (MiscellaneousVars[158] == 1) HudMessage(s:"KILL";HUDMSG_ALPHA | HUDMSG_COLORSTRING,2113,killmsgcolor,xpos,ypos,HUDMsgDelayFixed,msgalpha);
+       else HudMessage(s:"KILLS";HUDMSG_ALPHA | HUDMSG_COLORSTRING,2113,killmsgcolor,xpos,ypos,HUDMsgDelayFixed,msgalpha);
       }
 
       // "OVERKILL" text
@@ -29897,7 +29921,22 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
  int TensionCoolDownRatio = 200;
  PerkFactor = ((MiscellaneousVars[10011] * 500) + (MiscellaneousVars[10012] * 1250)) + 10000;
  TensionCoolDownRatio = TensionCoolDownRatio * PerkFactor / 10000; // "PsycheMore" and "PsycheMore EX" perks.
+
  TensionCoolDownRatio = TensionCoolDownRatio * GetCVar("dvds_tension_cooldownmultiplier") / 100;
+
+ // Kill Combo
+ if (MiscellaneousVars[158] > 1)
+ {
+  if (MiscellaneousVars[158] > 10 && MiscellaneousVars[158] < 21) { TensionCoolDownRatio = (TensionCoolDownRatio * 1010) / 1000; }
+  else if (MiscellaneousVars[158] > 20 && MiscellaneousVars[158] < 36) { TensionCoolDownRatio = (TensionCoolDownRatio * 1030) / 1000; }
+  else if (MiscellaneousVars[158] > 35 && MiscellaneousVars[158] < 61) { TensionCoolDownRatio = (TensionCoolDownRatio * 1060) / 1000; }
+  else if (MiscellaneousVars[158] > 60 && MiscellaneousVars[158] < 101) { TensionCoolDownRatio = (TensionCoolDownRatio * 1100) / 1000; }
+  else if (MiscellaneousVars[158] > 100 && MiscellaneousVars[158] < 201) { TensionCoolDownRatio = (TensionCoolDownRatio * 1200) / 1000; }
+  else if (MiscellaneousVars[158] > 200 && MiscellaneousVars[158] < 501) { TensionCoolDownRatio = (TensionCoolDownRatio * 1500) / 1000; }
+  else if (MiscellaneousVars[158] > 500) { TensionCoolDownRatio = (TensionCoolDownRatio * 1950) / 1000; }
+ }
+
+ 
  if (MiscellaneousVars[166] <= 0 && MenuSystemVars[0] == 0) MiscellaneousVars[186] -= TensionCoolDownRatio;
 
  if (MiscellaneousVars[186] <= 0) { MiscellaneousVars[186] = 0; MiscellaneousVars[188] = MiscellaneousVars[186]; }
@@ -29990,6 +30029,18 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
       if (GetCVar("dvds_musou_powertripmode") == 1) TensionChargeAmount *= 5;
       if (GetCVar("dvds_musou_powertripmode") == 2) TensionChargeAmount *= 10;
 
+	  // Kill Combo
+	  if (MiscellaneousVars[158] > 1)
+	  {
+	   if (MiscellaneousVars[158] > 10 && MiscellaneousVars[158] < 21) { TensionChargeAmount = (TensionChargeAmount * 1005) / 1000; }
+	   else if (MiscellaneousVars[158] > 20 && MiscellaneousVars[158] < 36) { TensionChargeAmount = (TensionChargeAmount * 1015) / 1000; }
+	   else if (MiscellaneousVars[158] > 35 && MiscellaneousVars[158] < 61) { TensionChargeAmount = (TensionChargeAmount * 1030) / 1000; }
+	   else if (MiscellaneousVars[158] > 60 && MiscellaneousVars[158] < 101) { TensionChargeAmount = (TensionChargeAmount * 1050) / 1000; }
+	   else if (MiscellaneousVars[158] > 100 && MiscellaneousVars[158] < 201) { TensionChargeAmount = (TensionChargeAmount * 1100) / 1000; }
+	   else if (MiscellaneousVars[158] > 200 && MiscellaneousVars[158] < 501) { TensionChargeAmount = (TensionChargeAmount * 1250) / 1000; }
+	   else if (MiscellaneousVars[158] > 500) { TensionChargeAmount = (TensionChargeAmount * 1475) / 1000; }
+	  }
+	  
       // PsycheMore perks
       PerkFactor = ((MiscellaneousVars[10011] * 750) + (MiscellaneousVars[10012] * 1875)) + 10000;
       TensionChargeAmount = TensionChargeAmount * PerkFactor / 10000; // "PsycheMore" and "PsycheMore EX" perks.
