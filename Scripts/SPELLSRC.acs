@@ -29513,6 +29513,9 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
  //*Calculate Speed for some Abilities*
  //************************************
  int TotalSpeed = 1.00;
+ 
+ int CVarAdjustSpeed = GetCVar("dvds_speedmult");
+ TotalSpeed = FixedMul(TotalSpeed,CVarAdjustSpeed);
 
  int StaminaSpeed = 1.00;
  int StaminaPercentFull = MiscellaneousVars[21] * 10000 / MiscellaneousVars[22];
@@ -29565,11 +29568,14 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
  
  int LVLSpeed = 1.0;
  // Level
- if (CharacterClass == 0) LVLSpeed = 1.0 + (PlayerLevel * 0.000669);
- if (CharacterClass == 1) LVLSpeed = 1.0 + (PlayerLevel * 0.00117533333333); 
- if (CharacterClass == 2) LVLSpeed = 1.0 + (PlayerLevel * 0.001389);
- if (CharacterClass == 8) LVLSpeed = 1.0 + (PlayerLevel * 0.00128255555555);
- if (CharacterClass == 9) LVLSpeed = 1.0 + (PlayerLevel * 0.00117533333333); 
+ if (GetCVar("dvds_levelaffectsspeed"))
+ {
+  if (CharacterClass == 0) LVLSpeed = 1.0 + (PlayerLevel * 0.000669);
+  if (CharacterClass == 1) LVLSpeed = 1.0 + (PlayerLevel * 0.00117533333333); 
+  if (CharacterClass == 2) LVLSpeed = 1.0 + (PlayerLevel * 0.001389);
+  if (CharacterClass == 8) LVLSpeed = 1.0 + (PlayerLevel * 0.00128255555555);
+  if (CharacterClass == 9) LVLSpeed = 1.0 + (PlayerLevel * 0.00117533333333); 
+ }
  TotalSpeed = FixedMul(TotalSpeed,LVLSpeed);
 
  int AGLSpeed = 1.0;
@@ -35104,7 +35110,9 @@ script "CENTRALSCRIPTOFEVERYTHING" ENTER
             s:"\nFriction: ",f:MiscellaneousVars[399],
             s:"\nAirControl: ",f:MiscellaneousVars[400],
 			s:"\n",
-            s:"\nStaminaSpeed x: ",f:StaminaSpeed,
+            s:"\nCVarAdjustSpeed x: ",f:CVarAdjustSpeed,
+			s:"\n",
+            s:"\nStaminaSpeed x: ",f:StaminaSpeed, s:" \cy(Stam:\c- ", d:StaminaPercentFull, s:"\cy)",
             s:"\nDodgeMoreSpeed x: ",f:DodgeMoreSpeed,
             s:"\nJumpMoreSpeed x: ",f:JumpMoreSpeed,
             s:"\nOnTheMoveSpeed x: ",f:OnTheMoveSpeed,

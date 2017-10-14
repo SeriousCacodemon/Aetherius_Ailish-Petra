@@ -115,6 +115,12 @@ OptionValue "StaminaAffectsSpeed"
 	1, "Yes [DEFAULT]"
 }
 
+OptionValue "LevelAffectsSpeed"
+{
+	0, "No"
+	1, "Yes [DEFAULT]"
+}
+
 OptionValue "KillsForAeonPts"
 {
 	48, "48 [Easiest]"
@@ -1864,11 +1870,14 @@ OptionMenu "DVDS-SubMenu1"
 	Option "Actor Crisis Attacks?", 				"dvds_monstercrisisattacks", 			"CrisisAttacks"
 	TextField "Crisis Attack Multiplier",			"dvds_monstercrisismulti"
 	Option "BFG2704 Alt-Fire?", 				"dvds_BFG2704", 					"BFG2704"
-     Option "Stamina Affects Movement Speed",			"dvds_staminaaffectsspeed", 			"StaminaAffectsSpeed"
 	Option "Can Dash/Air-Dash?",	 			"dvds_allowdashing", 				"DashOption"
 	Option "Can use Tension?",					"dvds_allowtension", 				"TensionOption"
 	Option "Tension OverPsyche Slowly Hurts?",		"dvds_allowtensionocdmg", 				"TensionOverdriveDmg"
 	Option "Tension Spd (affects Stam. use)",			"dvds_tensionspeed", 				"TensionSpeed"
+	StaticText " "
+	Slider "Adjust Movement Speed",				"dvds_speedmult", 					0.01, 2.0, 0.01, 2
+	Option "Stamina Affects Movement Speed",			"dvds_staminaaffectsspeed", 			"StaminaAffectsSpeed"
+	Option "Level Affects Movement Speed",			"dvds_levelaffectsspeed", 				"LevelAffectsSpeed"
 	StaticText " "
 	Option "Monsters Behavior Based on Level?",		"dvds_monsterlevelbehavior", 			"MonsterLevelBehavior"
 	Option "'Improved' Icon of Sin",				"dvds_improvediconofsin", 				"ImprovedIconOfSin"
