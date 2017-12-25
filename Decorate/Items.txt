@@ -39,9 +39,10 @@ actor StoneSkinAP : StoneSkin Replaces StoneSkin
 			TNT1 A 0 A_FadeOut(1.0)
 			Loop
 		Spawn:
-			TNT1 A 0 NoDelay A_JumpIfInventory("FloraInPlay", 1, "FloraDetected", AAPTR_PLAYER1)
-			TNT1 A 0 NoDelay A_JumpIfInventory("AilishInPlay", 1, "AilishDetected", AAPTR_PLAYER1)
-			TNT1 A 0 NoDelay A_JumpIfInventory("PetraInPlay", 1, "PetraDetected", AAPTR_PLAYER1)
+			TNT1 A 0 NoDelay
+			TNT1 A 0 A_JumpIfInventory("FloraInPlay", 1, "FloraDetected", AAPTR_PLAYER1)
+			TNT1 A 0 A_JumpIfInventory("AilishInPlay", 1, "AilishDetected", AAPTR_PLAYER1)
+			TNT1 A 0 A_JumpIfInventory("PetraInPlay", 1, "PetraDetected", AAPTR_PLAYER1)
 	}
 }
 
@@ -57,9 +58,10 @@ actor StoneSkinGAAP : StoneSkinGA Replaces StoneSkinGA
 			TNT1 A 0 A_FadeOut(1.0)
 			Loop
 		Spawn:
-			TNT1 A 0 NoDelay A_JumpIfInventory("FloraInPlay", 1, "FloraDetected", AAPTR_PLAYER1)
-			TNT1 A 0 NoDelay A_JumpIfInventory("AilishInPlay", 1, "AilishDetected", AAPTR_PLAYER1)
-			TNT1 A 0 NoDelay A_JumpIfInventory("PetraInPlay", 1, "PetraDetected", AAPTR_PLAYER1)
+			TNT1 A 0 NoDelay
+			TNT1 A 0 A_JumpIfInventory("FloraInPlay", 1, "FloraDetected", AAPTR_PLAYER1)
+			TNT1 A 0 A_JumpIfInventory("AilishInPlay", 1, "AilishDetected", AAPTR_PLAYER1)
+			TNT1 A 0 A_JumpIfInventory("PetraInPlay", 1, "PetraDetected", AAPTR_PLAYER1)
 	}
 }
 
@@ -75,9 +77,10 @@ actor DiamondSkinAP : DiamondSkin Replaces DiamondSkin
 			TNT1 A 0 A_FadeOut(1.0)
 			Loop
 		Spawn:
-			TNT1 A 0 NoDelay A_JumpIfInventory("FloraInPlay", 1, "FloraDetected", AAPTR_PLAYER1)
-			TNT1 A 0 NoDelay A_JumpIfInventory("AilishInPlay", 1, "AilishDetected", AAPTR_PLAYER1)
-			TNT1 A 0 NoDelay A_JumpIfInventory("PetraInPlay", 1, "PetraDetected", AAPTR_PLAYER1)
+			TNT1 A 0 NoDelay
+			TNT1 A 0 A_JumpIfInventory("FloraInPlay", 1, "FloraDetected", AAPTR_PLAYER1)
+			TNT1 A 0 A_JumpIfInventory("AilishInPlay", 1, "AilishDetected", AAPTR_PLAYER1)
+			TNT1 A 0 A_JumpIfInventory("PetraInPlay", 1, "PetraDetected", AAPTR_PLAYER1)
 	}
 }
 
@@ -93,9 +96,10 @@ actor DiamondSkinGAAP : DiamondSkinGA Replaces DiamondSkinGA
 			TNT1 A 0 A_FadeOut(1.0)
 			Loop
 		Spawn:
-			TNT1 A 0 NoDelay A_JumpIfInventory("FloraInPlay", 1, "FloraDetected", AAPTR_PLAYER1)
-			TNT1 A 0 NoDelay A_JumpIfInventory("AilishInPlay", 1, "AilishDetected", AAPTR_PLAYER1)
-			TNT1 A 0 NoDelay A_JumpIfInventory("PetraInPlay", 1, "PetraDetected", AAPTR_PLAYER1)
+			TNT1 A 0 NoDelay
+			TNT1 A 0 A_JumpIfInventory("FloraInPlay", 1, "FloraDetected", AAPTR_PLAYER1)
+			TNT1 A 0 A_JumpIfInventory("AilishInPlay", 1, "AilishDetected", AAPTR_PLAYER1)
+			TNT1 A 0 A_JumpIfInventory("PetraInPlay", 1, "PetraDetected", AAPTR_PLAYER1)
 	}
 }
 
@@ -237,9 +241,9 @@ actor Berserk2AP : Berserk2 replaces Berserk2
 					A_SpawnItemEx("MercuryBandana",0,0,0,0,0,0,0,0,0);
 				}
 			}
-			PSTR A 0 NoDelay A_JumpIfInventory("FloraInPlay", 1, "SpawnCelestialStone1", AAPTR_PLAYER1)
-			PSTR A 0 NoDelay A_JumpIfInventory("AilishInPlay", 1, "SpawnCelestialStone2", AAPTR_PLAYER1)
-			PSTR A 0 NoDelay A_JumpIfInventory("PetraInPlay", 1, "SpawnCelestialStone3", AAPTR_PLAYER1)
+			PSTR A 0 A_JumpIfInventory("FloraInPlay", 1, "SpawnCelestialStone1", AAPTR_PLAYER1)
+			PSTR A 0 A_JumpIfInventory("AilishInPlay", 1, "SpawnCelestialStone2", AAPTR_PLAYER1)
+			PSTR A 0 A_JumpIfInventory("PetraInPlay", 1, "SpawnCelestialStone3", AAPTR_PLAYER1)
 			goto Idle
 		ChangeWeapon:
 			TNT1 A 0 A_JumpIfInventory("FistIllucia",0,6)
