@@ -921,6 +921,8 @@ global int 21:MiscellaneousVars[]; // ***ARRAY*** For various permenant vars in 
 	// [10054] "Wand/Staff Mastery EX" Perk Level
 	// [10055] "Cleared of Mind" Perk Level
 	// [10056] "Cleared of Mind EX" Perk Level
+	// [10057] "Villain Killer" Perk Level
+	// [10058] "Villain Killer EX" Perk Level
 	// [11001] "Higher Learning" Grand Mastery Perk Level
 
 	// [100001]
@@ -23354,6 +23356,25 @@ script "INGAMEMENUS_MECHANICS" ENTER
 								else if (MiscellaneousVars[temp6] == 3 && MiscellaneousVars[25] >= temp4) { MiscellaneousVars[temp6] = 4; MiscellaneousVars[25] -= temp4; GetPerkSound(); }
 								else if (MiscellaneousVars[temp6] == 4 && MiscellaneousVars[25] >= temp5) { MiscellaneousVars[temp6] = 5; MiscellaneousVars[25] -= temp5; GetPerkSound(); }
 							}
+							if (MenuSystemVars[1] == 6) // Villain Killer [5]
+							{
+								temp6 = 10057;	// MiscellaneousVars[] input
+								temp1 = 15 * MiscellaneousVars[280] / 100;	// Level 1 Cost
+								temp2 = 20 * MiscellaneousVars[280] / 100;	// Level 2 Cost
+								temp3 = 25 * MiscellaneousVars[280] / 100;	// Level 3 Cost
+								temp4 = 30 * MiscellaneousVars[280] / 100;	// Level 4 Cost
+								temp5 = 35 * MiscellaneousVars[280] / 100;	// Level 5 Cost
+								if (temp1 < perksmincost) temp1 = perksmincost;
+								if (temp2 < perksmincost) temp2 = perksmincost;
+								if (temp3 < perksmincost) temp3 = perksmincost;
+								if (temp4 < perksmincost) temp4 = perksmincost;
+								if (temp5 < perksmincost) temp5 = perksmincost;
+										 if (MiscellaneousVars[temp6] == 0 && MiscellaneousVars[25] >= temp1) { MiscellaneousVars[temp6] = 1; MiscellaneousVars[25] -= temp1; GetPerkSound(); }
+								else if (MiscellaneousVars[temp6] == 1 && MiscellaneousVars[25] >= temp2) { MiscellaneousVars[temp6] = 2; MiscellaneousVars[25] -= temp2; GetPerkSound(); }
+								else if (MiscellaneousVars[temp6] == 2 && MiscellaneousVars[25] >= temp3) { MiscellaneousVars[temp6] = 3; MiscellaneousVars[25] -= temp3; GetPerkSound(); }
+								else if (MiscellaneousVars[temp6] == 3 && MiscellaneousVars[25] >= temp4) { MiscellaneousVars[temp6] = 4; MiscellaneousVars[25] -= temp4; GetPerkSound(); }
+								else if (MiscellaneousVars[temp6] == 4 && MiscellaneousVars[25] >= temp5) { MiscellaneousVars[temp6] = 5; MiscellaneousVars[25] -= temp5; GetPerkSound(); }
+							}
 						}
 						else
 						if (CharacterClass == 2) // Flora Only
@@ -23412,11 +23433,43 @@ script "INGAMEMENUS_MECHANICS" ENTER
 								if (temp3 < perksmincost) temp3 = perksmincost;
 								if (temp4 < perksmincost) temp4 = perksmincost;
 								if (temp5 < perksmincost) temp5 = perksmincost;
-										if (MiscellaneousVars[temp6] == 0 && MiscellaneousVars[25] >= temp1) { MiscellaneousVars[temp6] = 1; MiscellaneousVars[25] -= temp1; GetPerkSound(); }
+										 if (MiscellaneousVars[temp6] == 0 && MiscellaneousVars[25] >= temp1) { MiscellaneousVars[temp6] = 1; MiscellaneousVars[25] -= temp1; GetPerkSound(); }
 								else if (MiscellaneousVars[temp6] == 1 && MiscellaneousVars[25] >= temp2) { MiscellaneousVars[temp6] = 2; MiscellaneousVars[25] -= temp2; GetPerkSound(); }
 								else if (MiscellaneousVars[temp6] == 2 && MiscellaneousVars[25] >= temp3) { MiscellaneousVars[temp6] = 3; MiscellaneousVars[25] -= temp3; GetPerkSound(); }
 								else if (MiscellaneousVars[temp6] == 3 && MiscellaneousVars[25] >= temp4) { MiscellaneousVars[temp6] = 4; MiscellaneousVars[25] -= temp4; GetPerkSound(); }
 								else if (MiscellaneousVars[temp6] == 4 && MiscellaneousVars[25] >= temp5) { MiscellaneousVars[temp6] = 5; MiscellaneousVars[25] -= temp5; GetPerkSound(); }
+							}
+							if (MenuSystemVars[1] == 5) // Villain Killer [5]
+							{
+								temp6 = 10057;	// MiscellaneousVars[] input
+								temp1 = 15 * MiscellaneousVars[280] / 100;	// Level 1 Cost
+								temp2 = 20 * MiscellaneousVars[280] / 100;	// Level 2 Cost
+								temp3 = 25 * MiscellaneousVars[280] / 100;	// Level 3 Cost
+								temp4 = 30 * MiscellaneousVars[280] / 100;	// Level 4 Cost
+								temp5 = 35 * MiscellaneousVars[280] / 100;	// Level 5 Cost
+								if (temp1 < perksmincost) temp1 = perksmincost;
+								if (temp2 < perksmincost) temp2 = perksmincost;
+								if (temp3 < perksmincost) temp3 = perksmincost;
+								if (temp4 < perksmincost) temp4 = perksmincost;
+								if (temp5 < perksmincost) temp5 = perksmincost;
+										 if (MiscellaneousVars[temp6] == 0 && MiscellaneousVars[25] >= temp1) { MiscellaneousVars[temp6] = 1; MiscellaneousVars[25] -= temp1; GetPerkSound(); }
+								else if (MiscellaneousVars[temp6] == 1 && MiscellaneousVars[25] >= temp2) { MiscellaneousVars[temp6] = 2; MiscellaneousVars[25] -= temp2; GetPerkSound(); }
+								else if (MiscellaneousVars[temp6] == 2 && MiscellaneousVars[25] >= temp3) { MiscellaneousVars[temp6] = 3; MiscellaneousVars[25] -= temp3; GetPerkSound(); }
+								else if (MiscellaneousVars[temp6] == 3 && MiscellaneousVars[25] >= temp4) { MiscellaneousVars[temp6] = 4; MiscellaneousVars[25] -= temp4; GetPerkSound(); }
+								else if (MiscellaneousVars[temp6] == 4 && MiscellaneousVars[25] >= temp5) { MiscellaneousVars[temp6] = 5; MiscellaneousVars[25] -= temp5; GetPerkSound(); }
+							}
+							if (MenuSystemVars[1] == 6) // Villain Killer EX [2]
+							{
+								temp6 = 10058; // MiscellaneousVars[] input
+								temp7 = 10057; // MiscellaneousVars[] [requirement type]
+								temp8 = 2; // MiscellaneousVars[] input [requirement level threshold 1]
+								temp9 = 4; // MiscellaneousVars[] input [requirement level threshold 2]
+								temp1 = 30 * MiscellaneousVars[280] / 100; // Level 1 Cost
+								temp2 = 60 * MiscellaneousVars[280] / 100; // Level 2 Cost
+								if (temp1 < perksmincost) temp1 = perksmincost;
+								if (temp2 < perksmincost) temp2 = perksmincost;
+										if (MiscellaneousVars[temp6] == 0 && MiscellaneousVars[temp7] >= temp8 && MiscellaneousVars[25] >= temp1) { MiscellaneousVars[temp6] = 1; MiscellaneousVars[25] -= temp1; GetPerkSound(); }
+								else if (MiscellaneousVars[temp6] == 1 && MiscellaneousVars[temp7] >= temp9 && MiscellaneousVars[25] >= temp2) { MiscellaneousVars[temp6] = 2; MiscellaneousVars[25] -= temp2; GetPerkSound(); }
 							}
 						}
 					}
@@ -23513,17 +23566,17 @@ script "INGAMEMENUS_MECHANICS" ENTER
 					{
 						if (CharacterClass == 0) // Deggaris Only
 						{
-							if (MenuSystemVars[1] < 0) MenuSystemVars[1] = 5;
+							if (MenuSystemVars[1] < 0) MenuSystemVars[1] = 6;
 						}
 						else
 						if (CharacterClass == 1) // Illucia Only
 						{
-							if (MenuSystemVars[1] < 0) MenuSystemVars[1] = 5;
+							if (MenuSystemVars[1] < 0) MenuSystemVars[1] = 6;
 						}
 						else
 						if (CharacterClass == 2) // Flora
 						{
-							if (MenuSystemVars[1] < 0) MenuSystemVars[1] = 4;
+							if (MenuSystemVars[1] < 0) MenuSystemVars[1] = 6;
 						}
 					}
 					if (MenuSystemVars[5] == 5) // Mastery Perks
@@ -23617,17 +23670,17 @@ script "INGAMEMENUS_MECHANICS" ENTER
 					{
 						if (CharacterClass == 0) // Deggaris Only
 						{
-							if (MenuSystemVars[1] > 5) MenuSystemVars[1] = 0;
+							if (MenuSystemVars[1] > 6) MenuSystemVars[1] = 0;
 						}
 						else
 						if (CharacterClass == 1) // Illucia Only
 						{
-							if (MenuSystemVars[1] > 5) MenuSystemVars[1] = 0;
+							if (MenuSystemVars[1] > 6) MenuSystemVars[1] = 0;
 						}
 						else
 						if (CharacterClass == 2) // Flora
 						{
-							if (MenuSystemVars[1] > 4) MenuSystemVars[1] = 0;
+							if (MenuSystemVars[1] > 6) MenuSystemVars[1] = 0;
 						}
 					}
 					if (MenuSystemVars[5] == 5) // Mastery Perks
@@ -23792,6 +23845,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 	str perkdescript1, perkdescript2, perkdescript3, perkdescript4, perkdescript5;
 	str textcolor = "";
 	int perksmincost = GetCVar("dvdsperks_minimumcost");
+	int hudmsgid;
 	
 	int HudXRange, HudYRange; 
 	// MENU SYSTEM [HudMessage]
@@ -23823,29 +23877,32 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 		SetFont("DVDSBIGFONT"); // DQHUDFONTSML // Default Font setting for all menus
 		if (MenuSystemVars[4] == 0)
 		{
+			hudmsgid = 1998;
 			xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
 			ytemp1 = (HudYRange * 35000 / 100000) * 1.0; // 0.35;
-			if (MenuSystemVars[1] == 1) HudMessage(s:"STATS [UNFINISHED]";  HUDMSG_ALPHA,  1998, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0);
-															else HudMessage(s:"STATS [UNFINISHED]";  HUDMSG_ALPHA,  1998, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);   
+			if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+			HudMessage(s:"STATS [UNFINISHED]";  HUDMSG_ALPHA,  hudmsgid, textcolor, xtemp1, ytemp1, 0.03, 1.0);   
 		
+			hudmsgid -= 1;
 			xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
-			ytemp1 = (HudYRange * 45000 / 100000) * 1.0; // 0.45;
-			if (MenuSystemVars[1] == 2) HudMessage(s:"SPELLS"; HUDMSG_ALPHA,  1997, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0);
-															else HudMessage(s:"SPELLS"; HUDMSG_ALPHA,  1997, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);
+			ytemp1 += (HudYRange * 10000 / 100000) * 1.0; // 0.45;
+			if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+			HudMessage(s:"SPELLS"; HUDMSG_ALPHA,  hudmsgid, textcolor, xtemp1, ytemp1, 0.03, 1.0);
 		
 			if (MiscellaneousVars[110001] == 1) 
 			{
+				hudmsgid -= 1;
 				xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
-				ytemp1 = (HudYRange * 55000 / 100000) * 1.0; // 0.55;
-				if (MenuSystemVars[1] == 3) HudMessage(s:"PERKS";  HUDMSG_ALPHA,  1996, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0); 
-															else HudMessage(s:"PERKS";  HUDMSG_ALPHA,  1996, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);
+				ytemp1 += (HudYRange * 10000 / 100000) * 1.0; // 0.45;
+				if (MenuSystemVars[1] == 3) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+				HudMessage(s:"PERKS";  HUDMSG_ALPHA,  hudmsgid, textcolor, xtemp1, ytemp1, 0.03, 1.0);
 			}
 		
+			hudmsgid -= 1;
 			xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
-			ytemp1 = (HudYRange * 65000 / 100000) * 1.0; // 0.65;
-			if (MiscellaneousVars[110001] == 0) ytemp1 = (HudYRange * 55000 / 100000) * 1.0; // 0.65;
-			if (MenuSystemVars[1] == 4) HudMessage(s:"CODEX [UNFINISHED]";  HUDMSG_ALPHA,  1995, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0);
-															else HudMessage(s:"CODEX [UNFINISHED]";  HUDMSG_ALPHA,  1995, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);
+			ytemp1 += (HudYRange * 10000 / 100000) * 1.0; // 0.55/0.65;
+			if (MenuSystemVars[1] == 4) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+			HudMessage(s:"CODEX [UNFINISHED]";  HUDMSG_ALPHA,  hudmsgid, textcolor, xtemp1, ytemp1, 0.03, 1.0);
 		}
 	
 		
@@ -25544,7 +25601,9 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				ytemp1 = (HudYRange *  8125 / 100000) * 1.0; // 0.08125;
 				HudMessage(s:"Stat Perks [All]";  HUDMSG_ALPHA,  1903, CR_WHITE,  xtemp1, ytemp1, 0.03, 1.0);
 		
+				hudmsgid = 1998;
 				// Selection #1
+				hudmsgid -= 1;
 				SetFont("DVDSSMLFONT"); // DQHUDFONTSTATUS
 				xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 				ytemp2 = (HudYRange * 16250 / 100000) * 1.0; // 0.1625;
@@ -25563,9 +25622,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - MAX-HP INCREASED BY \cd",f:temp1,s:"%\c- AND DEFENSE INCREASED BY \cd",f:temp2,s:"%\c-",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-									HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 				// Selection #2
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "MAGI UP";
 				temp4 = 10003; // MiscellaneousVars[]
@@ -25582,9 +25642,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - MAX-MP INCREASED BY \cd",f:temp1,s:"%\c- AND MAG-DMG INCREASED BY \cd",f:temp2,s:"%\c-",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-									HUDMSG_ALPHA,  1996, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 				// Selection #3
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "STAM UP";
 				temp4 = 10005; // MiscellaneousVars[]
@@ -25601,9 +25662,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 3) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - MAX-STAMINA INCREASED BY \cd",f:temp1,s:"%\c- AND MELEE DAMAGE INCREASED BY \cd",f:temp2,s:"%\c-",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";
-									HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 				// Selection #4
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "DODGE MORE";
 				temp4 = 10007; // MiscellaneousVars[]
@@ -25619,9 +25681,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 4) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES EVASION CHANCE BY \cd",f:temp1,s:"%\c-",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";
-									HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 				// Selection #5
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "JUMP MORE";
 				temp4 = 10009; // MiscellaneousVars[]
@@ -25637,9 +25700,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 5) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES JUMP STRENGTH BY \cd",f:temp1,s:"%\c-",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";
-									HUDMSG_ALPHA,  1993, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 				// Selection #6
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "PSYCHE FAST";
 				temp4 = 10011; // MiscellaneousVars[]
@@ -25655,9 +25719,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 6) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES PSYCHE-UP SPEED BY \cd",f:temp1,s:"%\c-",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";
-									HUDMSG_ALPHA,  1992, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 				// Selection #7
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "REGEN HP FAST";
 				temp4 = 10013; // MiscellaneousVars[]
@@ -25673,9 +25738,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 7) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - HP REGEN SPD \cd+",f:temp1,s:"%\c- AND HP DEGEN SPD \cd-",f:temp1,s:"%\c-",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";
-									HUDMSG_ALPHA,  1991, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 				// Selection #8
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "REGEN MP FAST";
 				temp4 = 10015; // MiscellaneousVars[]
@@ -25691,9 +25757,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 8) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - MP REGEN SPD \cd+",f:temp1,s:"%\c- AND MP DEGEN SPD \cd-",f:temp1,s:"%\c-",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";
-									HUDMSG_ALPHA,  1990, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 				// Selection #9
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "REGEN STAM FAST";
 				temp4 = 10017; // MiscellaneousVars[]
@@ -25709,9 +25776,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 9) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - STAMINA REGEN SPD \cd+",f:temp1,s:"%\c- AND STAMINA DEGEN SPD \cd-",f:temp1,s:"%\c-",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";
-									HUDMSG_ALPHA,  1989, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 				
 				// Selection #10
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "ON THE MOVE";
 				temp4 = 10045; // MiscellaneousVars[]
@@ -25732,20 +25800,23 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 10) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - EVASION CHANCE \cd+",f:temp1,s:"%\c- WHEN ACTIVELY MOVING.",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";
-									HUDMSG_ALPHA,  1988, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 				
 				
+				hudmsgid = 1903;
+				hudmsgid -= 1;
 				SetFont("STATAEON");
 				xtemp3 = (HudXRange * 47500 / 100000) * 1.0; // 0.475;
 				ytemp3 = (HudYRange * 97500 / 100000) * 1.0; // 0.975;
 				HudMessage(s:"A";
-				HUDMSG_ALPHA,  1902, CR_UNTRANSLATED, xtemp3, ytemp3, 0.03, 1.0);
+				HUDMSG_ALPHA,  hudmsgid, CR_UNTRANSLATED, xtemp3, ytemp3, 0.03, 1.0);
 		
+				hudmsgid -= 1;
 				SetFont("DQHUDFONTSTATUS"); // DQHUDFONTSTATUS // DQHUDFONTSML // Default Font setting for all menus
 				xtemp3 = (HudXRange * 52500 / 100000) * 1.0; // 0.525;
 				ytemp3 = (HudYRange * 97500 / 100000) * 1.0; // 0.975;
 				HudMessage(d:MiscellaneousVars[25];
-				HUDMSG_ALPHA,  1901, CR_GOLD, xtemp3, ytemp3, 0.03, 1.0);
+				HUDMSG_ALPHA,  hudmsgid, CR_GOLD, xtemp3, ytemp3, 0.03, 1.0);
 			}
 
 			//********************************************
@@ -25760,7 +25831,9 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (CharacterClass == 0) // Deggaris Only [3]
 				{
 					SetFont("DVDSSMLFONT"); // DQHUDFONTSTATUS
+					hudmsgid = 1998;
 					// Selection #1
+					hudmsgid -= 1;
 					xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 					ytemp2 = (HudYRange * 16250 / 100000) * 1.0; // 0.1625;
 					perkname = "MAGI UP EX";
@@ -25787,10 +25860,11 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - MAX-MP INCREASED BY \cd",f:temp1,s:"%\c- AND MAG-DMG INCREASED BY \cd",f:temp2,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;  
-										HUDMSG_ALPHA,  1997, CR_GOLD,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 						
 					// Selection #2
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "DODGE MORE EX";
 					temp4 = 10008; // MiscellaneousVars[]
@@ -25809,9 +25883,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES EVASION CHANCE BY \cd",f:temp1,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;  
-										HUDMSG_ALPHA,  1996, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 					// Selection #3
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "JUMP MORE EX";
 					temp4 = 10010; // MiscellaneousVars[]
@@ -25836,13 +25911,15 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 3) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES JUMP STRENGTH BY \cd",f:temp1,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;  
-										HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 				}
 				else
 				if (CharacterClass == 1) // Illucia Only [3]
 				{
 					SetFont("DVDSSMLFONT"); // DQHUDFONTSTATUS
+					hudmsgid = 1998;
 					// Selection #1
+					hudmsgid -= 1;
 					xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 					ytemp2 = (HudYRange * 16250 / 100000) * 1.0; // 0.1625;
 					perkname = "STAM UP EX";
@@ -25869,9 +25946,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - MAX-STAMINA INCREASED BY \cd",f:temp1,s:"%\c- & AND MELEE DAMAGE INCREASED BY \cd",f:temp2,s:"%",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 					// Selection #2
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "DODGE MORE EX";
 					temp4 = 10008; // MiscellaneousVars[]
@@ -25896,9 +25974,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES EVASION CHANCE BY \cd",f:temp1,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;  
-										HUDMSG_ALPHA,  1996, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 					// Selection #3
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "JUMP MORE EX";
 					temp4 = 10010; // MiscellaneousVars[]
@@ -25917,14 +25996,16 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 3) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES JUMP STRENGTH BY \cd",f:temp1,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;  
-										HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 				
 				}
 				else
 				if (CharacterClass == 2) // Flora Only [3]
 				{
 					SetFont("DVDSSMLFONT"); // DQHUDFONTSTATUS
+					hudmsgid = 1998;
 					// Selection #1
+					hudmsgid -= 1;
 					xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 					ytemp2 = (HudYRange * 16250 / 100000) * 1.0; // 0.1625;
 					perkname = "LIFE UP EX";
@@ -25951,10 +26032,11 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - MAX-HP INCREASED BY \cd",f:temp1,s:"%\c- AND DEFENSE INCREASED BY \cd",f:temp2,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;  
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 							
 					// Selection #2
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "PSYCHE FAST EX";
 					temp4 = 10012; // MiscellaneousVars[]
@@ -25979,10 +26061,11 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES PSYCHE-UP SPEED BY \cd",f:temp1,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;
-										HUDMSG_ALPHA,  1996, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 						
 					// Selection #3
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "STAM UP EX";
 					temp4 = 10006; // MiscellaneousVars[]
@@ -26002,7 +26085,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 3) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - MAX-STAMINA INCREASED BY \cd",f:temp1,s:"%\c- & AND MELEE DAMAGE INCREASED BY \cd",f:temp2,s:"%",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;
-										HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 		
 				}
 		
@@ -26031,7 +26114,9 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 		
 				if (CharacterClass == 0 | CharacterClass == 1) // Deggaris & Illucia Both [6 Shared]
 				{
+					hudmsgid = 1998;
 					// Selection #1
+					hudmsgid -= 1;
 					xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 					ytemp2 = (HudYRange * 15000 / 100000) * 1.0 + 0.1; // -0.15;
 					perkname = "BERSERKER FIT";
@@ -26055,10 +26140,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd+",f:temp1,s:"%\c- CRITICAL HIT CHANCE WHEN MELEE WEAPONS ARE EQUIPPED",
 										s:"\nSTAMINA CONSUMPTION FOR MELEE ATTACKS REDUCED BY \cd",f:temp2,s:"%\c-",  
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
-			
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 					// Selection #2
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 8750 / 100000) * 1.0; // 0.075;
 					perkname = "BULLET ACCURACY";
 					temp4 = 10019; // MiscellaneousVars[]
@@ -26074,9 +26159,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - REDUCES SPREAD OF BULLET WEAPONS BY \cd",f:temp1,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1996, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 					// Selection #3
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "PELLET ACCURACY";
 					temp4 = 10021; // MiscellaneousVars[]
@@ -26092,9 +26178,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 3) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - REDUCES SPREAD OF PELLET WEAPONS BY \cd",f:temp1,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 					// Selection #4
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "PLASMA ACCURACY";
 					temp4 = 10023; // MiscellaneousVars[]
@@ -26110,9 +26197,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 4) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - REDUCES SPREAD OF PLASMA-WEAPONS FIRE BY \cd",f:temp1,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 			
 					// Selection #5
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "DEMOLITIONS EXPERT";
 					temp4 = 10025; // MiscellaneousVars[]
@@ -26129,9 +26217,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 5) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - EXPLOSIVE DAMAGE DEALT \cd+",f:temp1,s:" - ",f:temp2,s:"%\c- & EXPLOSIVE DAMAGE TAKEN \cd-",f:temp1,s:" - ",f:temp2,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1993, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 					// Selection #6
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "BOTTOMLESS MAGAZINES";
 					temp4 = 10047; // MiscellaneousVars[]
@@ -26147,12 +26236,12 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 6) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES CHANCES OF NOT CONSUMING AMMO BY \cd",f:temp1,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1992, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
-			
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 					if (CharacterClass == 0) // Deggaris Only [3, 9 total]
 					{
 						// Selection #7
+						hudmsgid -= 1;
 						ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 						perkname = "BULLET ACCURACY EX";
 						temp4 = 10020; // MiscellaneousVars[]
@@ -26177,10 +26266,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 						if (MenuSystemVars[1] == 7) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - REDUCES SPREAD OF BULLET WEAPONS BY \cd",f:temp1,s:"%\c-",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;
-											HUDMSG_ALPHA,  1991, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
-								
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 						// Selection #8
+						hudmsgid -= 1;
 						ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 						perkname = "DEMOLITIONS EXPERT EX";
 						temp4 = 10026; // MiscellaneousVars[]
@@ -26200,9 +26289,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 						if (MenuSystemVars[1] == 8) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - EXPLOSIVE DAMAGE DEALT \cd+",f:temp1,s:" - ",f:temp2,s:"%\c- & EXPLOSIVE DAMAGE TAKEN \cd-",f:temp1,s:" - ",f:temp2,s:"%\c-",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;
-											HUDMSG_ALPHA,  1990, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 						// Selection #9
+						hudmsgid -= 1;
 						ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 						perkname = "BFG ATTUNEMENT";
 						temp4 = 10029; // MiscellaneousVars[]
@@ -26216,7 +26306,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 						{
 							HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL AFFECT BFG 9000 TRAITS...",
 												s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-												HUDMSG_ALPHA,  1989, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+												HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 						else
 						if (MiscellaneousVars[temp4] == 1)
@@ -26226,7 +26316,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 												s:"\nBFG WILL EMIT \cd48\c- TRACERS INSTEAD OF \cd40\c- ON DETONATION.",  
 												s:"\nBFG FIRING SPEED \cd+20%\c-.",  
 												s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-												HUDMSG_ALPHA,  1989, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+												HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 						else
 						if (MiscellaneousVars[temp4] == 2)
@@ -26236,13 +26326,14 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 												s:"\nBFG WILL EMIT \cd56\c- TRACERS INSTEAD OF \cd40\c- ON DETONATION.",  
 												s:"\nBFG FIRING SPEED \cd+40%\c-.",  
 												s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-												HUDMSG_ALPHA,  1989, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+												HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 					}
 			
 					if (CharacterClass == 1) // Illucia Only [3, 9 total]
 					{
 						// Selection #7
+						hudmsgid -= 1;
 						ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 						perkname = "PELLET ACCURACY EX";
 						temp4 = 10022; // MiscellaneousVars[]
@@ -26267,9 +26358,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 						if (MenuSystemVars[1] == 7) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - REDUCES SPREAD OF PELLET WEAPONS BY \cd",f:temp1,s:"%\c-",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;
-											HUDMSG_ALPHA,  1991, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-				
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 						// Selection #8
+						hudmsgid -= 1;
 						ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 						perkname = "PLASMA ACCURACY EX";
 						temp4 = 10024; // MiscellaneousVars[]
@@ -26288,9 +26380,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 						if (MenuSystemVars[1] == 8) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - REDUCES SPREAD OF PLASMA-WEAPONS FIRE BY \cd",f:temp1,s:"%\c-",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;
-											HUDMSG_ALPHA,  1990, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-				
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 						// Selection #9
+						hudmsgid -= 1;
 						ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 						perkname = "KARASAWA ATTUNEMENT";
 						temp4 = 10027; // MiscellaneousVars[]
@@ -26305,7 +26398,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 						{
 							HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL AFFECT KAWASAWA TRAITS...",
 												s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-												HUDMSG_ALPHA,  1989, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+												HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 						else
 						if (MiscellaneousVars[temp4] == 1)
@@ -26315,7 +26408,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 											s:"\nKAWASAWA SHOTS CONSUME \cd6\c- CELLS INSTEAD OF \cd8\c-.",  
 											s:"\nKAWASAWA FIRING SPEED \cd+20%\c-.",  
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1989, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 						else
 						if (MiscellaneousVars[temp4] == 2)
@@ -26325,14 +26418,16 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 											s:"\nKAWASAWA SHOTS CONSUME \cd4\c- CELLS INSTEAD OF \cd6\c-.",  
 											s:"\nKAWASAWA FIRING SPEED \cd+40%\c-.",  
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1989, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 					}
 				}
 				else
 				if (CharacterClass == 2) // Flora [4, 4 total]
 				{
+					hudmsgid = 1998;
 					// Selection #1
+					hudmsgid -= 1;
 					SetFont("DVDSSMLFONT"); // DQHUDFONTSTATUS
 					xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 					ytemp2 = (HudYRange * 15000 / 100000) * 1.0 + 0.1; // -0.15;
@@ -26351,9 +26446,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - ARROW DAMAGE \cd+",f:temp1,s:"%\c- AND ARROW SPEED \cd+",f:temp2,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 					// Selection #2
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "WAND/STAFF MASTERY";
 					temp4 = 10053; // MiscellaneousVars[]
@@ -26371,9 +26467,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - DAMAGE WITH MAGICAL WANDS/STAVES INCREASED BY \cd",f:temp1,s:"%\c-",
 										s:"\nMAGICAL DAMAGE DEALT INCREASED BY \cd",f:temp2,s:"%\c-.",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1996, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 					// Selection #3
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 					perkname = "SOUL MASTERY";
 					temp4 = 10033; // MiscellaneousVars[]
@@ -26393,9 +26490,10 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 										s:"\nHELLCORE HEATING RATIO DECREASED BY \cd",f:temp2,s:"%\c-.",
 										s:"\nHELLCORE OVERHEAT DAMAGE DECREASED BY \cd",f:temp21,s:"%\c-.",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-			
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 					// Selection #4
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 11250 / 100000) * 1.0; // 0.1125;
 					perkname = "MARTIAL ARTS MASTERY";
 					temp4 = 10035; // MiscellaneousVars[]
@@ -26413,7 +26511,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					{
 						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL INCREASE FLORA'S MARTIAL ARTS/MELEE CAPABILITIES.",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 					if (MiscellaneousVars[temp4] == 1)
 					{
@@ -26422,7 +26520,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 											s:"\nAOE DAMAGE FROM NON-SCEPTRE MELEE ATTACKS INCREASED BY \cd7.5%\c-.",
 											s:"\nPUNCHES/KICKS/UPPERCUTS HAVE A \cd12.5%\c- CHANCE TO \cdDESTROY PROJECTILES\c-.",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 					if (MiscellaneousVars[temp4] == 2)
 					{
@@ -26432,7 +26530,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 											s:"\nPUNCHES/KICKS/UPPERCUTS HAVE A \cd25%\c- CHANCE TO \cdDESTROY PROJECTILES\c-.",
 											s:"\nPUNCHES ARE \cd~1.3X\c- FASTER\c-",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 					if (MiscellaneousVars[temp4] == 3)
 					{
@@ -26444,7 +26542,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 											s:"\nUPPERCUTS ARE \cd~2.1X\c- FASTER\c-",
 											s:"\nKICKS ARE \cd~2.1X\c- FASTER\c-",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 					if (MiscellaneousVars[temp4] == 4)
 					{
@@ -26458,7 +26556,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 											s:"\nKICKS ARE \cd~2.1X\c- FASTER\c-",
 											s:"\nNON-SCEPTRE MELEE ATTACKS SLOW DOWN TENSION COUNTDOWN TIMER BY \cd10-20%\c-.",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 					if (MiscellaneousVars[temp4] == 5)
 					{
@@ -26472,7 +26570,7 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 											s:"\nKICKS ARE \cd~5X\c- FASTER\c-",
 											s:"\nNON-SCEPTRE MELEE ATTACKS SLOW DOWN TENSION COUNTDOWN TIMER BY \cd40-60%\c-.",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 				}
 		
@@ -26499,7 +26597,9 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				ytemp1 = (HudYRange *  8125 / 100000) * 1.0; // 0.038125;
 				HudMessage(s:"Item/Powerup Perks";  HUDMSG_ALPHA,  1903, CR_WHITE,  xtemp1, ytemp1, 0.03, 1.0);
 			
+				hudmsgid = 1998;
 				// Selection #1
+				hudmsgid -= 1;
 				SetFont("DVDSSMLFONT"); // DQHUDFONTSTATUS
 				xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 				ytemp2 = (HudYRange * 16250 / 100000) * 1.0; // 0.1625;
@@ -26525,17 +26625,18 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES HEALING FROM HERBS/MAGIC-WATERS BY \cd",f:temp1,s:"%\c- UP TO \cd",f:temp2,s:"%\c-",
 										s:"\nINCREASES HEALING FROM MEDICIAL ITEMS BY \cd",f:temp5,s:"%\c- UP TO \cd",f:temp6,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 				}
 				else
 				{
 					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - INCREASES HEALING FROM MEDICIAL ITEMS BY \cd",f:temp1,s:"%\c- UP TO \cd",f:temp2,s:"%\c-",
 										s:"\nINCREASES HEALING FROM HERBS/MAGIC-WATERS BY \cd",f:temp5,s:"%\c- UP TO \cd",f:temp6,s:"%\c-",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 				}
 		
 				// Selection #2
+				hudmsgid -= 1;
 				ytemp2 += (HudYRange * 7500 / 100000) * 1.0; // 0.075;
 				perkname = "POWERUP POWERHOUSE";
 				temp4 = 10050; // MiscellaneousVars[]
@@ -26550,8 +26651,8 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 				HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - POWERUP ITEMS/ARTIFACTS GIVE \cd+",f:temp1,s:"%\c- MORE DURATION",
 									s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-									HUDMSG_ALPHA,  1996, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
-		
+									HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+
 				SetFont("STATAEON");
 				xtemp3 = (HudXRange * 47500 / 100000) * 1.0; // 0.475;
 				ytemp3 = (HudYRange * 97500 / 100000) * 1.0; // 0.975;
@@ -26575,7 +26676,9 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				HudMessage(s:"Misc Perks";  HUDMSG_ALPHA,  1903, CR_WHITE,  xtemp1, ytemp1, 0.03, 1.0);
 				if (CharacterClass == 0 | CharacterClass == 1) // Deggaris & Illucia Both (3)
 				{
+					hudmsgid = 1998;
 					// Selection #1
+					hudmsgid -= 1;
 					SetFont("DVDSSMLFONT"); // DQHUDFONTSTATUS
 					xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 					ytemp2 = (HudYRange * 15000 / 100000) * 1.0 + 0.1; // -0.15;
@@ -26586,11 +26689,12 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MiscellaneousVars[temp4] == 0) temp3 = 15 * MiscellaneousVars[280] / 100;
 					if (temp3 < perksmincost && MiscellaneousVars[temp4] < temp11) temp3 = perksmincost;
 					if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
-					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - 50% TO BLAST AWAY NEARBY ENEMIES & PROJECTILES AFTER SURVIVING A MORTAL HIT",
+					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd50%\c- CHANCE TO BLAST AWAY NEARBY ENEMIES & PROJECTILES AFTER SURVIVING A MORTAL HIT",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 			
 					// Selection #2
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 11250 / 100000) * 1.0; // 0.1125;
 					perkname = "MORTAL HIT MANA RECOVERY";
 					temp4 = 10039; // MiscellaneousVars[]
@@ -26599,11 +26703,12 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MiscellaneousVars[temp4] == 0) temp3 = 15 * MiscellaneousVars[280] / 100;
 					if (temp3 < perksmincost && MiscellaneousVars[temp4] < temp11) temp3 = perksmincost;
 					if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
-					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - 66.6% CHANCE TO RECOVER 25% OF MAXIMUM MP [UP TO 125% OF MAX] AFTER SURVIVING A MORTAL HIT",
+					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd66.6%\c- CHANCE TO RECOVER \cd25%\c- OF MAXIMUM MP [UP TO \cd125%\c- OF MAX] AFTER SURVIVING A MORTAL HIT",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1996, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					
 					// Selection #3
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 11250 / 100000) * 1.0; // 0.1125;
 					if (CharacterClass == 0) // Deggaris Only (1)
 					{
@@ -26624,28 +26729,28 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 						{
 							HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - CHANCE FOR INVULNERABLITY AND DAMAGE BOOST AFTER SURVIVING A MORTAL HIT",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 						if (MiscellaneousVars[temp4] == 1)
 						{
-							HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - 12.5% CHANCE FOR INVULNERABLITY AND DAMAGE BOOST AFTER SURVIVING A MORTAL HIT",
+							HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd12.5%\c- CHANCE FOR INVULNERABLITY AND DAMAGE BOOST AFTER SURVIVING A MORTAL HIT",
 												s:"\n\cf180 SECOND COOLDOWN TIME.",
 												s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-												HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+												HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 						if (MiscellaneousVars[temp4] == 2)
 						{
-							HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - 20% CHANCE FOR INVULNERABLITY AND DAMAGE BOOST AFTER SURVIVING A MORTAL HIT",
+							HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd20%\c- CHANCE FOR INVULNERABLITY AND DAMAGE BOOST AFTER SURVIVING A MORTAL HIT",
 												s:"\n\cf150 SECOND COOLDOWN TIME.",
 												s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-												HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+												HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 						if (MiscellaneousVars[temp4] == 3)
 						{
-							HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - 25% CHANCE FOR INVULNERABLITY AND DAMAGE BOOST AFTER SURVIVING A MORTAL HIT",
+							HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd25%\c- CHANCE FOR INVULNERABLITY AND DAMAGE BOOST AFTER SURVIVING A MORTAL HIT",
 												s:"\n\cf120 SECOND COOLDOWN TIME.",
 												s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-												HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+												HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 						}
 					}
 					if (CharacterClass == 1) // Illucia Only (1)
@@ -26664,12 +26769,13 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 						if (MiscellaneousVars[temp4] == 0) temp3 = 35 * MiscellaneousVars[280] / 100;
 						if (temp3 < perksmincost && MiscellaneousVars[temp4] < temp11) temp3 = perksmincost;
 						if (MenuSystemVars[1] == 3) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
-						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - +25% TO BLAST AWAY NEARBY ENEMIES & PROJECTILES AFTER SURVIVING A MORTAL HIT",
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd+25%\c- TO BLAST AWAY NEARBY ENEMIES & PROJECTILES AFTER SURVIVING A MORTAL HIT",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;   
-											HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 			
 					// Selection #4
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 11250 / 100000) * 1.0; // 0.1125;
 					perkname = "MORTAL HIT PSYCHE UP";
 					temp4 = 10037; // MiscellaneousVars[]
@@ -26696,16 +26802,17 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					{
 						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL AFFECT TENSION AFTER SURVIVING A MORTAL HIT",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 					else
 					{
-						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - 40% CHANCE TO HIT \c[Purple]'",d:temp1,s:"'\c- TENSION AFTER SURVIVING A MORTAL HIT",
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd40%\c- CHANCE TO HIT \c[Purple]'",d:temp1,s:"'\c- TENSION AFTER SURVIVING A MORTAL HIT",
 											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-											HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 			
 					// Selection #5
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 11250 / 100000) * 1.0; // 0.1125;
 					perkname = "CLEARED OF MIND";
 					temp4 = 10055; // MiscellaneousVars[]
@@ -26746,22 +26853,76 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					{
 						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL AFFECT EXP GAINED, HP/MP/STAMINA REGEN & GENERAL DAMAGE DEALT.",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1993, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 					else
 					{
-						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - +",d:temp1,s:"% MORE LEVEL EXP/EXPERIESSENCE-GAIN",
-											s:"\n\c-+",f:temp7,s:"% HP/MP/STAMINA REGENERATION SPEED.",
-											s:"\n\c--",d:temp8,s:"% MANA COST FOR SPELLS.",
-											s:"\n\c-+",f:temp9,s:"% GENERAL DAMAGE DEALT.",
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd+",d:temp1,s:"%\c- MORE LEVEL EXP/EXPERIESSENCE-GAIN",
+											s:"\n\c-\cd+",f:temp7,s:"%\c- HP/MP/STAMINA REGENERATION SPEED.",
+											s:"\n\c-\cd-",d:temp8,s:"%\c- MANA COST FOR SPELLS.",
+											s:"\n\c-\cd+",f:temp9,s:"%\c- GENERAL DAMAGE DEALT.",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1993, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+					}
+			
+					// Selection #6
+					hudmsgid -= 1;
+					ytemp2 += (HudYRange * 10000 / 100000) * 1.0; // 0.1000;
+					perkname = "VILLAIN KILLER";
+					temp4 = 10057; // MiscellaneousVars[]
+					temp7 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp7 = 10.0;
+					if (MiscellaneousVars[temp4] == 2) temp7 = 20.0;
+					if (MiscellaneousVars[temp4] == 3) temp7 = 30.0;
+					if (MiscellaneousVars[temp4] == 4) temp7 = 40.0;
+					if (MiscellaneousVars[temp4] == 5) temp7 = 50.0;
+					temp9 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp9 = 12.5;
+					if (MiscellaneousVars[temp4] == 2) temp9 = 25.0;
+					if (MiscellaneousVars[temp4] == 3) temp9 = 37.5;
+					if (MiscellaneousVars[temp4] == 4) temp9 = 50.0;
+					if (MiscellaneousVars[temp4] == 5) temp9 = 62.5;
+					temp1 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp1 = 15.0;
+					if (MiscellaneousVars[temp4] == 2) temp1 = 30.0;
+					if (MiscellaneousVars[temp4] == 3) temp1 = 45.0;
+					if (MiscellaneousVars[temp4] == 4) temp1 = 60.0;
+					if (MiscellaneousVars[temp4] == 5) temp1 = 75.0;
+					temp8 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp8 = 20.0;
+					if (MiscellaneousVars[temp4] == 2) temp8 = 40.0;
+					if (MiscellaneousVars[temp4] == 3) temp8 = 60.0;
+					if (MiscellaneousVars[temp4] == 4) temp8 = 80.0;
+					if (MiscellaneousVars[temp4] == 5) temp8 = 100.0;
+					temp11 = 5; // Max Levels
+					temp3 = 0; // Cost for next level.
+					if (MiscellaneousVars[temp4] == 0) temp3 = 15 * MiscellaneousVars[280] / 100;
+					if (MiscellaneousVars[temp4] == 1) temp3 = 20 * MiscellaneousVars[280] / 100;
+					if (MiscellaneousVars[temp4] == 2) temp3 = 25 * MiscellaneousVars[280] / 100;
+					if (MiscellaneousVars[temp4] == 3) temp3 = 30 * MiscellaneousVars[280] / 100;
+					if (MiscellaneousVars[temp4] == 4) temp3 = 35 * MiscellaneousVars[280] / 100;
+					if (temp3 < perksmincost && MiscellaneousVars[temp4] < temp11) temp3 = perksmincost;
+					if (MenuSystemVars[1] == 6) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+					if (MiscellaneousVars[temp4] == 0)
+					{
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL AFFECT DAMAGE DEALT TO 'LEGENDARY' ENEMIES.",
+											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+					}
+					else
+					{
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd+",f:temp7,s:"-",f:temp9,s:"%\c- DAMAGE DEALT TO 'LEGENDARY' MONSTERS",
+											s:"\n\c-\cd+",f:temp1,s:"-",f:temp8,s:"%\c- DAMAGE DEALT TO 'LEGENDARY' BOSSES",
+											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 				}
 				else
 				if (CharacterClass == 2) // Flora (3)
 				{
+					hudmsgid = 1998;
 					// Selection #1
+					hudmsgid -= 1;
 					SetFont("DVDSSMLFONT"); // DQHUDFONTSTATUS
 					xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 					ytemp2 = (HudYRange * 15000 / 100000) * 1.0 + 0.1; // -0.15;
@@ -26772,11 +26933,12 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MiscellaneousVars[temp4] == 0) temp3 = 15 * MiscellaneousVars[280] / 100;
 					if (temp3 < perksmincost && MiscellaneousVars[temp4] < temp11) temp3 = perksmincost;
 					if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
-					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - 66.6% CHANCE TO RECOVER 25% OF MAXIMUM MP [UP TO 125% OF MAX] AFTER SURVIVING A MORTAL HIT",
+					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd66.6%\c- CHANCE TO RECOVER \cd25%\c- OF MAXIMUM MP [UP TO \cd125%\c- OF MAX] AFTER SURVIVING A MORTAL HIT",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 			
 					// Selection #2
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 11250 / 100000) * 1.0; // 0.1125;
 					perkname = "MORTAL HIT MANA RECOVERY EX";
 					temp4 = 10040; // MiscellaneousVars[]
@@ -26792,12 +26954,13 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					if (MiscellaneousVars[temp4] == 0) temp3 = 35 * MiscellaneousVars[280] / 100;
 					if (temp3 < perksmincost && MiscellaneousVars[temp4] < temp11) temp3 = perksmincost;
 					if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
-					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - +33.4% CHANCE TO RECOVER 50% OF MAXIMUM MP [UP TO 175% OF MAX] AFTER SURVIVING A MORTAL HIT",
+					HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd+33.4%\c- CHANCE TO RECOVER \cd50%\c- OF MAXIMUM MP [UP TO \cd175%\c- OF MAX] AFTER SURVIVING A MORTAL HIT",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;  
-										HUDMSG_ALPHA,  1996, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 			
 				
 					// Selection #3
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 11250 / 100000) * 1.0; // 0.1125;
 					perkname = "MORTAL HIT PSYCHE UP";
 					temp4 = 10037; // MiscellaneousVars[]
@@ -26824,16 +26987,17 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					{
 						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL AFFECT TENSION AFTER SURVIVING A MORTAL HIT",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 					else
 					{
-						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - 75% CHANCE TO HIT \c[Purple]'",d:temp1,s:"'\c- TENSION AFTER SURVIVING A MORTAL HIT",
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd75%\c- CHANCE TO HIT \c[Purple]'",d:temp1,s:"'\c- TENSION AFTER SURVIVING A MORTAL HIT",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1995, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 				
 					// Selection #4
+					hudmsgid -= 1;
 					ytemp2 += (HudYRange * 11250 / 100000) * 1.0; // 0.1125;
 					perkname = "CLEARED OF MIND";
 					temp4 = 10055; // MiscellaneousVars[]
@@ -26874,16 +27038,117 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 					{
 						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL AFFECT EXP GAINED, HP/MP/STAMINA REGEN & HELLCORE COOLDOWN SPEED.",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 					else
 					{
-						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - +",d:temp1,s:"% MORE LEVEL EXP/EXPERIESSENCE-GAIN.",
-											s:"\n\c-+",f:temp7,s:"% HP/MP/STAMINA REGENERATION SPEED.",
-											s:"\n\c--",d:temp8,s:"% MANA COST FOR SPELLS.",
-											s:"\n\c-+",f:temp9,s:"% HELLCORE COOLDOWN SPEED.",
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd+",d:temp1,s:"%\c- MORE LEVEL EXP/EXPERIESSENCE-GAIN.",
+											s:"\n\c-\cd+",f:temp7,s:"%\c- HP/MP/STAMINA REGENERATION SPEED.",
+											s:"\n\c-\cd-",d:temp8,s:"%\c- MANA COST FOR SPELLS.",
+											s:"\n\c-\cd+",f:temp9,s:"%\c- HELLCORE COOLDOWN SPEED.",
 										s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
-										HUDMSG_ALPHA,  1994, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+					}
+			
+					// Selection #5
+					hudmsgid -= 1;
+					ytemp2 += (HudYRange * 10000 / 100000) * 1.0; // 0.1000;
+					perkname = "VILLAIN KILLER";
+					temp4 = 10057; // MiscellaneousVars[]
+					temp7 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp7 = 10.0;
+					if (MiscellaneousVars[temp4] == 2) temp7 = 20.0;
+					if (MiscellaneousVars[temp4] == 3) temp7 = 30.0;
+					if (MiscellaneousVars[temp4] == 4) temp7 = 40.0;
+					if (MiscellaneousVars[temp4] == 5) temp7 = 50.0;
+					temp9 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp9 = 12.5;
+					if (MiscellaneousVars[temp4] == 2) temp9 = 25.0;
+					if (MiscellaneousVars[temp4] == 3) temp9 = 37.5;
+					if (MiscellaneousVars[temp4] == 4) temp9 = 50.0;
+					if (MiscellaneousVars[temp4] == 5) temp9 = 62.5;
+					temp1 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp1 = 15.0;
+					if (MiscellaneousVars[temp4] == 2) temp1 = 30.0;
+					if (MiscellaneousVars[temp4] == 3) temp1 = 45.0;
+					if (MiscellaneousVars[temp4] == 4) temp1 = 60.0;
+					if (MiscellaneousVars[temp4] == 5) temp1 = 75.0;
+					temp8 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp8 = 20.0;
+					if (MiscellaneousVars[temp4] == 2) temp8 = 40.0;
+					if (MiscellaneousVars[temp4] == 3) temp8 = 60.0;
+					if (MiscellaneousVars[temp4] == 4) temp8 = 80.0;
+					if (MiscellaneousVars[temp4] == 5) temp8 = 100.0;
+					temp11 = 5; // Max Levels
+					temp3 = 0; // Cost for next level.
+					if (MiscellaneousVars[temp4] == 0) temp3 = 15 * MiscellaneousVars[280] / 100;
+					if (MiscellaneousVars[temp4] == 1) temp3 = 20 * MiscellaneousVars[280] / 100;
+					if (MiscellaneousVars[temp4] == 2) temp3 = 25 * MiscellaneousVars[280] / 100;
+					if (MiscellaneousVars[temp4] == 3) temp3 = 30 * MiscellaneousVars[280] / 100;
+					if (MiscellaneousVars[temp4] == 4) temp3 = 35 * MiscellaneousVars[280] / 100;
+					if (temp3 < perksmincost && MiscellaneousVars[temp4] < temp11) temp3 = perksmincost;
+					if (MenuSystemVars[1] == 5) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+					if (MiscellaneousVars[temp4] == 0)
+					{
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL AFFECT DAMAGE DEALT TO 'LEGENDARY' ENEMIES.",
+											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+					}
+					else
+					{
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd+",f:temp7,s:"-",f:temp9,s:"%\c- DAMAGE DEALT TO 'LEGENDARY' MONSTERS",
+											s:"\n\c-\cd+",f:temp1,s:"-",f:temp8,s:"%\c- DAMAGE DEALT TO 'LEGENDARY' BOSSES",
+											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS";  
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+					}
+
+					// Selection #6
+					hudmsgid -= 1;
+					ytemp2 += (HudYRange * 10000 / 100000) * 1.0; // 0.1000;
+					perkname = "VILLAIN KILLER EX";
+					temp4 = 10058; // MiscellaneousVars[]
+					temp5 = 10057;
+					temp7 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp7 = 25.0;
+					if (MiscellaneousVars[temp4] == 2) temp7 = 50.0;
+					temp9 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp9 = 31.25;
+					if (MiscellaneousVars[temp4] == 2) temp9 = 62.50;
+					temp1 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp1 = 37.5;
+					if (MiscellaneousVars[temp4] == 2) temp1 = 75.0;
+					temp8 = 0;
+					if (MiscellaneousVars[temp4] == 1) temp8 = 50.0;
+					if (MiscellaneousVars[temp4] == 2) temp8 = 100.0;
+					perkdescript1 = "";
+					if (MiscellaneousVars[temp4] == 0)
+					{
+						if (MiscellaneousVars[temp5] >= 2) perkdescript1 = " \cd[REQUIRES \ccVILLAIN KILLER \cv(2+)\cd]";
+																					else perkdescript1 = " \cg[REQUIRES \ccVILLAIN KILLER \cv(2+)\cg]";
+					}
+					if (MiscellaneousVars[temp4] == 1)
+					{
+						if (MiscellaneousVars[temp5] >= 4) perkdescript1 = " \cd[REQUIRES \ccVILLAIN KILLER \cv(4+)\cd]";
+																					else perkdescript1 = " \cg[REQUIRES \ccVILLAIN KILLER \cv(4+)\cg]";
+					}
+					temp11 = 2; // Max Levels
+					temp3 = 0; // Cost for next level.
+					if (MiscellaneousVars[temp4] == 0) temp3 = 30 * MiscellaneousVars[280] / 100;
+					if (MiscellaneousVars[temp4] == 1) temp3 = 60 * MiscellaneousVars[280] / 100;
+					if (temp3 < perksmincost && MiscellaneousVars[temp4] < temp11) temp3 = perksmincost;
+					if (MenuSystemVars[1] == 6) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+					if (MiscellaneousVars[temp4] == 0)
+					{
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - WILL AFFECT DAMAGE DEALT TO 'LEGENDARY' ENEMIES.",
+											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+					}
+					else
+					{
+						HudMessage(s:perkname,s:" (\cn",d:MiscellaneousVars[temp4],s:"\c-/\cn",d:temp11,s:"\c-) - \cd+",f:temp7,s:"-",f:temp9,s:"%\c- EXTRA DAMAGE DEALT TO 'LEGENDARY' MONSTERS",
+											s:"\n\c-\cd+",f:temp1,s:"-",f:temp8,s:"%\c- EXTRA DAMAGE DEALT TO 'LEGENDARY' BOSSES",
+											s:"\n\cfCOST FOR NEXT LEVEL: ",d:temp3,s:" AEON PTS",s:perkdescript1;  
+											HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 					}
 				}
 		
@@ -26910,26 +27175,28 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				HudMessage(s:"GRAND-MASTERY PERKS";  HUDMSG_ALPHA,  1903, CR_WHITE,  xtemp1, ytemp1, 0.03, 1.0);
 		
 			
+				hudmsgid = 1998;
 				// Selection #1
+				hudmsgid -= 1;
 				SetFont("DVDSSMLFONT"); // DQHUDFONTSTATUS
 				xtemp2 = (HudXRange * 0 / 100000) * 1.0 + 0.1; // -0.10;
 				ytemp2 = (HudYRange * 15000 / 100000) * 1.0 + 0.1; // -0.15;
-			if (MiscellaneousVars[11001] == 2)
-			{
-				perkname = "\c[Green]HIGHER LEARNING [LEVEL 2]\c- -";
-				perkdescript1 = "";
-				if (CharacterClass == 2) perkdescript1 = "\n        \cd+30%\c- SCEPTRE EXP GAINED.";
-				perkdescript2 = "\n        \cd+45%\c- EXP GAINED.";
-				if (CharacterClass == 2) perkdescript2 = "\n        \cd+30%\c- EXP GAINED.";
-				perkdescript3 = "\n        \cd+30%\c- COMBO TIMER GAINED PER KILL.";
-				perkdescript4 = "\n        \cd+50%\c- AEON POINTS ACCQUIRED ON LEVEL UP.";
-				if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
-				HudMessage(s:perkname,
-									s:perkdescript1,
-									s:perkdescript2,
-									s:perkdescript3,
-									s:perkdescript4;  
-									HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+				if (MiscellaneousVars[11001] == 2)
+				{
+					perkname = "\c[Green]HIGHER LEARNING [LEVEL 2]\c- -";
+					perkdescript1 = "";
+					if (CharacterClass == 2) perkdescript1 = "\n        \cd+30%\c- SCEPTRE EXP GAINED.";
+					perkdescript2 = "\n        \cd+45%\c- EXP GAINED.";
+					if (CharacterClass == 2) perkdescript2 = "\n        \cd+30%\c- EXP GAINED.";
+					perkdescript3 = "\n        \cd+30%\c- COMBO TIMER GAINED PER KILL.";
+					perkdescript4 = "\n        \cd+50%\c- AEON POINTS ACCQUIRED ON LEVEL UP.";
+					if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+					HudMessage(s:perkname,
+										s:perkdescript1,
+										s:perkdescript2,
+										s:perkdescript3,
+										s:perkdescript4;  
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 				}
 				else
 				if (MiscellaneousVars[11001] == 1)
@@ -26947,13 +27214,13 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 										s:perkdescript2,
 										s:perkdescript3,
 										s:perkdescript4;  
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 				}
 				else
 				{
 					if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
 					HudMessage(s:"?????? ????????? - [YOU MUST MAX OUT AT LEAST 5 PERKS WITH 3 OR MORE LEVELS.]";  
-										HUDMSG_ALPHA,  1997, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
+										HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp2, ytemp2, 0.03, 1.0);
 				}
 			
 			
@@ -26981,13 +27248,14 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 		//******************
 		if (MenuSystemVars[4] == 4)
 		{
+			hudmsgid = 1998;
 			SetFont("DVDSBIGFONT"); // DQHUDFONTSTATUS
 			HudXRange = 800;
 			HudYRange = 600;
 			SetHudSize(HudXRange,HudYRange,0);
 			xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
 			ytemp1 = (HudYRange *  3125 / 100000) * 1.0; // 0.03125;
-			HudMessage(s:"CODEX";  HUDMSG_ALPHA,  1998, CR_WHITE,  xtemp1, ytemp1, 0.03, 1.0);
+			HudMessage(s:"CODEX";  HUDMSG_ALPHA,  hudmsgid, CR_WHITE,  xtemp1, ytemp1, 0.03, 1.0);
 		
 			//*****************
 			//** MAIN PAGE
@@ -26998,35 +27266,41 @@ script "INGAMEMENUS_DISPLAYS" ENTER
 				HudXRange = 760;
 				HudYRange = 570;
 				SetHudSize(HudXRange,HudYRange,0);
+				hudmsgid -= 1;
 				xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
 				ytemp1 = (HudYRange * 37500 / 100000) * 1.0; // 0.35;
-				if (MenuSystemVars[1] == 1) HudMessage(s:"WEAPONS";  HUDMSG_ALPHA,  1997, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0);
-															else HudMessage(s:"WEAPONS";  HUDMSG_ALPHA,  1997, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);   
+				if (MenuSystemVars[1] == 1) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+				HudMessage(s:"WEAPONS";  HUDMSG_ALPHA,  hudmsgid, textcolor,  xtemp1, ytemp1, 0.03, 1.0);
 		
+				hudmsgid -= 1;
 				xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
-				ytemp1 = (HudYRange * 42500 / 100000) * 1.0; // 0.45;
-				if (MenuSystemVars[1] == 2) HudMessage(s:"ITEMS"; HUDMSG_ALPHA,  1996, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0);
-															else HudMessage(s:"ITEMS"; HUDMSG_ALPHA,  1996, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);
+				ytemp1 += (HudYRange * 5000 / 100000) * 1.0; // 0.45;
+				if (MenuSystemVars[1] == 2) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+				HudMessage(s:"ITEMS"; HUDMSG_ALPHA,  hudmsgid, textcolor, xtemp1, ytemp1, 0.03, 1.0);
 		
+				hudmsgid -= 1;
 				xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
-				ytemp1 = (HudYRange * 47500 / 100000) * 1.0; // 0.55;
-				if (MenuSystemVars[1] == 3) HudMessage(s:"POWERUPS/ARTIFACTS";  HUDMSG_ALPHA,  1995, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0); 
-															else HudMessage(s:"POWERUPS/ARTIFACTS";  HUDMSG_ALPHA,  1995, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);
+				ytemp1 += (HudYRange * 5000 / 100000) * 1.0; // 0.45;
+				if (MenuSystemVars[1] == 3) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+				HudMessage(s:"POWERUPS/ARTIFACTS";  HUDMSG_ALPHA,  hudmsgid, textcolor, xtemp1, ytemp1, 0.03, 1.0);
 		
+				hudmsgid -= 1;
 				xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
-				ytemp1 = (HudYRange * 52500 / 100000) * 1.0; // 0.65;
-				if (MenuSystemVars[1] == 4) HudMessage(s:"MONSTERS";  HUDMSG_ALPHA,  1994, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0);
-															else HudMessage(s:"MONSTERS";  HUDMSG_ALPHA,  1994, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);
+				ytemp1 += (HudYRange * 5000 / 100000) * 1.0; // 0.45;
+				if (MenuSystemVars[1] == 4) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+				HudMessage(s:"MONSTERS";  HUDMSG_ALPHA,  hudmsgid, textcolor, xtemp1, ytemp1, 0.03, 1.0);
 		
+				hudmsgid -= 1;
 				xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
-				ytemp1 = (HudYRange * 57500 / 100000) * 1.0; // 0.65;
-				if (MenuSystemVars[1] == 5) HudMessage(s:"CHARACTERS";  HUDMSG_ALPHA,  1993, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0);
-															else HudMessage(s:"CHARACTERS";  HUDMSG_ALPHA,  1993, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);
+				ytemp1 += (HudYRange * 5000 / 100000) * 1.0; // 0.45;
+				if (MenuSystemVars[1] == 5) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+				HudMessage(s:"CHARACTERS";  HUDMSG_ALPHA,  hudmsgid, textcolor, xtemp1, ytemp1, 0.03, 1.0);
 		
+				hudmsgid -= 1;
 				xtemp1 = (HudXRange * 50000 / 100000) * 1.0; // 0.5;
-				ytemp1 = (HudYRange * 62500 / 100000) * 1.0; // 0.65;
-				if (MenuSystemVars[1] == 6) HudMessage(s:"LOCATIONS/ENVIRONMENTS";  HUDMSG_ALPHA,  1992, CR_GOLD,  xtemp1, ytemp1, 0.03, 1.0);
-															else HudMessage(s:"LOCATIONS/ENVIRONMENTS";  HUDMSG_ALPHA,  1992, CR_WHITE, xtemp1, ytemp1, 0.03, 1.0);
+				ytemp1 += (HudYRange * 5000 / 100000) * 1.0; // 0.45;
+				if (MenuSystemVars[1] == 6) { textcolor = CR_GOLD; } else { textcolor = CR_WHITE; }
+				HudMessage(s:"LOCATIONS/ENVIRONMENTS";  HUDMSG_ALPHA,  hudmsgid, textcolor, xtemp1, ytemp1, 0.03, 1.0);
 			}
 		}
 	
@@ -49453,10 +49727,10 @@ script "UseManaAttack" (int amount, int check, int infammocheck)
 			{
 				if (check > 1)
 				{
-				CurrentMana -= amount;
-				if (CurrentMana < 1) CurrentMana = 0;
-				MiscellaneousVars[243] = CurrentMana;
-				MiscellaneousVars[238] = CurrentMana;
+					CurrentMana -= amount;
+					if (CurrentMana < 1) CurrentMana = 0;
+					MiscellaneousVars[243] = CurrentMana;
+					MiscellaneousVars[238] = CurrentMana;
 				}
 				SetResultValue(1); 
 			}
@@ -50179,15 +50453,15 @@ script "AddEXP" (int baseamount, int flags, int incrementcombo)
 
 	if (randomdropsallowed > 0)
 	{
-		if (random(1,128) <= experiessencefactor) DropItem(0,"Experiessence",1,256);
-		if (random(1,512) <= experiessencefactor) DropItem(0,"Experiessence",1,256);
-		if (random(1,2048) <= experiessencefactor) DropItem(0,"Experiessence",1,256);
-		if (random(1,512) <= experiessencefactor) DropItem(0,"LargeExperiessence",1,256);
-		if (random(1,2048) <= experiessencefactor) DropItem(0,"LargeExperiessence",1,256);
-		if (random(1,8192) <= experiessencefactor) DropItem(0,"LargeExperiessence",1,256);
-		if (random(1,2048) <= experiessencefactor) DropItem(0,"HugeExperiessence",1,256);
-		if (random(1,8192) <= experiessencefactor) DropItem(0,"HugeExperiessence",1,256);
-		if (random(1,32768) <= experiessencefactor) DropItem(0,"HugeExperiessence",1,256);
+		if (random(1,256) <= experiessencefactor) DropItem(0,"Experiessence",1,256);
+		if (random(1,1024) <= experiessencefactor) DropItem(0,"Experiessence",1,256);
+		if (random(1,4096) <= experiessencefactor) DropItem(0,"Experiessence",1,256);
+		if (random(1,1024) <= experiessencefactor) DropItem(0,"LargeExperiessence",1,256);
+		if (random(1,4096) <= experiessencefactor) DropItem(0,"LargeExperiessence",1,256);
+		if (random(1,16384) <= experiessencefactor) DropItem(0,"LargeExperiessence",1,256);
+		if (random(1,4096) <= experiessencefactor) DropItem(0,"HugeExperiessence",1,256);
+		if (random(1,16384) <= experiessencefactor) DropItem(0,"HugeExperiessence",1,256);
+		if (random(1,65536) <= experiessencefactor) DropItem(0,"HugeExperiessence",1,256);
 		
 		if (random(1,131072) == 1) DropItem(0,"TheOneRing",1,256);
 		if (random(1,16384) == 1) DropItem(0,"ElfinElixir",1,256);
