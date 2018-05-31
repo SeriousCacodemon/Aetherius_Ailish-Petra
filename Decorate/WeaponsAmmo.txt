@@ -48,9 +48,29 @@ actor SerpentStaffAilish : CWeapStaff
 	}
 }
 
-Actor CStaffMissileNew : CStaffMissile Replaces CStaffMissile
+Actor CStaffMissileNew : AetheriusProjectileZSC // Replaces CStaffMissile
 {
-	Damage (ACS_NamedExecuteWithResult("GetPlayerATKDMG",55,0,0))
+	Damage (finaldamagedealt)
+	Speed 22
+	Radius 12
+	Height 10
+	Damage 5
+	RenderStyle Add
+	Projectile
+	DeathSound "ClericCStaffExplode"
+	Obituary "$OB_MPCWEAPSTAFFR"
+	States
+	{
+		Spawn:
+			CSSF D 0 Bright NoDelay { A_GetPlayerAttackDamage(57,0); }
+		Idle:
+			CSSF DDEE 1 Bright A_Weave(3, 0, 1.0, 0.0)
+			Loop
+		Death:
+			CSSF FG 4 Bright
+			CSSF HI 3 Bright
+			Stop
+	}
 }
 // Petra-specfic version with more comboability...
 // What HP amount do I equate 32000 with?  Belphegor specific HP?
@@ -270,7 +290,7 @@ Actor AChristinaHeresiarch : AChristina { Inventory.PickupMessage "Alexandra Chr
 
 Actor AChristinaPartinias : AChristina { Inventory.PickupMessage "Alexandra Christina gains ability to... use Partinias's heartful magic?!" }
 
-actor AChristinaShot : Actor
+actor AChristinaShot : AetheriusProjectileZSC
 {
 	Radius 11
 	Height 8
@@ -289,7 +309,11 @@ actor AChristinaShot : Actor
 		Spawn:
 			CHRB A 1 BRIGHT
 		Death:
-			CHRB A 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",48,0),64,0,1,64)
+			CHRB A 1 BRIGHT 
+			{
+				A_GetPlayerAttackDamage(48,0);
+				A_Explode((finaldamagedealt),64,0,1,64);
+			}
 			CHRB AAAAAAAAAA 1 BRIGHT A_FadeOut(0.1)
 			stop
 	}
@@ -302,13 +326,17 @@ actor AChristinaShot : Actor
 		Spawn:
 			CHRP A 1 BRIGHT
 		Death:
-			CHRP A 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",48,0),64,0,1,64)
+			CHRP A 1 BRIGHT
+			{
+				A_GetPlayerAttackDamage(48,0);
+				A_Explode((finaldamagedealt),64,0,1,64);
+			}
 			CHRP A 1 BRIGHT A_FadeOut(0.1)
 			goto Death+2
 	}
 }*/
 
-Actor AChristinaTracer : FastProjectile
+Actor AChristinaTracer : AetheriusFastProjectileZSC
 {
 	Damagetype "Ether"
 	Radius 1
@@ -340,13 +368,17 @@ Actor AChristinaTracer : FastProjectile
 			loop
 		Death:
 			CHRP C 0 A_SetScale(0.5,0.418)
-			CHRP C 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",49,0,0),32,0,1,32)
+			CHRP C 1 BRIGHT 
+			{
+				A_GetPlayerAttackDamage(49,0);
+				A_Explode((finaldamagedealt),32,0,1,32);
+			}
 			CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
 			stop
 	}
 }
 
-actor AChristinaPuff : BulletPuff
+actor AChristinaPuff : AetheriusPuffZSC
 {
 	Radius 12
 	Height 8
@@ -366,7 +398,11 @@ actor AChristinaPuff : BulletPuff
 	{
 		Spawn:
 			CHRP C 0
-			CHRP C 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",49,1,0),32,0,1,32,0,0,0,"Ether")
+			CHRP C 1 BRIGHT 
+			{
+				A_GetPlayerAttackDamage(49,1);
+				A_Explode((finaldamagedealt),32,0,1,32,0,0,0,"Ether");
+			}
 			CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
 			stop
 	}
@@ -378,7 +414,11 @@ Actor AChristinaPuffCharged : AChristinaPuff
 	{
 		Spawn:
 			CHRP C 0
-			CHRP C 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",53,1,0),32,0,1,32,0,0,0,"Ether")
+			CHRP C 1 BRIGHT
+			{
+				A_GetPlayerAttackDamage(53,1);
+				A_Explode((finaldamagedealt),32,0,1,32,0,0,0,"Ether");
+			}
 			CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
 			stop
 	}
@@ -393,15 +433,19 @@ Actor AChristinaPuffChargedFinal : AChristinaPuff
 	{
 		Spawn:
 			CHRP C 0
-			CHRP C 1 BRIGHT A_Explode(ACS_NamedExecuteWithResult("GetPlayerATKDMG",54,1,0),70,0,1,70,0,0,0,"Ether")
+			CHRP C 1 BRIGHT
+			{
+				A_GetPlayerAttackDamage(54,1);
+				A_Explode((finaldamagedealt),70,0,1,70,0,0,0,"Ether");
+			}
 			CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
 			stop
 	}
 }
 
-actor AChristinaBouncingshotweak : Actor
+actor AChristinaBouncingshotweak : AetheriusProjectileZSC
 {
-	Damage (ACS_NamedExecuteWithResult("GetPlayerATKDMG",55,0,0))
+	Damage (finaldamagedealt)
 	XScale 0.26
 	YScale 0.208
 	Radius 2
@@ -414,6 +458,8 @@ actor AChristinaBouncingshotweak : Actor
 	States
 	{
 		Spawn:
+			TNT1 A 0 Bright NoDelay { A_GetPlayerAttackDamage(55,0); }
+		Idle:
 			TNT1 AAAAAAAAAAAAAAAAAAAAAAAA 1 Bright
 			{
 				A_SpawnItemEx("AChristinaBouncingShotTrail",0,0,0-pitch);
@@ -430,7 +476,7 @@ actor AChristinaBouncingshotweak : Actor
 
 actor AChristinaBouncingshotstage1 : AChristinaBouncingshotweak
 {
-	Damage (ACS_NamedExecuteWithResult("GetPlayerATKDMG",56,0,0))
+	Damage (finaldamagedealt)
 	BounceType Doom
 	BounceFactor 1
 	WallBounceFactor 1
@@ -442,6 +488,8 @@ actor AChristinaBouncingshotstage1 : AChristinaBouncingshotweak
 	States
 	{
 		Spawn:
+			TNT1 A 0 Bright NoDelay { A_GetPlayerAttackDamage(56,0); }
+		Idle:
 			TNT1 A 1 Bright
 			{
 				A_SpawnItemEx("AChristinaBouncingShotTrail",0,0,0-pitch);
