@@ -1650,6 +1650,12 @@ OptionValue "DEBUG_HUDDisplay"
 	1, "Yes"
 }
 
+OptionValue "DEBUG_InitDisplay"
+{
+	0, "No"
+	1, "Yes"
+}
+
 OptionValue "DEBUG_SeedGrabDisplay"
 {
 	0, "No"
@@ -2045,10 +2051,11 @@ OptionMenu "DVDS-SubMenu5"
 	TextField "EXP Combo Timer Speed [%]", 			"dvds_expcombotimermultiplier"
 	TextField "EXP Combo Base Gain [%]", 			"dvds_expcombobasemultiplier"
 	StaticText " "
-	TextField "Player EXP Base Requirement", 			"dvds_baseexprequirement"
+	TextField "Player EXP Base Requirement [#/2000]", 			"dvds_baseexprequirement"
 	TextField "Player EXP Base Extra [#/1]", 			"dvds_baseexpextra"
 	TextField "Player EXP Acceleration 1 [#/3]", 		"dvds_baseexpaccel1"
 	TextField "Player EXP Acceleration 2 [#/96]", 		"dvds_baseexpaccel2"
+	TextField "Player Acceleration 2 Divisor [#/1k]", 		"dvds_accel2div"
 	TextField "Player EXP Multiplier 1 [#/96]", 		"dvds_expmulti1"
 	TextField "Player EXP Multiplier 2 [#/50]", 		"dvds_expmulti2"
 	StaticText " "
@@ -2151,7 +2158,7 @@ OptionMenu "DVDS-DebugMenu1"
 	Option "Shield Uncurse Displays",				"dvdsdebug_shielduncursedisplay",			"DEBUG_ShieldUncurseDisplay"
 	Option "Curse Degen Displays",				"dvdsdebug_cursedmgdisplay",			"DEBUG_CurseDegenDisplay"
 	Option "Poison Ailment Displays",				"dvdsdebug_poisonailmentdisplays",			"DEBUG_PoisonDisplay"
-	Option "Show Ghost of Sceptre's Range?",				"dvdsdebug_sceptrerangeghost",			"DEBUG_SceptreRangeGhost"
+	Option "Show Ghost of Melee Attack Range",				"dvdsdebug_sceptrerangeghost",			"DEBUG_SceptreRangeGhost"
 	Option "Show Ghosts of 'Shields'",				"dvdsdebug_shieldactorghosts",			"DEBUG_ShieldActorGhosts"
 	Option "Show Inventory Limit Displays",				"dvdsdebug_inventorylimits",			"DEBUG_InventoryLimitDisplays"
 }
@@ -2176,6 +2183,7 @@ OptionMenu "DVDS-DebugMenu3"
 	Option "Max HP Bonus/Seed/Fygg Displays",			"dvdsdebug_showseedstuff",				"DEBUG_SeedGrabDisplay"
 	Option "Level Up Displays",			"dvdsdebug_levelupdisplays",				"DEBUG_LevelUpDisplay"
 	Option "HUD Displays",			"dvdsdebug_huddisplays",				"DEBUG_HUDDisplay"
+	Option "Initialization Displays",			"dvdsdebug_initdisplays",				"DEBUG_InitDisplay"
 }
 
 OptionMenu "DVDS-MiscModCompat1"
