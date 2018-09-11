@@ -1973,7 +1973,7 @@ OptionMenu "DVDS-SubMenu1"
 	Option "Sauron's Gauntlets drain stamina", "dvds_saurongauntlets_givestamina", "SauronGauntletsGive"
 	Option "...up to 500%", "dvds_saurongauntlets_giveoverstamina", "SauronGauntletsGive", "dvds_saurongauntlets_givestamina"
 	Option "Sauron's Gauntlets drain armor", "dvds_saurongauntlets_givearmor", "SauronGauntletsGive"
-	Option "...up to [#]%", "dvds_saurongauntlets_givearmorlimit", "SauronGauntletsGiveArmorLevel"
+	Option "...up to [#]%", "dvds_saurongauntlets_givearmorlimit", "SauronGauntletsGiveArmorLevel", "dvds_saurongauntlets_givearmor"
 	StaticText " "
 	Command "Restore Default Settings", 			"dvds_defaults1"
 }
