@@ -19036,6 +19036,44 @@ script "DVI-MainEyeDeath1" (void)
 	}
 }
 
+// Changes Music for the battle with the main Eye of Sauron on MAP04 [DVI-DS] or MAP12 [DVII-DS]
+script "DV1M04-Music1" (void)
+{
+	if (SpecialGameFlags[10000] == 0) SetMusic("DDRAGON3", 13); 
+}
+
+// Changes Music back when exiting the Fishmouth Temple in MAP04 [DVI-DS] or MAP12 [DVII-DS]
+script 24 (void)
+{
+	if (SpecialGameFlags[10000] == 0) SetMusic("*", 0); 
+}
+
+// Changes Music for Entering the Fishmouth Temple in MAP04 [DVI-DS] or MAP12 [DVII-DS]
+script 25 (void)
+{
+	if (SpecialGameFlags[10000] == 0) SetMusic("DDRAGON3", 15); 
+}
+
+// Makes Monsters in MAP04 [DVI-DS] or MAP12 [DVII-DS] have a TID of 666 [this makes them suspectible to the Sauravatar's activation script]
+script "DVI-M04MonsterTags" (void)
+{
+	if (ModType == 1) // DVI
+	{
+		if (GetLevelInfo(LEVELINFO_LEVELNUM) == 1104)
+		{
+			Thing_ChangeTID (0, 666);
+		}
+	}
+	else
+	if (ModType == 2) // DVII
+	{
+		if (GetLevelInfo(LEVELINFO_LEVELNUM) == 1214)
+		{
+			Thing_ChangeTID (0, 666);
+		}
+	}
+}
+
 // Sauravatar's Death [DVI-DS]
 script "SauravatarDeath" (void)
 {
@@ -19589,24 +19627,6 @@ script "SauravatarRegenMode" (int RegenType)
 	{
 		SetThingSpecial(1124,0,0,0,0,0,0); // Set's args[0] to 0 in order to make the Sauravatar shoot his SuperBFG balls [the red BFG balls]
 	}
-}
-
-// Changes Music for the battle with the main Eye of Sauron on MAP04 [DVI-DS] or MAP12 [DVII-DS]
-script "DV1M04-Music1" (void)
-{
-	if (SpecialGameFlags[10000] == 0) SetMusic("DDRAGON3", 13); 
-}
-
-// Changes Music back when exiting the Fishmouth Temple in MAP04 [DVI-DS] or MAP12 [DVII-DS]
-script 24 (void)
-{
-	if (SpecialGameFlags[10000] == 0) SetMusic("*", 0); 
-}
-
-// Changes Music for Entering the Fishmouth Temple in MAP04 [DVI-DS] or MAP12 [DVII-DS]
-script 25 (void)
-{
-	if (SpecialGameFlags[10000] == 0) SetMusic("DDRAGON3", 15); 
 }
 
 // Max Health Bonus Script
@@ -26990,16 +27010,6 @@ script "SceptreTwirlFrameCheck" (int FrameNo)
 	}
 }
 
-// Gauntlet Flash Effect
-script "GauntletFlashEffect" (void)
-{
-	if (MiscellaneousVars[49] > 0)
-	{
-		FadeRange(224,224,224,0.33,224,224,224,0,0.5);
-		MiscellaneousVars[49] = 0;
-	}
-}
-
 // Sauron's Gauntlets Effect
 script "SauronGauntletsHit" (int Amount, int HitType)
 {
@@ -27091,27 +27101,9 @@ script "SauronGauntletsHit" (int Amount, int HitType)
 		if (CharacterClass == 2) ActivatorSound("healing_dq",127);
 		else ActivatorSound("HealSpell1",127); 
 		
-		MiscellaneousVars[49] = 1; // Screen Flash
-	}
-}
-
-// Makes Monsters in MAP04 [DVI-DS] or MAP12 [DVII-DS] have a TID of 666 [this makes them suspectible to the Sauravatar's activation script]
-script "DVI-M04MonsterTags" (void)
-{
-	if (ModType == 1) // DVI
-	{
-		if (GetLevelInfo(LEVELINFO_LEVELNUM) == 1104)
-		{
-			Thing_ChangeTID (0, 666);
-		}
-	}
-	else
-	if (ModType == 2) // DVII
-	{
-		if (GetLevelInfo(LEVELINFO_LEVELNUM) == 1214)
-		{
-			Thing_ChangeTID (0, 666);
-		}
+		SetActivator(Player1TID); // Set to Player's ID
+		FadeRange(224,224,224,0.33,224,224,224,0,0.5);
+		SetActivator(0); // Set back to worldly activator
 	}
 }
 
@@ -30944,18 +30936,6 @@ script "GetRailgunDriftSpeed" (int type)
 	if (MiscellaneousVars[100007] > 0 && ActivatorTID() == Player1TID) PrintBold(s:"DriftSpeed: ",f:driftspeed);
 	driftspeed = driftspeed>>16;
 	SetResultValue(driftspeed);
-}
-
-script "GetSapphireWandAltSpread" (int type)
-{
-	int result = 400;
-	if (MiscellaneousVars[10053] == 1) result = result * 5 / 6;
-	if (MiscellaneousVars[10053] == 2) result = result * 4 / 6;
-	if (MiscellaneousVars[10053] == 3) result = result * 3 / 6;
-	if (MiscellaneousVars[10053] == 4) result = result * 2 / 6;
-	if (MiscellaneousVars[10053] == 5) result = result * 1 / 6;
-	if (type == -1) result *= -1;
-	SetResultValue(result);
 }
 
 // Damage Indicators
