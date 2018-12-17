@@ -541,7 +541,7 @@ actor AChristinaBouncingShotTrail : Actor
 //Partinias shot addon.  Basically attacks used by the Partinias arcana.
 //======================================================================
 //To do later(?):
-//Super version
+//Super version of both existing attacks perhaps?
 Actor AChristinaPartinias : AChristina 
 {
 	Inventory.PickupMessage "Alexandra Christina gains ability to... use Partinias's heartful magic?!"
