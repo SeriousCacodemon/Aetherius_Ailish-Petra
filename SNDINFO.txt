@@ -97,6 +97,11 @@ ZillaelHolyVoice	ZILLHVOI
 ZillaelJavelin	ZILLJAVL
 ZillaelBlessing	ZILBLESS
 
+PartiniasRozSfaira	PRT_BALL
+PartiniasRozToxo	PRTBEAM1
+PartiniasOuranioToxo	PRTBEAM2
+PartiniasIliosSfairaSong	PRT_MUS
+
 PetraLeveledUp		PETLEVL
 ArcanaGaugeLevelup	AGAUGELV
 
