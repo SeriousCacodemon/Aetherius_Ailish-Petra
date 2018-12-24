@@ -101,18 +101,6 @@ actor Ailish : AetheriusPlayerPawn
 
 	States
 	{
-		HPFlashGravity:
-			NERA A 0 ACS_NamedExecuteAlways("DiabloistGravityFlash",0,0,0,0)
-			Goto Spawn
-		ManaFlashGravity:
-			NERA A 0 ACS_NamedExecuteAlways("DiabloistGravityFlash",0,1,0,0)
-			Goto Spawn  
-		InvulnFlashGravity:
-			NERA A 0 ACS_NamedExecuteAlways("DiabloistGravityFlash",0,2,0,0)
-			Goto Spawn  
-		HPManaFlashGravity:
-			NERA A 0 ACS_NamedExecuteAlways("DiabloistGravityFlash",0,3,0,0)
-			Goto Spawn  
 		Pain.Charm: Goto See  Pain.Heal1: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,0); } Goto See  Pain.Heal2: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,1); } Goto See  Pain.Heal3: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,2); } Goto See  Pain.Heal4: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,3); } Goto See Goto See  Pain.Heal1: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,0); } Goto See  Pain.Heal2: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,1); } Goto See  Pain.Heal3: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,2); } Goto See  Pain.Heal4: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,3); } Goto See
 		Spawn:
 			NERA A 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
@@ -280,18 +268,6 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 
 	States
 	{
-		HPFlashGravity:
-			PETR A 0 ACS_NamedExecuteAlways("DiabloistGravityFlash",0,0,0,0)
-			Goto Spawn
-		ManaFlashGravity:
-			PETR A 0 ACS_NamedExecuteAlways("DiabloistGravityFlash",0,1,0,0)
-			Goto Spawn  
-		InvulnFlashGravity:
-			PETR A 0 ACS_NamedExecuteAlways("DiabloistGravityFlash",0,2,0,0)
-			Goto Spawn  
-		HPManaFlashGravity:
-			PETR A 0 ACS_NamedExecuteAlways("DiabloistGravityFlash",0,3,0,0)
-			Goto Spawn  
 		Pain.Charm: Goto See  Pain.Heal1: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,0); } Goto See  Pain.Heal2: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,1); } Goto See  Pain.Heal3: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,2); } Goto See  Pain.Heal4: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,3); } Goto See Goto See  Pain.Heal1: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,0); } Goto See  Pain.Heal2: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,1); } Goto See  Pain.Heal3: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,2); } Goto See  Pain.Heal4: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,3); } Goto See
 		Spawn:
 			PETR A 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
