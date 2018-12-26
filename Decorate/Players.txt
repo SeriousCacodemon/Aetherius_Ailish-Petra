@@ -119,7 +119,7 @@ actor Ailish : AetheriusPlayerPawn
 			NERA A 4 
 			{ 
 				A_APPBreathe(1.0, 0.976471, 0.00214, 4);
-				ACS_NamedExecuteAlways("AilishPainScreams"); // A_Pain
+				A_APPPain; // ACS_NamedExecuteAlways("AilishPainScreams"); // A_Pain
 			}
 			Goto Spawn
 		Death:
@@ -286,7 +286,7 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 			PETR C 4 
 			{
 				A_APPBreathe(1.0, 0.976471, 0.00214, 4);
-				ACS_NamedExecuteAlways("PetraPainScreams"); // A_Pain
+				A_APPPain; // ACS_NamedExecuteAlways("PetraPainScreams"); // A_Pain
 			}
 			Goto Spawn
 		Death:
