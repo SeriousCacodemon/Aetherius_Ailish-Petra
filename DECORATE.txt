@@ -1,4 +1,4 @@
-#include decorate/items.txt
-#include decorate/players.txt
-#include decorate/technicalstuff.txt
-#include decorate/weaponsammo.txt
+#include decorate/APP-items.dec
+#include decorate/APP-players.dec
+#include decorate/APP-technicalstuff.dec
+#include decorate/APP-weaponsammo.dec
