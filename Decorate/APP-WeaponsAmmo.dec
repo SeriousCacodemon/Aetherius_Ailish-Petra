@@ -3,7 +3,7 @@
 
 actor RoyalScepter : CWeapStaffDVDS { Tag "Royal Scepter" }
 actor SoulWhisper : CWeapStaffDVDS { Tag "Soul Whisper" }
-actor ShockStaff : CWeapStaffDVDS { Tag "Xuric;s Shock Staff" }
+actor ShockStaff : CWeapStaffDVDS { Tag "Xuric's Shock Staff" }
 actor Histanica : CWeapStaffDVDS { Tag "Histanica" }
 actor Batholith : CWeapStaffDVDS { Tag "Batholith" }
 actor WizardWoodStave : CWeapStaffDVDS { Tag "Wizardwood Stave" }
@@ -465,7 +465,7 @@ Actor AChristinaPuffChargedFinal : AChristinaPuff
 	}
 }
 
-actor AChristinaBouncingshotweak : AetheriusProjectileZSC
+actor AChristinaBouncingShotWeak : AetheriusProjectileZSC
 {
 	Damage (finaldamagedealt)
 	XScale 0.26
@@ -497,7 +497,7 @@ actor AChristinaBouncingshotweak : AetheriusProjectileZSC
 	}
 }
 
-actor AChristinaBouncingshotstage1 : AChristinaBouncingshotweak
+actor AChristinaBouncingShotStage1 : AChristinaBouncingShotWeak
 {
 	Damage (finaldamagedealt)
 	BounceType Doom
@@ -527,8 +527,8 @@ actor AChristinaBouncingshotstage1 : AChristinaBouncingshotweak
 	}
 }
 
-actor AChristinaBouncingshotstage2 : AChristinaBouncingshotstage1 { BounceCount 3 }
-actor AChristinaBouncingshotstage3 : AChristinaBouncingshotstage1 { BounceCount 4 }
+actor AChristinaBouncingShotStage2 : AChristinaBouncingShotStage1 { BounceCount 3 }
+actor AChristinaBouncingShotStage3 : AChristinaBouncingShotStage1 { BounceCount 4 }
 
 actor AChristinaBouncingShotTrail : Actor
 {
@@ -603,7 +603,7 @@ Actor AChristinaPartinias : AChristina
 
 Actor AChristinaPartiniasBall : AetheriusProjectileZSC
 {
-	Damage (random(98,195))//Damage (finaldamagedealt)
+	Damage (random(98,195)) //Damage (finaldamagedealt)
 	DamageType "Love"
 	XScale 0.26
 	YScale 0.208
@@ -619,7 +619,7 @@ Actor AChristinaPartiniasBall : AetheriusProjectileZSC
 	States
 	{
 		Spawn:
-			TNT1 A 0 Bright NoDelay //{ A_GetPlayerAttackDamage(56,0); }
+			TNT1 A 0 Bright NoDelay // { A_GetPlayerAttackDamage(56,0); }
 		Idle:
 			//CHPA ABCDEFGHIJKL 3 Bright
 			CHPA M 1 Bright { A_SetScale(0.26,0.208); A_Weave(0,2,0,0.5); A_SeekerMissile(0,5); }
