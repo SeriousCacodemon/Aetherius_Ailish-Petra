@@ -682,23 +682,27 @@ actor SauronGauntletsPetra : MarineWeapon
 	{
 /*
 		DeggarisPickup:
-			WGNT A 0 A_SpawnItemEX("SauronGauntlets")
-			WGNT A 0 A_FadeOut(1.0)
+			WGNT A 0 A_SpawnItemEx("SauronGauntlets")
+			WGNT A 0 Thing_Remove(0)
 			Loop
 		IlluciaPickup:
-			WGNT A 0 A_SpawnItemEX("SauronGauntletsIllucia")
-			WGNT A 0 A_FadeOut(1.0)
+			WGNT A 0 A_SpawnItemEx("SauronGauntletsIllucia")
+			WGNT A 0 Thing_Remove(0)
 			Loop
 		FloraPickup:
-			WGNT A 0 A_SpawnItemEX("SauronGauntletsFlora")
-			WGNT A 0 A_FadeOut(1.0)
+			WGNT A 0 A_SpawnItemEx("SauronGauntletsFlora")
+			WGNT A 0 Thing_Remove(0)
+			Loop
+		AilishPickup:
+			WGNT A 0 A_SpawnItemEX("SauronGauntletsPetra")
+			WGNT A 0 Thing_Remove(0)
 			Loop
 		PetraPickup:
 			WGNT A 0 A_SpawnItemEX("SauronGauntletsPetra")
-			WGNT A 0 A_FadeOut(1.0)
+			WGNT A 0 Thing_Remove(0)
 			Loop
 		NoMore:
-			WGNT A 0 A_FadeOut(1.0)
+			WGNT A 0 Thing_Remove(0)
 			Loop
 */
 		Spawn:
@@ -706,10 +710,12 @@ actor SauronGauntletsPetra : MarineWeapon
 			WGNT AAA 1
 /*
 			{
-						if (ACS_NamedExecuteWithResult("GauntletsCheckCharacter") == 1) { return state("DeggarisPickup"); }
-			 else if (ACS_NamedExecuteWithResult("GauntletsCheckCharacter") == 2) { return state("IlluciaPickup"); }
-			 else if (ACS_NamedExecuteWithResult("GauntletsCheckCharacter") == 3) { return state("FloraPickup"); }
-			 return state("");
+				A_GauntletsCheckCharacter;
+						 if (CountInv("CharacterClassCheck") == 1) { return state("DeggarisPickup"); }
+				else if (CountInv("CharacterClassCheck") == 2) { return state("IlluciaPickup"); }
+				else if (CountInv("CharacterClassCheck") == 3) { return state("FloraPickup"); }
+				else if (CountInv("CharacterClassCheck") == 8) { return state("AilishPickup"); }
+				return state("");
 			}
 */
 		SpawnSoundEmit:
@@ -723,10 +729,12 @@ actor SauronGauntletsPetra : MarineWeapon
 			WGNT AA 1
 /*
 			{
-						if (ACS_NamedExecuteWithResult("GauntletsCheckCharacter") == 1) { return state("DeggarisPickup"); }
-			 else if (ACS_NamedExecuteWithResult("GauntletsCheckCharacter") == 2) { return state("IlluciaPickup"); }
-			 else if (ACS_NamedExecuteWithResult("GauntletsCheckCharacter") == 3) { return state("FloraPickup"); }
-			 return state("");
+				A_GauntletsCheckCharacter;
+						 if (CountInv("CharacterClassCheck") == 1) { return state("DeggarisPickup"); }
+				else if (CountInv("CharacterClassCheck") == 2) { return state("IlluciaPickup"); }
+				else if (CountInv("CharacterClassCheck") == 3) { return state("FloraPickup"); }
+				else if (CountInv("CharacterClassCheck") == 8) { return state("AilishPickup"); }
+				return state("");
 			}
 */
 			WGNT A 0
