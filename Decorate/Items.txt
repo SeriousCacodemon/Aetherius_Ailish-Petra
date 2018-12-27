@@ -271,7 +271,7 @@ actor Berserk2AP : Berserk2 replaces Berserk2
 			TNT1 A 0 A_SpawnItemEx("CelestialStoneRandomizer")
 			stop
 		SpawnEtherStockFullClip:
-			TNT1 A 0 A_SpawnItemEx("EtherStockFullClip")
+			TNT1 A 0 // A_SpawnItemEx("EtherStockFullClip") // Misfit's Note - temporarily commenting this out until the item in question exists, as so to avoid warnings at start up >.>
 			stop
 	}
 }

@@ -129,7 +129,12 @@ actor AChristina : AetheriusBaseWeaponZSC
 			Goto Ready
 		AltFire:
 		AltHold:
-			ACHG B 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckAChristinaCheck") >= 1,"BouncingShotWeak") //Enter bouncing shot state if Zoom is held
+			ACHG B 0 
+			{
+				A_CheckAChristinaCheck;
+				if (CountInv("AChristinaAltFireType",AAPTR_PLAYER1) >= 1) { return state("BouncingShotWeak"); } // Enter bouncing shot state if Zoom is held
+				return state("");
+			}
 			ACHG B 0 A_JumpIfInventory("EtherStock",1,"AltHoldCharged")
 			ACHG B 0 BRIGHT
 			{
@@ -264,13 +269,22 @@ actor AChristina : AetheriusBaseWeaponZSC
 		Reload:
 			ACHG H 0 A_PlaySound("AChristina/Reload1",CHAN_5)
 			ACHG HHH 4 A_GiveInventory("EtherStock",1)
-			ACHG H 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckAChristinaCheck") == 3,"Reload2")
-			//ACHG A 0 A_ReFire("Reload2")
+			ACHG H 0
+			{
+				A_CheckAChristinaCheck;
+				if (CountInv("AChristinaAltFireType",AAPTR_PLAYER1) == 3) { return state("Reload2"); } // Enter bouncing shot state if Zoom is held
+				return state("");
+			}
 			goto ReloadEnd
 		Reload2:
 			ACHG H 4 A_GiveInventory("EtherStock",1)
 			ACHG H 0 A_JumpIfInventory("EtherStock",12,"ReloadEnd")
-			ACHG H 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckAChristinaCheck") == 3,"Reload2")
+			ACHG H 0
+			{
+				A_CheckAChristinaCheck;
+				if (CountInv("AChristinaAltFireType",AAPTR_PLAYER1) == 3) { return state("Reload2"); } // Enter bouncing shot state if Zoom is held
+				return state("");
+			}
 			goto ReloadEnd
 		ReloadEnd:
 			ACHG A 4
@@ -409,7 +423,7 @@ actor AChristinaPuff : AetheriusPuffZSC
 			CHRP C 1 BRIGHT 
 			{
 				A_GetPlayerAttackDamage(49,1);
-				A_Explode((finaldamagedealt),32,0,1,32,0,0,0,"Ether");
+				A_Explode((finaldamagedealt),32,0,true,32,0,0,"BulletPuff","Ether");
 			}
 			CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
 			stop
@@ -425,7 +439,7 @@ Actor AChristinaPuffCharged : AChristinaPuff
 			CHRP C 1 BRIGHT
 			{
 				A_GetPlayerAttackDamage(53,1);
-				A_Explode((finaldamagedealt),32,0,1,32,0,0,0,"Ether");
+				A_Explode((finaldamagedealt),32,0,true,32,0,0,"BulletPuff","Ether");
 			}
 			CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
 			stop
@@ -444,7 +458,7 @@ Actor AChristinaPuffChargedFinal : AChristinaPuff
 			CHRP C 1 BRIGHT
 			{
 				A_GetPlayerAttackDamage(54,1);
-				A_Explode((finaldamagedealt),70,0,1,70,0,0,0,"Ether");
+				A_Explode((finaldamagedealt),70,0,true,70,0,0,"BulletPuff","Ether");
 			}
 			CHRP DEFGHIJKLMNOPQRSTUVW 1 BRIGHT
 			stop
@@ -578,8 +592,8 @@ Actor AChristinaPartinias : AChristina
 			Goto Ready
 		AltHoldCharged:
 			ACHF A 0 A_TakeInventory("EtherStock",1)
-			ACHF B 1 A_RailAttack(random(117,234),-3,0,0,0,0,0,0,0,0,8192,35,0,0,"PartiniasLaserSprite",4)
-			//ACHF B 1 A_SpreadAuraRailAttack(random(117,234),-3,0,"",0,0,0,0,"",0,0,8192,35,0,0,"PartiniasLaserSprite",4) Spreadfire Aura level 2 bogs down framerate temporarily at times with this...
+			ACHF B 1 A_RailAttack(random(117,234),-3,0, "","", 0,0,"BulletPuff",0.0,0.0, 8192,35,0.0,0.0,"PartiniasLaserSprite",4.0)
+			//ACHF B 1 A_SpreadAuraRailAttack(random(117,234),-3,0,"","",0,0,"BulletPuff",0.0,0.0,8192,35,0,0,"PartiniasLaserSprite",4.0) Spreadfire Aura level 2 bogs down framerate temporarily at times with this...
 			ACHG FGF 4
 			ACHG A 16
 			ACHG A 0 A_Refire
@@ -699,9 +713,12 @@ actor SauronGauntletsPetra : MarineWeapon
 			}
 */
 		SpawnSoundEmit:
-			WGNT A 0 A_Stopsound(CHAN_ITEM)
-			WGNT A 0 A_Playsound("SauronGauntlets/Hum",CHAN_ITEM)
-			WGNT A 0 A_SetUserVar("user_theta",0)
+			WGNT A 0 
+			{
+				A_Stopsound(CHAN_ITEM);
+				A_Playsound("SauronGauntlets/Hum",CHAN_ITEM);
+				A_SetInventory("ActorVar1",0);
+			}
 		SpawnPhase1:
 			WGNT AA 1
 /*
@@ -712,8 +729,12 @@ actor SauronGauntletsPetra : MarineWeapon
 			 return state("");
 			}
 */
-			WGNT A 0 A_SetUserVar("user_theta",user_theta+1)
-			WGNT A 0 A_JumpIf(user_theta==70,"SpawnSoundEmit")
+			WGNT A 0
+			{
+				A_GiveInventory("ActorVar1",1);
+				if (CountInv("ActorVar1") >= 70) { return state("SpawnSoundEmit"); }
+				return state("");
+			}
 			loop
 
 		Pickup:
