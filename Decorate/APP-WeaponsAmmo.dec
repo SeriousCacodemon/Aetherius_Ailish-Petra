@@ -715,6 +715,7 @@ actor SauronGauntletsPetra : MarineWeapon
 				else if (CountInv("CharacterClassCheck") == 2) { return state("IlluciaPickup"); }
 				else if (CountInv("CharacterClassCheck") == 3) { return state("FloraPickup"); }
 				else if (CountInv("CharacterClassCheck") == 8) { return state("AilishPickup"); }
+				if (GetCVar("dvds_saurongauntletsdrops") <= 0) { Thing_Remove(0); }
 				return state("");
 			}
 */
@@ -734,6 +735,7 @@ actor SauronGauntletsPetra : MarineWeapon
 				else if (CountInv("CharacterClassCheck") == 2) { return state("IlluciaPickup"); }
 				else if (CountInv("CharacterClassCheck") == 3) { return state("FloraPickup"); }
 				else if (CountInv("CharacterClassCheck") == 8) { return state("AilishPickup"); }
+				if (GetCVar("dvds_saurongauntletsdrops") <= 0) { Thing_Remove(0); }
 				return state("");
 			}
 */
