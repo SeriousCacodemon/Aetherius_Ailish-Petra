@@ -89,7 +89,7 @@ Actor CelestialStone7 : CelestialStone1
 	}
 }
 
-Actor CelestialStoneRandomizer : RandomSpawner
+Actor CelestialStoneRandomizer : RandomSpawner2
 {
 	DropItem "CelestialStone1", 256, 1
 	DropItem "CelestialStone2", 256, 1
