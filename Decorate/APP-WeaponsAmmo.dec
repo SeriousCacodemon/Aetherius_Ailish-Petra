@@ -21,14 +21,12 @@ actor SerpentStaffAilish : CWeapStaffDVDS
 	States
 	{
 		Select:
-			CSSF C 0 A_Raise
-			CSSF C 1 A_Raise
+			CSSF C 1 A_Raise(12)
 			Loop
 		Deselect:
 			CSSF B 3
 			CSSF C 4
-			CSSF C 0 A_Lower
-			CSSF C 1 A_Lower
+			CSSF C 1 A_Lower(12)
 			Wait
 		Fire:
 			CSSF A 1 Offset (0, 45) A_CStaffCheck
@@ -105,10 +103,10 @@ actor AChristina : AetheriusBaseWeaponZSC
 	states
 	{
 		Select:
-			ACHG A 1 A_Raise
+			ACHG A 1 A_Raise(6)
 			loop
 		Deselect:
-			ACHG A 1 A_Lower
+			ACHG A 1 A_Lower(6)
 			loop
 		Fire:
 			ACHG B 0 BRIGHT
@@ -682,23 +680,23 @@ actor SauronGauntletsPetra : MarineWeapon
 	{
 /*
 		DeggarisPickup:
-			WGNT A 0 A_SpawnItemEx("SauronGauntlets")
+			WGNT A 0 A_SpawnItemEx("SauronGauntlets",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0,tid)
 			WGNT A 0 Thing_Remove(0)
 			Loop
 		IlluciaPickup:
-			WGNT A 0 A_SpawnItemEx("SauronGauntletsIllucia")
+			WGNT A 0 A_SpawnItemEx("SauronGauntletsIllucia",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0,tid)
 			WGNT A 0 Thing_Remove(0)
 			Loop
 		FloraPickup:
-			WGNT A 0 A_SpawnItemEx("SauronGauntletsFlora")
+			WGNT A 0 A_SpawnItemEx("SauronGauntletsFlora",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0,tid)
 			WGNT A 0 Thing_Remove(0)
 			Loop
 		AilishPickup:
-			WGNT A 0 A_SpawnItemEX("SauronGauntletsPetra")
+			WGNT A 0 A_SpawnItemEX("SauronGauntletsAilish",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0,tid)
 			WGNT A 0 Thing_Remove(0)
 			Loop
 		PetraPickup:
-			WGNT A 0 A_SpawnItemEX("SauronGauntletsPetra")
+			WGNT A 0 A_SpawnItemEX("SauronGauntletsPetra",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0,tid)
 			WGNT A 0 Thing_Remove(0)
 			Loop
 		NoMore:
@@ -768,22 +766,18 @@ actor SauronGauntletsPetra : MarineWeapon
 			TNT1 A 0 
 			Stop
 		Deselect:
-			TNT1 A 0 
+			GNTF A 1 
 			{
-				if (ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035) >= 2) { A_Lower; }
-				if (ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035) >= 4) { A_Lower; }
+				A_Lower(ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035)*3);
+				A_Lower(12);
 			}
-			TNT1 A 0 A_Lower
-			GNTF A 1 A_Lower
 			Loop
 		Select:
-			TNT1 A 0
+			GNTF A 1 
 			{
-				if (ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035) >= 2) { A_Raise; }
-				if (ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035) >= 4) { A_Raise; }
+				A_Raise(ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035)*3);
+				A_Raise(12);
 			}
-			TNT1 A 0 A_Raise
-			GNTF A 1 A_Raise
 			Loop
 		Ready:
 			GNTF A 1
