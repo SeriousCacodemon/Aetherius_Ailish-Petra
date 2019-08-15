@@ -768,14 +768,16 @@ actor SauronGauntletsPetra : MarineWeapon
 		Deselect:
 			GNTF A 1 
 			{
-				A_DVDSLower(ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035)*3);
+				A_DVDSLower(CallACS("MiscVarCheckDECORATE",10035)*2);
+				A_DVDSLower(CallACS("MiscVarCheckDECORATE",10036)*5);
 				A_DVDSLower(12);
 			}
 			Loop
 		Select:
 			GNTF A 1 
 			{
-				A_DVDSRaise(ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035)*3);
+				A_DVDSRaise(CallACS("MiscVarCheckDECORATE",10035)*2);
+				A_DVDSRaise(CallACS("MiscVarCheckDECORATE",10036)*5);
 				A_DVDSRaise(12);
 			}
 			Loop
