@@ -21,12 +21,12 @@ actor SerpentStaffAilish : CWeapStaffDVDS
 	States
 	{
 		Select:
-			CSSF C 1 A_Raise(12)
+			CSSF C 1 A_DVDSRaise(12)
 			Loop
 		Deselect:
 			CSSF B 3
 			CSSF C 4
-			CSSF C 1 A_Lower(12)
+			CSSF C 1 A_DVDSLower(12)
 			Wait
 		Fire:
 			CSSF A 1 Offset (0, 45) A_CStaffCheck
@@ -103,10 +103,10 @@ actor AChristina : AetheriusBaseWeaponZSC
 	states
 	{
 		Select:
-			ACHG A 1 A_Raise(6)
+			ACHG A 1 A_DVDSRaise(6)
 			loop
 		Deselect:
-			ACHG A 1 A_Lower(6)
+			ACHG A 1 A_DVDSLower(6)
 			loop
 		Fire:
 			ACHG B 0 BRIGHT
@@ -768,15 +768,15 @@ actor SauronGauntletsPetra : MarineWeapon
 		Deselect:
 			GNTF A 1 
 			{
-				A_Lower(ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035)*3);
-				A_Lower(12);
+				A_DVDSLower(ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035)*3);
+				A_DVDSLower(12);
 			}
 			Loop
 		Select:
 			GNTF A 1 
 			{
-				A_Raise(ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035)*3);
-				A_Raise(12);
+				A_DVDSRaise(ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035)*3);
+				A_DVDSRaise(12);
 			}
 			Loop
 		Ready:
