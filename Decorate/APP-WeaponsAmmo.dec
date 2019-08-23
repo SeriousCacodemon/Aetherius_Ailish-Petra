@@ -793,7 +793,7 @@ actor SauronGauntletsPetra : MarineWeapon
 			TNT1 A 0 A_AlertMonsters // Sometimes a swing will be enough to wake up all monsters in the area.
 			TNT1 A 0 
 			{
-				A_GetPunchStaminaUse(1); A_UseStaminaAttack(CountInv("StamConsumed", AAPTR_PLAYER1),2);
+				A_UseStaminaAttack(A_GetPunchStaminaUse(1),2);
 				if (CountInv("StamUsed", AAPTR_PLAYER1) == 1) { return state("PunchSuccess"); }
 				return state("");
 			}
@@ -856,7 +856,7 @@ actor SauronGauntletsPetra : MarineWeapon
 			TNT1 A 0 A_AlertMonsters // Sometimes a swing will be enough to wake up all monsters in the area.
 			TNT1 A 0
 			{
-				A_GetPunchStaminaUse(2); A_UseStaminaAttack(CountInv("StamConsumed", AAPTR_PLAYER1),2);
+				A_UseStaminaAttack(A_GetPunchStaminaUse(2),2);
 				if (CountInv("StamUsed", AAPTR_PLAYER1) == 1) { return state("AltPunchSuccess"); }
 				return state("");
 			}
