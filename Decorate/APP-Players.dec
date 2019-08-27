@@ -1,10 +1,6 @@
 // Ailish.  First of two extra characters for addon.
 actor Ailish : AetheriusPlayerPawn
 {
-	var int user_randomaccuracy1; var int user_randomaccuracy2; var int user_randomaccuracy1a; var int user_randomaccuracy2a;
-	var int user_FlameCount; var int user_uppercutphase; var int user_temp1; var int user_temp2;
-	var int user_randomizer1;
-
 	+SOLID
 	+SHOOTABLE
 	+DROPOFF
@@ -165,10 +161,6 @@ actor Ailish : AetheriusPlayerPawn
 
 actor PetraLagerkvist : AetheriusPlayerPawn
 {
-	var int user_randomaccuracy1; var int user_randomaccuracy2; var int user_randomaccuracy1a; var int user_randomaccuracy2a;
-	var int user_FlameCount; var int user_uppercutphase; var int user_temp1; var int user_temp2;
-	var int user_randomizer1;
-
 	+SOLID
 	+SHOOTABLE
 	+DROPOFF
