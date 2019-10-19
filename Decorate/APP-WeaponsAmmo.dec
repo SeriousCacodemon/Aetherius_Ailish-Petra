@@ -32,7 +32,7 @@ actor SerpentStaffAilish : CWeapStaffDVDS
 			CSSF A 1 Offset (0, 45) A_CStaffCheck
 			CSSF J 0 
 			{
-				if (A_UseManaAttack(1,2,1) == 0) { return state("Ready"); }
+				if (A_UseManaAttack(CountInv("NormFireManaCost",AAPTR_PLAYER1),2,1) == 0) { return state("Ready"); }
 				return state("");
 			}
 			CSSF J 0 ACS_NamedExecuteAlways("StartTensionCountDown")
@@ -45,7 +45,7 @@ actor SerpentStaffAilish : CWeapStaffDVDS
 		Drain:
 			CSSF K 0 
 			{
-				if (A_UseManaAttack(1,2,1) == 0) { return state("Ready"); }
+				if (A_UseManaAttack(CountInv("NormFireManaCost",AAPTR_PLAYER1),2,1) == 0) { return state("Ready"); }
 				return state("");
 			}
 			CSSF K 0 ACS_NamedExecuteAlways("StartTensionCountDown")

@@ -126,12 +126,12 @@ actor Berserk2AP : Berserk2 replaces Berserk2
 					}
 				}
 				// Paxa Punch
-				if (random(1,2048) <= 81)
+				if (random(1,2048) <= 80)
 				{
 					A_SpawnItemEx("PaxaPunch",0,0,0,0,0,0,0,0,0);
 				}
 				// Mercury Bandana
-				if (random(1,2048) <= 81)
+				if (random(1,2048) <= 80)
 				{
 					A_SpawnItemEx("MercuryBandana",0,0,0,0,0,0,0,0,0);
 				}
