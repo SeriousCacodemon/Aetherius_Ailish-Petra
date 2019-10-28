@@ -110,7 +110,11 @@ actor Berserk2AP : Berserk2 replaces Berserk2
 				Stop
 		
 		Spawn:
-			PSTR A random(1,4) NoDelay A_JumpIf(ACS_NamedExecuteWithResult("BerserkCheckSceptre") == 1,"BecomeSceptre")
+			PSTR A random(1,4) NoDelay 
+			{
+				if (A_BerserkCheckSceptre >= 1) { return state("BecomeSceptre"); }
+				return state("");
+			}
 			PSTR A 0
 			{
 				// Vimstones
