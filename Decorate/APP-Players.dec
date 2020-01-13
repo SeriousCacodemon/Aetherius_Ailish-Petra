@@ -53,20 +53,20 @@ actor Ailish : AetheriusPlayerPawn
 	DamageFactor "PoisonElemental", 1.0
 	Damagefactor "IncarnateGlare", 1 // Same as Dark
 	DamageFactor "Sigil", 1
-	DamageFactor "ImpClaw", 1
-	DamageFactor "DarkImpClaw", 1
-	DamageFactor "CacodemonEye", 1
-	DamageFactor "CacolanternEye", 1
+	DamageFactor "ImpSoul", 1
+	DamageFactor "DarkImpSoul", 1
+	DamageFactor "CacodemonSoul", 1
+	DamageFactor "CacolanternSoul", 1
 	DamageFactor "AbaddonEye", 1
-	DamageFactor "KnightFist", 1
-	DamageFactor "BaronFist", 1
-	DamageFactor "BelphegorFist", 1
+	DamageFactor "KnightSoul", 1
+	DamageFactor "BaronSoul", 1
+	DamageFactor "BelphegorSoul", 1
 	DamageFactor "BrusierFist", 1
-	DamageFactor "ArchonFist", 1
-	DamageFactor "PyroFist", 1
-	DamageFactor "IncarnateSkull", 1
-	DamageFactor "DiabloistHand", 1
-	DamageFactor "BalrogFist", 1
+	DamageFactor "ArchonSoul", 1
+	DamageFactor "PyroDemonSoul", 1
+	DamageFactor "IncarnateSoul", 1
+	DamageFactor "DiabloistSoul", 1
+	DamageFactor "BalrogSoul", 1
 	DamageFactor "Railgun", 1
 	DamageFactor "Disintergrate", 1
 	DamageFactor "Telefrag", 1
@@ -215,20 +215,20 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 	DamageFactor "PoisonElemental", 1.0
 	Damagefactor "IncarnateGlare", 1 // Same as Dark
 	DamageFactor "Sigil", 1
-	DamageFactor "ImpClaw", 1
-	DamageFactor "DarkImpClaw", 1
-	DamageFactor "CacodemonEye", 1
-	DamageFactor "CacolanternEye", 1
+	DamageFactor "ImpSoul", 1
+	DamageFactor "DarkImpSoul", 1
+	DamageFactor "CacodemonSoul", 1
+	DamageFactor "CacolanternSoul", 1
 	DamageFactor "AbaddonEye", 1
-	DamageFactor "KnightFist", 1
-	DamageFactor "BaronFist", 1
-	DamageFactor "BelphegorFist", 1
+	DamageFactor "KnightSoul", 1
+	DamageFactor "BaronSoul", 1
+	DamageFactor "BelphegorSoul", 1
 	DamageFactor "BrusierFist", 1
-	DamageFactor "ArchonFist", 1
-	DamageFactor "PyroFist", 1
-	DamageFactor "IncarnateSkull", 1
-	DamageFactor "DiabloistHand", 1
-	DamageFactor "BalrogFist", 1
+	DamageFactor "ArchonSoul", 1
+	DamageFactor "PyroDemonSoul", 1
+	DamageFactor "IncarnateSoul", 1
+	DamageFactor "DiabloistSoul", 1
+	DamageFactor "BalrogSoul", 1
 	DamageFactor "Railgun", 1
 	DamageFactor "Disintergrate", 1
 	DamageFactor "Telefrag", 1

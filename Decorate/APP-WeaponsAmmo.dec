@@ -783,7 +783,7 @@ actor SauronGauntletsPetra : MarineWeapon
 			GNTF A 1
 			{
 				A_WeaponReady(WRF_ALLOWUSER1);
-				if (random(1,100) <= 50) { A_ChangeFlag("WEAPON.MELEEWEAPON", TRUE); } else { A_ChangeFlag("WEAPON.MELEEWEAPON", FALSE); }
+				//if (random(1,100) <= 50) { A_ChangeFlag("WEAPON.MELEEWEAPON", TRUE); } else { A_ChangeFlag("WEAPON.MELEEWEAPON", FALSE); }
 			}
 			Loop
 		Fire:
