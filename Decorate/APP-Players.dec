@@ -57,7 +57,7 @@ actor Ailish : AetheriusPlayerPawn
 	DamageFactor "DarkImpSoul", 1
 	DamageFactor "CacodemonSoul", 1
 	DamageFactor "CacolanternSoul", 1
-	DamageFactor "AbaddonEye", 1
+	DamageFactor "AbaddonSoul", 1
 	DamageFactor "KnightSoul", 1
 	DamageFactor "BaronSoul", 1
 	DamageFactor "BelphegorSoul", 1
@@ -219,7 +219,7 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 	DamageFactor "DarkImpSoul", 1
 	DamageFactor "CacodemonSoul", 1
 	DamageFactor "CacolanternSoul", 1
-	DamageFactor "AbaddonEye", 1
+	DamageFactor "AbaddonSoul", 1
 	DamageFactor "KnightSoul", 1
 	DamageFactor "BaronSoul", 1
 	DamageFactor "BelphegorSoul", 1
