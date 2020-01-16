@@ -67,6 +67,8 @@ actor Ailish : AetheriusPlayerPawn
 	DamageFactor "IncarnateSoul", 1
 	DamageFactor "DiabloistSoul", 1
 	DamageFactor "BalrogSoul", 1
+	DamageFactor "HElementalSoul", 1
+	DamageFactor "HOverlordSoul", 1
 	DamageFactor "Railgun", 1
 	DamageFactor "Disintergrate", 1
 	DamageFactor "Telefrag", 1
@@ -229,6 +231,8 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 	DamageFactor "IncarnateSoul", 1
 	DamageFactor "DiabloistSoul", 1
 	DamageFactor "BalrogSoul", 1
+	DamageFactor "HElementalSoul", 1
+	DamageFactor "HOverlordSoul", 1
 	DamageFactor "Railgun", 1
 	DamageFactor "Disintergrate", 1
 	DamageFactor "Telefrag", 1
