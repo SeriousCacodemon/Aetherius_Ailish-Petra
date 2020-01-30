@@ -1,7 +1,7 @@
 //Ah, the Celestial stone.  Centric to Arcana Heart 3's plot, now a alternate berserk
 //pack replacement that restores MP, Stamina (and for Petra, Force Gauge).
 
-Actor CelestialStone1 : CustomInventory
+Actor CelestialStone1 : AetheriusCustomInventory
 {
 	+FLOATBOB
 	+DONTGIB
