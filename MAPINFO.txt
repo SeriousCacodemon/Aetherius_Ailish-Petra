@@ -13,7 +13,7 @@ skill baby
 	playerclassname = "Deggaris Montegger", "Pussyfooting..."
 	playerclassname = "Illucia Hendershot", "Pussyfooting..."
 	playerclassname = "Flora Briscoletti", "Lost in the World..."
-	playerclassname = "Ailish", "Would rather stay home..."
+	playerclassname = "Ailish Estdale", "Would rather stay home..."
 	playerclassname = "Petra Johanna Lagerkvist", "Not ready for this..."
 	Key = "i"
 }
@@ -26,7 +26,7 @@ skill easy
 	playerclassname = "Deggaris Montegger", "Still A Greenhorn..."
 	playerclassname = "Illucia Hendershot", "Still A Greenhorn..."
 	playerclassname = "Flora Briscoletti", "Still a Bit Scared..."
-	playerclassname = "Ailish", "Bad feeling about this..."
+	playerclassname = "Ailish Estdale", "Bad feeling about this..."
 	playerclassname = "Petra Johanna Lagerkvist", "Taking it easy..."
 	Key = "h"
 }
@@ -40,7 +40,7 @@ skill normal
 	playerclassname = "Deggaris Montegger", "UAC Training Course!"
 	playerclassname = "Illucia Hendershot", "UAC Training Course!"
 	playerclassname = "Flora Briscoletti", "A Long Journey Awaits..."
-	playerclassname = "Ailish", "Staying is boring..."
+	playerclassname = "Ailish Estdale", "Staying is boring..."
 	playerclassname = "Petra Johanna Lagerkvist", "I have sheer brilliance..."
 	DefaultSkill
 }
@@ -53,7 +53,7 @@ skill hard
 	playerclassname = "Deggaris Montegger", "This Is More Like It!"
 	playerclassname = "Illucia Hendershot", "This Is More Like It!"
 	playerclassname = "Flora Briscoletti", "It's Getting Messy..."
-	playerclassname = "Ailish", "Time to die, fiends!"
+	playerclassname = "Ailish Estdale", "Time to die, fiends!"
 	playerclassname = "Petra Johanna Lagerkvist", "Invincible I am..."
 	Key = "u"
 }
@@ -65,7 +65,7 @@ skill nightmare
 	playerclassname = "Deggaris Montegger", "Nightmare of Deggaris!"
 	playerclassname = "Illucia Hendershot", "Nightmare of Illucia!"
 	playerclassname = "Flora Briscoletti", "Sauron's Revenge!!"
-	playerclassname = "Ailish", "I praise you, Tetsu!"
+	playerclassname = "Ailish Estdale", "I praise you, Tetsu!"
 	playerclassname = "Petra Johanna Lagerkvist", "I am become death..."
 	Key = "n"
 }

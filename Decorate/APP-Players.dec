@@ -1,5 +1,5 @@
-// Ailish.  First of two extra characters for addon.
-actor Ailish : AetheriusPlayerPawn
+// Ailish Estdale.  First of two extra characters for addon.
+actor AilishEstdale : AetheriusPlayerPawn
 {
 	+SOLID
 	+SHOOTABLE
@@ -91,7 +91,7 @@ actor Ailish : AetheriusPlayerPawn
 	Player.ForwardMove 2.0, 1.0
 	Player.SideMove 2.0, 1.0
 	Player.InvulnerabilityMode "Reflective"
-	Player.DisplayName "Ailish"
+	Player.DisplayName "Ailish Estdale"
 	Player.Face AIL
 	Player.CrouchSprite TNT1
 	Player.SoundClass "AilishSND"
