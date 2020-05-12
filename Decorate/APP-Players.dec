@@ -88,8 +88,8 @@ actor AilishEstdale : AetheriusPlayerPawn
 	Player.WeaponSlot 9, EvilWarriorShield
 	Player.ViewHeight 36
 	Player.JumpZ 10
-	Player.ForwardMove 2.0, 1.0
-	Player.SideMove 2.0, 1.0
+	Player.ForwardMove 2.375, 1.1875
+	Player.SideMove 2.375, 1.1875
 	Player.InvulnerabilityMode "Reflective"
 	Player.DisplayName "Ailish Estdale"
 	Player.Face AIL
@@ -253,8 +253,8 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 	Player.WeaponSlot 9, EvilWarriorShield
 	Player.ViewHeight 34
 	Player.JumpZ 10
-	Player.ForwardMove 2.25, 1.125
-	Player.SideMove 2.25, 1.125
+	Player.ForwardMove 2.125, 1.0625
+	Player.SideMove 2.125, 1.0625
 	Player.InvulnerabilityMode "Reflective"
 	Player.DisplayName "Petra Johanna Lagerkvist"
 	Player.Face PET
