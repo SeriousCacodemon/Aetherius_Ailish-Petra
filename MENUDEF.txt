@@ -26,9 +26,9 @@ OptionMenu "DVDSOptions"
 	StaticText " "
 	IfGame(Doom)
 	{
-		DVDSSubMenu "Marine Specfic Options",		"Marine Specfic Options.",		"DVDS-MarineSpecfic"
+		DVDSSubMenu "Marine Specific Options",		"Marine Specific Options.",		"DVDS-MarineSpecific"
 	}
-	DVDSSubMenu "Flora Specfic Options",		"Flora Specfic Options.",		"DVDS-FloraSpecfic"
+	DVDSSubMenu "Flora Specific Options",		"Flora Specific Options.",		"DVDS-FloraSpecific"
 	DVDSSubMenu "Ailish Specific Options",		"Ailish Specific Options.",		"DVDS-AilishSpecific"
 	DVDSSubMenu "Petra Specific Options",		"Petra Specific Options.",		"DVDS-PetraSpecific"
 	DVDSSubMenu "Perks/AeonPts Options",		"Options related to Perks & Aeon Points.",		"DVDS-PerksAeonPts"

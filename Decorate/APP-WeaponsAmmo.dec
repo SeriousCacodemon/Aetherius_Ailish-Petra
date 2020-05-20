@@ -81,7 +81,7 @@ Actor CStaffMissileNew : AetheriusProjectileZSC // Replaces CStaffMissile
 			Stop
 	}
 }
-// Petra-specfic version with more comboability...
+// Petra-specific version with more comboability...
 // What HP amount do I equate 32000 with?  Belphegor specific HP?
 Actor EtherStock : Ammo
 {
