@@ -32,7 +32,7 @@ actor SerpentStaffAilish : CWeapStaffDVDS
 			CSSF A 1 Offset (0, 45) A_CStaffCheck
 			CSSF J 0 
 			{
-				if (A_UseManaAttack(CountInv("NormFireManaCost",AAPTR_PLAYER1),2,1) == 0) { return state("Ready"); }
+				if (A_UseManaAttack(CountInv("NormFireManaCost"),2,1) == 0) { return state("Ready"); }
 				return state("");
 			}
 			CSSF J 0 ACS_NamedExecuteAlways("StartTensionCountDown")
@@ -45,7 +45,7 @@ actor SerpentStaffAilish : CWeapStaffDVDS
 		Drain:
 			CSSF K 0 
 			{
-				if (A_UseManaAttack(CountInv("NormFireManaCost",AAPTR_PLAYER1),2,1) == 0) { return state("Ready"); }
+				if (A_UseManaAttack(CountInv("NormFireManaCost"),2,1) == 0) { return state("Ready"); }
 				return state("");
 			}
 			CSSF K 0 ACS_NamedExecuteAlways("StartTensionCountDown")
@@ -131,7 +131,7 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHG B 0 
 			{
 				A_CheckAChristinaCheck;
-				if (CountInv("AChristinaAltFireType",AAPTR_PLAYER1) >= 1) { return state("BouncingShotWeak"); } // Enter bouncing shot state if Zoom is held
+				if (CountInv("AChristinaAltFireType") >= 1) { return state("BouncingShotWeak"); } // Enter bouncing shot state if Zoom is held
 				return state("");
 			}
 			ACHG B 0 A_JumpIfInventory("EtherStock",1,"AltHoldCharged")
@@ -271,7 +271,7 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHG H 0
 			{
 				A_CheckAChristinaCheck;
-				if (CountInv("AChristinaAltFireType",AAPTR_PLAYER1) == 3) { return state("Reload2"); } // Enter bouncing shot state if Zoom is held
+				if (CountInv("AChristinaAltFireType") == 3) { return state("Reload2"); } // Enter bouncing shot state if Zoom is held
 				return state("");
 			}
 			goto ReloadEnd
@@ -281,7 +281,7 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHG H 0
 			{
 				A_CheckAChristinaCheck;
-				if (CountInv("AChristinaAltFireType",AAPTR_PLAYER1) == 3) { return state("Reload2"); } // Enter bouncing shot state if Zoom is held
+				if (CountInv("AChristinaAltFireType") == 3) { return state("Reload2"); } // Enter bouncing shot state if Zoom is held
 				return state("");
 			}
 			goto ReloadEnd
@@ -715,18 +715,18 @@ actor SauronGauntletsPetra : MarineWeapon
 			WGNT AAA 1
 /*
 			{
-				if (GetCVar("dvds_saurongauntletsdrops") <= 0) 
+				if (dvds_saurongauntletsdrops) 
 				{ 
-					Thing_Remove(0); 
-				}
-				else
-				{
 					A_GauntletsCheckCharacter;
 							 if (CountInv("CharacterClassCheck") == 0) { return state("DeggarisPickup"); }
 					else if (CountInv("CharacterClassCheck") == 1) { return state("IlluciaPickup"); }
 					else if (CountInv("CharacterClassCheck") == 2) { return state("FloraPickup"); }
 					else if (CountInv("CharacterClassCheck") == 9) { return state("AilishPickup"); }
 					return state("");
+				}
+				else
+				{
+					Thing_Remove(0); 
 				}
 				return state("");
 			}
@@ -742,18 +742,18 @@ actor SauronGauntletsPetra : MarineWeapon
 			WGNT AA 1
 /*
 			{
-				if (GetCVar("dvds_saurongauntletsdrops") <= 0) 
+				if (dvds_saurongauntletsdrops) 
 				{ 
-					Thing_Remove(0); 
-				}
-				else
-				{
 					A_GauntletsCheckCharacter;
 							 if (CountInv("CharacterClassCheck") == 0) { return state("DeggarisPickup"); }
 					else if (CountInv("CharacterClassCheck") == 1) { return state("IlluciaPickup"); }
 					else if (CountInv("CharacterClassCheck") == 2) { return state("FloraPickup"); }
 					else if (CountInv("CharacterClassCheck") == 9) { return state("AilishPickup"); }
 					return state("");
+				}
+				else
+				{
+					Thing_Remove(0); 
 				}
 				return state("");
 			}
@@ -775,16 +775,16 @@ actor SauronGauntletsPetra : MarineWeapon
 		Deselect:
 			GNTF A 1 
 			{
-				A_DVDSLower(CallACS("MiscVarCheckDECORATE",10035)*2);
-				A_DVDSLower(CallACS("MiscVarCheckDECORATE",10036)*5);
+				A_DVDSLower(0,10035,2);
+				A_DVDSLower(0,10036,5);
 				A_DVDSLower(12);
 			}
 			Loop
 		Select:
 			GNTF A 1 
 			{
-				A_DVDSRaise(CallACS("MiscVarCheckDECORATE",10035)*2);
-				A_DVDSRaise(CallACS("MiscVarCheckDECORATE",10036)*5);
+				A_DVDSRaise(0,10035,2);
+				A_DVDSRaise(0,10036,5);
 				A_DVDSRaise(12);
 			}
 			Loop
@@ -844,7 +844,7 @@ actor SauronGauntletsPetra : MarineWeapon
 				A_SetMartialArtsMastery(0);
 				A_ReFire;
 			}
-			GNTP B 0 A_TakeInventory("UsingMeleeAttack",9999,0,AAPTR_PLAYER1)
+			GNTP B 0 A_TakeInventory("UsingMeleeAttack",9999,0)
 			Goto Ready
 
 		AltFire:
@@ -920,7 +920,7 @@ actor SauronGauntletsPetra : MarineWeapon
 				if (ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035) >= 4) { A_SetTics(4); }
 				A_SetMartialArtsMastery(0);
 			}
-			GNTP W 0 A_TakeInventory("UsingMeleeAttack",9999,0,AAPTR_PLAYER1)
+			GNTP W 0 A_TakeInventory("UsingMeleeAttack",9999,0)
 			Goto Ready
 	}
 }
