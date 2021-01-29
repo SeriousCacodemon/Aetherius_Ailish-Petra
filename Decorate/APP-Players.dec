@@ -1,6 +1,7 @@
 // Ailish Estdale.  First of two extra characters for addon.
 actor AilishEstdale : AetheriusPlayerPawn
 {
+	Tag "Ailish Estdale"
 	+SOLID
 	+SHOOTABLE
 	+DROPOFF
@@ -28,7 +29,7 @@ actor AilishEstdale : AetheriusPlayerPawn
 	Mass 76
 	PainChance 255
 	species "Players"
-	DamageFactor "Normal", 1 // 75% the physical defense of a normal player.
+	DamageFactor "Normal", 1.167 // 75% the physical defense of a normal player.
 	DamageFactor "Magic", 0.60 // 166.7% the magical defense of a normal player
 	DamageFactor "Fire", 0.95 // 111.1% the fire-elemental defense of a normal player
 	DamageFactor "Ice", 1 // 105.2% the ice-elemental defense of a normal player
@@ -39,7 +40,7 @@ actor AilishEstdale : AetheriusPlayerPawn
 	DamageFactor "Melee", 1.0
 	DamageFactor "Sceptre", 1
 	DamageFactor "Slime", 1.0 // Damage Floors
-	DamageFactor "Crush", 16
+	DamageFactor "Crush", 8
 	DamageFactor "Drowning", 1
 	DamageFactor "Falling", 1
 	Damagefactor "Bullet", 0.8
@@ -163,6 +164,7 @@ actor AilishEstdale : AetheriusPlayerPawn
 
 actor PetraLagerkvist : AetheriusPlayerPawn
 {
+	Tag "Petra Johanna Lagerkvist"
 	+SOLID
 	+SHOOTABLE
 	+DROPOFF
@@ -191,9 +193,9 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 	Mass 60
 	PainChance 255
 	species "Players"
-	DamageFactor "Normal", 1 // 75% the physical defense of a normal player.
+	DamageFactor "Normal", 0.925 // 75% the physical defense of a normal player.
 	DamageFactor "Ether", 0 //So Petra doesn't kill herself with her own weapon.
-	DamageFactor "Magic", 0.87 // 166.7% the magical defense of a normal player
+	DamageFactor "Magic", 0.875 // 166.7% the magical defense of a normal player
 	DamageFactor "Fire", 0.98 // 111.1% the fire-elemental defense of a normal player
 	DamageFactor "Ice", 1.1 // 105.2% the ice-elemental defense of a normal player
 	DamageFactor "Thunder", 0.975 // 102.5% the thunder-elemental defense of a normal player
@@ -203,7 +205,7 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 	DamageFactor "Melee", 1.0
 	DamageFactor "Sceptre", 1
 	DamageFactor "Slime", 1.0 // Damage Floors
-	DamageFactor "Crush", 16
+	DamageFactor "Crush", 8
 	DamageFactor "Drowning", 1
 	DamageFactor "Falling", 0.1
 	Damagefactor "Bullet", 1.0
