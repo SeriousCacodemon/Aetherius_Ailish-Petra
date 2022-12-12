@@ -40,7 +40,7 @@ actor AilishEstdale : AetheriusPlayerPawn
 	DamageFactor "Melee", 1.0
 	DamageFactor "Sceptre", 1
 	DamageFactor "Slime", 1.0 // Damage Floors
-	DamageFactor "Crush", 8
+	DamageFactor "Crush", 1.0 // 8.0
 	DamageFactor "Drowning", 1
 	DamageFactor "Falling", 1
 	Damagefactor "Bullet", 0.8
@@ -54,6 +54,7 @@ actor AilishEstdale : AetheriusPlayerPawn
 	DamageFactor "PoisonElemental", 1.0
 	Damagefactor "IncarnateGlare", 1 // Same as Dark
 	DamageFactor "Sigil", 1
+	DamageFactor "SpectralLow", 1
 	DamageFactor "ImpSoul", 1
 	DamageFactor "DarkImpSoul", 1
 	DamageFactor "CacodemonSoul", 1
@@ -205,7 +206,7 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 	DamageFactor "Melee", 1.0
 	DamageFactor "Sceptre", 1
 	DamageFactor "Slime", 1.0 // Damage Floors
-	DamageFactor "Crush", 8
+	DamageFactor "Crush", 1.0 // 8.0
 	DamageFactor "Drowning", 1
 	DamageFactor "Falling", 0.1
 	Damagefactor "Bullet", 1.0
@@ -219,6 +220,7 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 	DamageFactor "PoisonElemental", 1.0
 	Damagefactor "IncarnateGlare", 1 // Same as Dark
 	DamageFactor "Sigil", 1
+	DamageFactor "SpectralLow", 1
 	DamageFactor "ImpSoul", 1
 	DamageFactor "DarkImpSoul", 1
 	DamageFactor "CacodemonSoul", 1

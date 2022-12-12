@@ -62,7 +62,7 @@ Actor CStaffMissileNew : AetheriusProjectileZSC // Replaces CStaffMissile
 	Radius 12
 	Height 10
 	Damage 5
-	RenderStyle Add
+	RenderStyle "Add"
 	Projectile
 	DeathSound "ClericCStaffExplode"
 	Obituary "$OB_MPCWEAPSTAFFR"
@@ -114,8 +114,8 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHG B 0 BRIGHT
 			{
 				ACS_NamedExecuteAlways("StartTensionCountDown");
-				A_PlaySound("PetraHeavyAttack",CHAN_VOICE);
-				A_PlaySound("AChristina/Shoot1",CHAN_WEAPON);
+				A_StartSound("PetraHeavyAttack",CHAN_VOICE);
+				A_StartSound("AChristina/Shoot1",CHAN_WEAPON);
 			}
 			 ACHF A 1 BRIGHT
 			{
@@ -138,7 +138,7 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHG B 0 A_JumpIfInventory("EtherStock",1,"AltHoldCharged")
 			ACHG B 0 BRIGHT
 			{
-				A_PlayWeaponSound("AChristina/LongRangeShoot");
+				A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON);
 				ACS_NamedExecuteAlways("StartTensionCountDown");
 			}
 			ACHF B 1 A_SpreadAuraFireBullets(0,0,1,0,"AChristinaPuff",FBF_NORANDOM|FBF_NORANDOMPUFFZ)//1024,"",0,0)
@@ -149,8 +149,8 @@ actor AChristina : AetheriusBaseWeaponZSC
 		AltHoldCharged:
 			ACHG B 0
 			{
-				A_PlaySound("PetraRangedAttackVoice1",CHAN_VOICE);
-				A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+				A_StartSound("PetraRangedAttackVoice1",CHAN_VOICE);
+				A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON);			
 				ACS_NamedExecuteAlways("StartTensionCountDown");
 			}
 			ACHF A 0 A_TakeInventory("EtherStock",1)
@@ -159,8 +159,8 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHG A 8
 			ACHG B 0
 			{
-				A_PlaySound("PetraRangedAttackVoice2",CHAN_VOICE);
-				A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+				A_StartSound("PetraRangedAttackVoice2",CHAN_VOICE);
+				A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON);			
 			}
 			ACHF A 1 A_SpreadAuraFireBullets(0,0,1,0,"AChristinaPuffCharged",FBF_NORANDOM|FBF_NORANDOMPUFFZ)//1024,"",0,0)
 			ACHG CDC 1
@@ -173,14 +173,14 @@ actor AChristina : AetheriusBaseWeaponZSC
 		AltHoldCharged2:
 			ACHG B 0
 			{
-				A_PlaySound("PetraRangedAttackVoice3",CHAN_VOICE);
-				A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+				A_StartSound("PetraRangedAttackVoice3",CHAN_VOICE);
+				A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON);			
 			}
 			ACHF A 0 A_TakeInventory("EtherStock",1)
 			ACHF B 1 A_SpreadAuraFireBullets(0,0,1,0,"AChristinaPuffCharged",FBF_NORANDOM|FBF_NORANDOMPUFFZ)//1024,"",0,0)
 			ACHG FGF 1
 			ACHG A 8
-			ACHG B 0 A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON)			
+			ACHG B 0 A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON)			
 			ACHF A 1 A_SpreadAuraFireBullets(0,0,1,0,"AChristinaPuffCharged",FBF_NORANDOM|FBF_NORANDOMPUFFZ)//1024,"",0,0)
 			ACHG CDC 1
 			ACHG A 8
@@ -192,8 +192,8 @@ actor AChristina : AetheriusBaseWeaponZSC
 		AltHoldCharged3:
 			ACHG B 0
 			{
-				A_PlaySound("PetraRangedAttackVoice4",CHAN_VOICE);
-				A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+				A_StartSound("PetraRangedAttackVoice4",CHAN_VOICE);
+				A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON);			
 			}
 			ACHF A 0 A_TakeInventory("EtherStock",1)
 			ACHF B 1 A_SpreadAuraFireBullets(0,0,1,0,"AChristinaPuffChargedFinal",FBF_NORANDOM|FBF_NORANDOMPUFFZ)//1024,"",0,0)
@@ -206,8 +206,8 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHG A 5
 			ACHF A 0
 			{
-				A_PlaySound("PetraRangedAttackVoice1",CHAN_VOICE);
-				A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+				A_StartSound("PetraRangedAttackVoice1",CHAN_VOICE);
+				A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON);			
 				A_TakeInventory("EtherStock",1);
 				ACS_NamedExecuteAlways("StartTensionCountDown");
 			}
@@ -223,8 +223,8 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHF A 1 A_ReFire("BouncingShotStage2")
 			ACHF A 0
 			{
-				A_PlaySound("PetraRangedAttackVoice2",CHAN_VOICE);
-				A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+				A_StartSound("PetraRangedAttackVoice2",CHAN_VOICE);
+				A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON);			
 				A_TakeInventory("EtherStock",1);
 				ACS_NamedExecuteAlways("StartTensionCountDown");
 			}
@@ -241,8 +241,8 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHF A 1 A_ReFire("BouncingShotStage3")
 			ACHF A 0
 			{
-				A_PlaySound("PetraRangedAttackVoice3",CHAN_VOICE);
-				A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+				A_StartSound("PetraRangedAttackVoice3",CHAN_VOICE);
+				A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON);			
 				A_TakeInventory("EtherStock",2);
 				ACS_NamedExecuteAlways("StartTensionCountDown");
 			}
@@ -255,8 +255,8 @@ actor AChristina : AetheriusBaseWeaponZSC
 			ACHG A 2
 			ACHF A 0
 			{
-				A_PlaySound("PetraRangedAttackVoice4",CHAN_VOICE);
-				A_PlaySound("AChristina/LongRangeShoot",CHAN_WEAPON);			
+				A_StartSound("PetraRangedAttackVoice4",CHAN_VOICE);
+				A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON);			
 				A_TakeInventory("EtherStock",3);
 				ACS_NamedExecuteAlways("StartTensionCountDown");
 			}
@@ -267,7 +267,7 @@ actor AChristina : AetheriusBaseWeaponZSC
 			goto Ready
 
 		Reload:
-			ACHG H 0 A_PlaySound("AChristina/Reload1",CHAN_5)
+			ACHG H 0 A_StartSound("AChristina/Reload1",CHAN_5)
 			ACHG HHH 4 A_GiveInventory("EtherStock",1)
 			ACHG H 0
 			{
@@ -289,8 +289,8 @@ actor AChristina : AetheriusBaseWeaponZSC
 		ReloadEnd:
 			ACHG A 4
 			{
-				A_PlaySound("PetraReloadVoice",CHAN_VOICE);
-				A_PlaySound("AChristina/Reload2",CHAN_WEAPON);
+				A_StartSound("PetraReloadVoice",CHAN_VOICE);
+				A_StartSound("AChristina/Reload2",CHAN_WEAPON);
 			}
 			ACHG IJI 4
 			ACHG A 6
@@ -373,7 +373,7 @@ Actor AChristinaTracer : AetheriusFastProjectileZSC
 	+PUFFONACTORS
 	+FORCEXYBILLBOARD
 	+FORCERADIUSDMG
-	Renderstyle Add
+	RenderStyle "Add"
 	Alpha 1.0
 	Scale 0.5
 	decal BulletChip
@@ -582,8 +582,8 @@ Actor AChristinaPartinias : AChristina
 			ACHG B 0 BRIGHT
 			{
 				ACS_NamedExecuteAlways("StartTensionCountDown");
-				A_PlaySound("PetraHeavyAttack",CHAN_VOICE);
-				A_PlaySound("AChristina/Shoot1",CHAN_WEAPON);
+				A_StartSound("PetraHeavyAttack",CHAN_VOICE);
+				A_StartSound("AChristina/Shoot1",CHAN_WEAPON);
 			}
 			 ACHF A 1 BRIGHT
 			{
@@ -598,7 +598,7 @@ Actor AChristinaPartinias : AChristina
 			ACHG B 0 A_JumpIfInventory("EtherStock",1,"AltHoldCharged")
 			ACHG B 0 BRIGHT
 			{
-				//A_PlayWeaponSound("AChristina/LongRangeShoot"); //Put a "Drawing a blank" sound here?
+				//A_StartSound("AChristina/LongRangeShoot",CHAN_WEAPON); //Put a "Drawing a blank" sound here?
 				ACS_NamedExecuteAlways("StartTensionCountDown");
 			}
 			ACHG A 1
@@ -746,7 +746,7 @@ actor SauronGauntletsPetra : MarineWeapon
 			WGNT A 0 
 			{
 				A_Stopsound(CHAN_ITEM);
-				A_Playsound("SauronGauntlets/Hum",CHAN_ITEM);
+				A_StartSound("SauronGauntlets/Hum",CHAN_ITEM);
 				A_SetInventory("ActorVar1",0);
 			}
 		SpawnPhase1:
@@ -780,7 +780,7 @@ actor SauronGauntletsPetra : MarineWeapon
 		Pickup:
 			// Other Things
 			TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CheckPlayerIfDead") == 1,2)
-			TNT1 A 0 A_PlaySound("generalequip", 5)
+			TNT1 A 0 A_StartSound("generalequip", 5)
 			TNT1 A 0 
 			Stop
 		Deselect:
@@ -818,11 +818,11 @@ actor SauronGauntletsPetra : MarineWeapon
 		PunchSuccess:
 			TNT1 A 0
 			TNT1 A 0 A_Jump(224,2)
-			TNT1 A 0 A_PlaySound("PetraMediumAttack",CHAN_VOICE)
+			TNT1 A 0 A_StartSound("PetraMediumAttack",CHAN_VOICE)
 			GNTP M 3
 			{
 				if (ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035) >= 3) { A_SetTics(2); }
-				A_PlaySound("GauntletSwing",CHAN_WEAPON);
+				A_StartSound("GauntletSwing",CHAN_WEAPON);
 			}
 			GNTP N 3
 			{
@@ -876,8 +876,8 @@ actor SauronGauntletsPetra : MarineWeapon
 			GNTP M 3
 			{
 				if (ACS_NamedExecuteWithResult("MiscVarCheckDECORATE",10035) >= 3) { A_SetTics(2); }
-				A_PlaySound("PetraHeavyAttack",CHAN_VOICE,10.0);
-				A_PlaySound("GauntletSwing",CHAN_WEAPON);
+				A_StartSound("PetraHeavyAttack",CHAN_VOICE,CHANF_DEFAULT,10.0);
+				A_StartSound("GauntletSwing",CHAN_WEAPON);
 			}
 			GNTP N 3
 			{
