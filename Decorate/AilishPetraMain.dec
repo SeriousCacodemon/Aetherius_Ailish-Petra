@@ -1,3 +1,565 @@
+//***********
+//* Players *
+//***********
+// Ailish Estdale.  First of two extra characters for addon.
+actor AilishEstdale : AetheriusPlayerPawn
+{
+	Tag "Ailish Estdale"
+	+SOLID
+	+SHOOTABLE
+	+DROPOFF
+	+PICKUP
+	+NOTDMATCH
+	+FRIENDLY
+	+SLIDESONWALLS
+	+CANPASS
+	+CANPUSHWALLS
+	+FLOORCLIP
+	+WINDTHRUST
+	+TELESTOMP
+	+NOBLOCKMONST
+	+NOSKIN
+	+NOTHRUSTWHENINVUL
+	+THRUSPECIES
+	+DONTMORPH
+	Speed 1
+	Health 63 // 45-76
+	Player.MaxHealth 65
+	Player.MugShotMaxHealth -1 // 65
+	Radius 13 // 13
+	Height 50 // 50
+	Scale 0.34512 // 0.34512
+	Mass 76
+	PainChance 255
+	species "Players"
+	DamageFactor "Normal", 1.167 // 75% the physical defense of a normal player.
+	DamageFactor "Magic", 0.60 // 166.7% the magical defense of a normal player
+	DamageFactor "Fire", 0.95 // 111.1% the fire-elemental defense of a normal player
+	DamageFactor "Ice", 1 // 105.2% the ice-elemental defense of a normal player
+	DamageFactor "Thunder", 0.975 // 102.5% the thunder-elemental defense of a normal player
+	DamageFactor "Wind", 1.0
+	DamageFactor "Holy", 0
+	DamageFactor "Dark", 1
+	DamageFactor "Melee", 1.0
+	DamageFactor "Sceptre", 1
+	DamageFactor "Slime", 1.0 // Damage Floors
+	DamageFactor "Crush", 1.0 // 8.0
+	DamageFactor "Drowning", 1
+	DamageFactor "Falling", 1
+	Damagefactor "Bullet", 0.8
+	Damagefactor "Explosive", 0.8
+	Damagefactor "Fist", 1.0
+	Damagefactor "Kick", 1.0
+	Damagefactor "Gauntlets", 1.0
+	Damagefactor "Chainsaw", 1.0
+	DamageFactor "Acid", 1.0
+	DamageFactor "Poison", 1.0
+	DamageFactor "PoisonElemental", 1.0
+	Damagefactor "IncarnateGlare", 1 // Same as Dark
+	DamageFactor "Sigil", 1
+	DamageFactor "SpectralLow", 1
+	DamageFactor "ImpSoul", 1
+	DamageFactor "DarkImpSoul", 1
+	DamageFactor "CacodemonSoul", 1
+	DamageFactor "CacolanternSoul", 1
+	DamageFactor "AbaddonSoul", 1
+	DamageFactor "KnightSoul", 1
+	DamageFactor "BaronSoul", 1
+	DamageFactor "BelphegorSoul", 1
+	DamageFactor "BrusierFist", 1
+	DamageFactor "ArchonSoul", 1
+	DamageFactor "PyroDemonSoul", 1
+	DamageFactor "IncarnateSoul", 1
+	DamageFactor "DiabloistSoul", 1
+	DamageFactor "BalrogSoul", 1
+	DamageFactor "HElementalSoul", 1
+	DamageFactor "HOverlordSoul", 1
+	DamageFactor "Railgun", 1
+	DamageFactor "Disintergrate", 1
+	DamageFactor "Telefrag", 1
+	
+	Player.ColorRange 0, 0
+	Player.Portrait "AILPORT2"
+	Player.StartItem "PlayerStatItem"
+	Player.StartItem "RoyalScepter"
+	Player.WeaponSlot 1, SauronGauntletsAilish, RoyalScepter, SoulWhisper
+	Player.WeaponSlot 2, ShockStaff
+	Player.WeaponSlot 3, Histanica, SerpentStaffAilish
+	Player.WeaponSlot 4, Batholith
+	Player.WeaponSlot 5, WizardWoodStave
+	Player.WeaponSlot 6, ChilltipCane
+	Player.WeaponSlot 7, NightShadow
+	Player.WeaponSlot 8, NNSigil
+	Player.WeaponSlot 9, EvilWarriorShield
+	Player.ViewHeight 36
+	Player.JumpZ 10
+	Player.ForwardMove 2.375, 1.1875
+	Player.SideMove 2.375, 1.1875
+	Player.InvulnerabilityMode "Reflective"
+	Player.DisplayName "Ailish Estdale"
+	Player.Face AIL
+	Player.CrouchSprite TNT1
+	Player.SoundClass "AilishSND"
+	Player.SpawnClass Any
+
+	States
+	{
+		Pain.Charm: Goto See  Pain.Heal1: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,0); } Goto See  Pain.Heal2: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,1); } Goto See  Pain.Heal3: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,2); } Goto See  Pain.Heal4: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,3); } Goto See Goto See  Pain.Heal1: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,0); } Goto See  Pain.Heal2: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,1); } Goto See  Pain.Heal3: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,2); } Goto See  Pain.Heal4: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,3); } Goto See
+		Spawn:
+			NERA A 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			Loop
+		See:
+			NERA AAAA 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			Loop
+		Missile:
+			NERA AAA 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			Goto Spawn
+		Melee:
+			NERA A 6 BRIGHT { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			Goto Missile
+		Pain:
+			NERA A 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			NERA A 4 
+			{ 
+				A_APPBreathe(1.0, 0.976471, 0.00214, 4);
+				A_APPPain; // ACS_NamedExecuteAlways("AilishPainScreams"); // A_Pain
+			}
+			Goto Spawn
+		Death:
+			TNT1 A 0 { A_APPBreatheReset; }
+			TNT1 A 0 A_PlayerSkinCheck("AltSkinDeath")
+		Death1:
+			TNT1 A 10
+			TNT1 A 10 A_PlayerScream
+			TNT1 A 10 A_NoBlocking
+			TNT1 AAA 10
+			TNT1 A -1
+			Stop
+		XDeath:
+			TNT1 A 0 { A_APPBreatheReset; }
+			TNT1 A 0 A_PlayerSkinCheck("AltSkinDeath")
+		XDeath1:
+			TNT1 A 5
+			TNT1 A 0 A_PlayerSkinCheck("AltSkinXDeath")
+			TNT1 A 5 A_XScream
+			TNT1 A 0 A_PlayerSkinCheck("AltSkinXDeath")
+			TNT1 A 5 A_NoBlocking
+			TNT1 AAAAA 5
+			TNT1 A -1
+			Stop
+		AltSkinDeath:
+			TNT1 A 0 { A_APPBreatheReset; }
+			TNT1 A 6
+			TNT1 A 6 A_PlayerScream
+			TNT1 AA 6
+			TNT1 A 6 A_NoBlocking
+			TNT1 AAA 6
+			TNT1 A -1
+			Stop
+		AltSkinXDeath:
+			TNT1 A 5 A_PlayerScream
+			TNT1 A 0 A_NoBlocking
+			TNT1 A 5 A_SkullPop
+			TNT1 AAAA 5
+			TNT1 A -1
+			Stop
+	}
+}
+
+actor PetraLagerkvist : AetheriusPlayerPawn
+{
+	Tag "Petra Johanna Lagerkvist"
+	+SOLID
+	+SHOOTABLE
+	+DROPOFF
+	+PICKUP
+	+NOTDMATCH
+	+FRIENDLY
+	+SLIDESONWALLS
+	+CANPASS
+	+CANPUSHWALLS
+	+FLOORCLIP
+	+WINDTHRUST
+	+TELESTOMP
+	+NOBLOCKMONST
+	+NOSKIN
+	+NOTHRUSTWHENINVUL
+	+THRUSPECIES
+	+DONTMORPH
+	Speed 1
+	Health 102 // 95-118
+	Player.MaxHealth 102
+	Player.MugShotMaxHealth -1 // 102
+	Radius 13 // 13
+	Height 44 // 44
+	XScale 0.26 // 0.24
+	YScale 0.208 // 0.20
+	Mass 60
+	PainChance 255
+	species "Players"
+	DamageFactor "Normal", 0.925 // 75% the physical defense of a normal player.
+	DamageFactor "Ether", 0 //So Petra doesn't kill herself with her own weapon.
+	DamageFactor "Magic", 0.875 // 166.7% the magical defense of a normal player
+	DamageFactor "Fire", 0.98 // 111.1% the fire-elemental defense of a normal player
+	DamageFactor "Ice", 1.1 // 105.2% the ice-elemental defense of a normal player
+	DamageFactor "Thunder", 0.975 // 102.5% the thunder-elemental defense of a normal player
+	DamageFactor "Wind", 1.0
+	DamageFactor "Holy", 0
+	DamageFactor "Dark", 1
+	DamageFactor "Melee", 1.0
+	DamageFactor "Sceptre", 1
+	DamageFactor "Slime", 1.0 // Damage Floors
+	DamageFactor "Crush", 1.0 // 8.0
+	DamageFactor "Drowning", 1
+	DamageFactor "Falling", 0.1
+	Damagefactor "Bullet", 1.0
+	Damagefactor "Explosive", 1.0
+	Damagefactor "Fist", 1.0
+	Damagefactor "Kick", 1.0
+	Damagefactor "Gauntlets", 1.0
+	Damagefactor "Chainsaw", 1.0
+	DamageFactor "Acid", 1.0
+	DamageFactor "Poison", 1.0
+	DamageFactor "PoisonElemental", 1.0
+	Damagefactor "IncarnateGlare", 1 // Same as Dark
+	DamageFactor "Sigil", 1
+	DamageFactor "SpectralLow", 1
+	DamageFactor "ImpSoul", 1
+	DamageFactor "DarkImpSoul", 1
+	DamageFactor "CacodemonSoul", 1
+	DamageFactor "CacolanternSoul", 1
+	DamageFactor "AbaddonSoul", 1
+	DamageFactor "KnightSoul", 1
+	DamageFactor "BaronSoul", 1
+	DamageFactor "BelphegorSoul", 1
+	DamageFactor "BrusierFist", 1
+	DamageFactor "ArchonSoul", 1
+	DamageFactor "PyroDemonSoul", 1
+	DamageFactor "IncarnateSoul", 1
+	DamageFactor "DiabloistSoul", 1
+	DamageFactor "BalrogSoul", 1
+	DamageFactor "HElementalSoul", 1
+	DamageFactor "HOverlordSoul", 1
+	DamageFactor "Railgun", 1
+	DamageFactor "Disintergrate", 1
+	DamageFactor "Telefrag", 1
+
+	Player.ColorRange 0, 0
+	Player.Portrait "PETPORT2"
+	Player.StartItem "PlayerStatItem"
+	Player.StartItem "AChristina"
+	Player.StartItem "EtherStock", 12
+	Player.WeaponSlot 1, PetraFist, SauronGauntletsPetra // Melee Weapons
+	Player.WeaponSlot 2, PetraRevolver, PetraRevolver2, AChristina // Pistols
+	Player.WeaponSlot 3, PetraSawedOff, AChristinaEnergyMine
+	Player.WeaponSlot 4, PetraTommyGun, PetraTommyGun2, AChristinaMastermind, AChristinaRepeater
+	Player.WeaponSlot 5, PetraNapalmLauncher, AChristinaCyberdemon, AChristinaMaulotaur, AChristinaWyvern, AChristinaMiniMissiles
+	Player.WeaponSlot 6, PetraTeslaCannon, PetraTeslaCannon2, AChristinaHades, AChristinaIronLich, AChristinaHeresiarch
+	Player.WeaponSlot 7, AChristinaBFG, AChristinaPartinias
+	Player.WeaponSlot 8, NNSigil
+	Player.WeaponSlot 9, EvilWarriorShield
+	Player.ViewHeight 34
+	Player.JumpZ 10
+	Player.ForwardMove 2.125, 1.0625
+	Player.SideMove 2.125, 1.0625
+	Player.InvulnerabilityMode "Reflective"
+	Player.DisplayName "Petra Johanna Lagerkvist"
+	Player.Face PET
+	Player.CrouchSprite PETC
+	Player.SoundClass "PetraSND"
+	Player.SpawnClass Any
+
+	States
+	{
+		Pain.Charm: Goto See  Pain.Heal1: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,0); } Goto See  Pain.Heal2: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,1); } Goto See  Pain.Heal3: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,2); } Goto See  Pain.Heal4: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,3); } Goto See Goto See  Pain.Heal1: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,0); } Goto See  Pain.Heal2: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,1); } Goto See  Pain.Heal3: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,2); } Goto See  Pain.Heal4: TNT1 A 0 { ACS_NamedExecuteAlways("Healing_Actor",0,3); } Goto See
+		Spawn:
+			PETR A 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			Loop
+		See:
+			PETR AAAA 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			Loop
+		Missile:
+			PETR AAA 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			Goto Spawn
+		Melee:
+			PETR A 6 BRIGHT { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			Goto Missile
+		Pain:
+			PETR B 4 { A_APPBreathe(1.0, 0.976471, 0.00214, 4); }
+			PETR C 4 
+			{
+				A_APPBreathe(1.0, 0.976471, 0.00214, 4);
+				A_APPPain; // ACS_NamedExecuteAlways("PetraPainScreams"); // A_Pain
+			}
+			Goto Spawn
+		Death:
+			TNT1 A 0 { A_APPBreatheReset; }
+			PETR C 5 ThrustThingZ(0,28,0,1)
+			PETR D 5 A_PlayerScream
+			PETR E 5 A_NoBlocking
+			PETR F 5
+			PETR GH 5 A_CheckFloor("Death2")
+			goto Death+4
+		Death2:
+			TNT1 A 0 { A_APPBreatheReset; }
+			PETR I 4
+			PETR J 4 ThrustThingZ(0,12,0,0)
+			PETR JLM 4
+			PETR N -1
+			Stop
+		XDeath:
+			TNT1 A 0 { A_APPBreatheReset; }
+			PETR C 5 ThrustThingZ(0,28,0,1)
+			PETR D 5 A_PlayerScream
+			PETR E 5 A_NoBlocking
+			PETR F 5
+			PETR GH 4 A_CheckFloor("XDeath2")
+			goto XDeath+4
+		XDeath2:
+			TNT1 A 0 { A_APPBreatheReset; }
+			PETR I 4
+			PETR J 4 ThrustThingZ(0,12,0,0)
+			PETR IO 4
+			PETR P -1
+			Stop
+	}
+}
+
+//******************
+//* Weapons / Ammo *
+//******************
+Actor ZillaelBlessing : CustomInventory
+{
+	States
+	{
+		Spawn:
+			TNT1 A -1
+			Stop
+		Pickup:
+			TNT1 A 0 A_GiveInventory("BlessingGiveDamageBoost",1)
+			TNT1 A 0 A_GiveInventory("BlessingGiveProtection",1)
+	}
+}
+
+Actor PowerBlessingGiveDamageBoost : PowerDamage
+{
+	DamageFactor "Normal", 1.2
+}
+
+Actor BlessingGiveDamageBoost : PowerupGiver
+{
+	Powerup.Type "BlessingGiveDamageBoost"
+	Powerup.Duration -15
+	+INVENTORY.AUTOACTIVATE
+	States
+	{
+		Spawn:
+			TNT1 A -1
+			Stop
+	}
+}
+
+Actor PowerBlessingGiveProtection : PowerProtection
+{
+	DamageFactor "Normal", 0.5
+}
+
+Actor BlessingGiveProtection : PowerupGiver
+{
+	Powerup.Color "6f ed bb", 0.10
+	Powerup.Type "BlessingGiveProtection"
+	Powerup.Duration -15
+	+INVENTORY.AUTOACTIVATE
+	States
+	{
+		Spawn:
+			TNT1 A -1
+			Stop
+	}
+}
+
+//*********
+//* Items *
+//*********
+//Ah, the Celestial stone.  Centric to Arcana Heart 3's plot, now a alternate berserk
+//pack replacement that restores MP, Stamina (and for Petra, Force Gauge).
+Actor CelestialStone1 : AetheriusCustomInventory
+{
+	+FLOATBOB
+	+DONTGIB
+	+INVENTORY.ALWAYSPICKUP
+	XScale 0.25
+	YScale 0.20
+	Inventory.Pickupsound "GetCelestialStone"
+	Inventory.PickupMessage "You possess the \crcelestial stone\c-!"
+	States
+	{
+		Spawn:
+			AH3S A -1 Bright
+			Stop
+		Pickup:
+			TNT1 A 0 ACS_NamedExecuteAlways("GiveBuffsPowerup",0,23,120,0)
+			TNT1 A 0 ACS_NamedExecuteAlways("PickupMedicalItem",0,3,0,0)
+			TNT1 A 0 
+			Stop
+	}
+}
+
+Actor CelestialStone2 : CelestialStone1
+{
+	Inventory.PickupMessage "You possess the \cvcelestial stone\c-!"
+	States
+	{
+		Spawn:
+			AH3S B -1 Bright
+			Stop
+	}
+}
+
+Actor CelestialStone3 : CelestialStone1
+{
+	Inventory.PickupMessage "You possess the \ckcelestial stone\c-!"
+	States
+	{
+		Spawn:
+			AH3S C -1 Bright
+			Stop
+	}
+}
+
+Actor CelestialStone4 : CelestialStone1
+{
+	Inventory.PickupMessage "You possess the \cdcelestial stone\c-!"
+	States
+	{
+		Spawn:
+			AH3S D -1 Bright
+			Stop
+	}
+}
+
+Actor CelestialStone5 : CelestialStone1
+{
+	Inventory.PickupMessage "You possess the \ctcelestial stone\c-!"
+	States
+	{
+		Spawn:
+			AH3S E -1 Bright
+			Stop
+	}
+}
+
+Actor CelestialStone6 : CelestialStone1
+{
+	Inventory.PickupMessage "You possess the \chcelestial stone\c-!"
+	States
+	{
+		Spawn:
+			AH3S F -1 Bright
+			Stop
+	}
+}
+
+Actor CelestialStone7 : CelestialStone1
+{
+	Inventory.PickupMessage "You possess the \cucelestial stone\c-!"
+	States
+	{
+		Spawn:
+			AH3S G -1 Bright
+			Stop
+	}
+}
+
+Actor CelestialStoneRandomizer : RandomSpawner2
+{
+	DropItem "CelestialStone1", 256, 1
+	DropItem "CelestialStone2", 256, 1
+	DropItem "CelestialStone3", 256, 1
+	DropItem "CelestialStone4", 256, 1
+	DropItem "CelestialStone5", 256, 1
+	DropItem "CelestialStone6", 256, 1
+	DropItem "CelestialStone7", 256, 1
+}
+
+actor Berserk2AP : Berserk2 replaces Berserk2
+{
+	States
+	{
+			BecomeSceptre:
+				TNT1 A 0 A_SpawnItemEx("SceptreOfEmpyrea",0,0,0,0,0,0,0,0,0)
+				TNT1 A 0 A_FadeOut(1.0)
+				Stop
+		
+		Spawn:
+			PSTR A random(1,4) NoDelay 
+			{
+				if (A_BerserkCheckSceptre >= 1) { return state("BecomeSceptre"); }
+				return state("");
+			}
+			PSTR A 0
+			{
+				// Vimstones
+				if (random(1,256) <= 4)
+				{
+					if (random(1,4) <= 3)
+					{
+						A_SpawnItemEx("LesserVimstone",0,0,0,0,0,0,0,0,0);
+					}
+					else
+					{
+						A_SpawnItemEx("GreaterVimstone",0,0,0,0,0,0,0,0,0);
+					}
+				}
+				// Paxa Punch
+				if (random(1,2048) <= 80)
+				{
+					A_SpawnItemEx("PaxaPunch",0,0,0,0,0,0,0,0,0);
+				}
+				// Mercury Bandana
+				if (random(1,2048) <= 80)
+				{
+					A_SpawnItemEx("MercuryBandana",0,0,0,0,0,0,0,0,0);
+				}
+			}
+			PSTR A 0 A_JumpIfInventory("FloraInPlay", 1, "SpawnCelestialStone1", AAPTR_PLAYER1)
+			PSTR A 0 A_JumpIfInventory("AilishInPlay", 1, "SpawnCelestialStone2", AAPTR_PLAYER1)
+			PSTR A 0 A_JumpIfInventory("PetraInPlay", 1, "SpawnCelestialStone3", AAPTR_PLAYER1)
+			goto Idle
+		ChangeWeapon:
+			TNT1 A 0 A_JumpIfInventory("FistIllucia",0,6)
+			TNT1 A 0 A_JumpIfInventory("SauronGauntlets",0,3)
+			TNT1 A 0 A_SelectWeapon("FistDeggaris")
+			TNT1 A 0 A_Jump(256,2)
+			TNT1 A 0 A_SelectWeapon("SauronGauntlets")
+			TNT1 A 0 A_Jump(256,5)
+			TNT1 A 0 A_JumpIfInventory("SauronGauntletsIllucia",0,3)
+			TNT1 A 0 A_SelectWeapon("FistIllucia")
+			TNT1 A 0 A_Jump(256,2)
+			TNT1 A 0 A_SelectWeapon("SauronGauntletsIllucia")
+			TNT1 A 0 
+			Stop
+		SpawnCelestialStone1: //Flora gets the lowest chance at having a Celestial Stone spawn.
+			TNT1 A 0 A_Jump(16,"SpawnCelestialStoneMain")
+			goto Idle
+		SpawnCelestialStone2: //Ailish is most likely to have a Celestial Stone spawn.
+			TNT1 A 0 A_Jump(48,"SpawnCelestialStoneMain")
+			goto Idle
+		SpawnCelestialStone3: //Petra has a inbetween chance of having a Celestial Stone spawn for her.
+			TNT1 A 0 A_Jump(32,"SpawnCelestialStoneMain")
+			goto SpawnEtherStockFullClip
+		SpawnCelestialStoneMain:
+			TNT1 A 0 A_SpawnItemEx("CelestialStoneRandomizer")
+			stop
+		SpawnEtherStockFullClip:
+			TNT1 A 0 // A_SpawnItemEx("EtherStockFullClip") // Misfit's Note - temporarily commenting this out until the item in question exists, as so to avoid warnings at start up >.>
+			stop
+	}
+}
+
+//***********
+//* Weapons *
+//***********
 // Ailish specific version of the Serpent Staff from Hexen.  Runs off of MP
 // instead of Blue Mana...
 
@@ -803,7 +1365,6 @@ actor SauronGauntletsPetra : MarineWeapon
 			GNTF A 1
 			{
 				A_WeaponReady;
-				//if (random(1,100) <= 50) { A_ChangeFlag("WEAPON.MELEEWEAPON", TRUE); } else { A_ChangeFlag("WEAPON.MELEEWEAPON", FALSE); }
 			}
 			Loop
 		Fire:
