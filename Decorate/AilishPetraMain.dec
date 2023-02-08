@@ -81,6 +81,9 @@ actor AilishEstdale : AetheriusPlayerPawn
 	Player.ColorRange 0, 0
 	Player.Portrait "AILPORT2"
 	Player.StartItem "PlayerStatItem"
+	Player.StartItem "PlayerStatItem2"
+	Player.StartItem "PlayerStatItem3"
+	Player.StartItem "PlayerDashJump"
 	Player.StartItem "RoyalScepter"
 	Player.WeaponSlot 1, SauronGauntletsAilish, RoyalScepter, SoulWhisper
 	Player.WeaponSlot 2, ShockStaff
@@ -247,6 +250,9 @@ actor PetraLagerkvist : AetheriusPlayerPawn
 	Player.ColorRange 0, 0
 	Player.Portrait "PETPORT2"
 	Player.StartItem "PlayerStatItem"
+	Player.StartItem "PlayerStatItem2"
+	Player.StartItem "PlayerStatItem3"
+	Player.StartItem "PlayerDashJump"
 	Player.StartItem "AChristina"
 	Player.StartItem "EtherStock", 12
 	Player.WeaponSlot 1, PetraFist, SauronGauntletsPetra // Melee Weapons
